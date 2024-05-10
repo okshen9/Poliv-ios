@@ -32,6 +32,7 @@ struct MainCalendarView: View {
                        selection: $selectedDate,
                        displayedComponents: .date)
             .datePickerStyle(.graphical)
+            .tint(.topGreen)
             TaskToDayView()
         }
         .padding(.top)
