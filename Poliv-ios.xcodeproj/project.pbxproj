@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */; };
-		AC91411E2BEE65C8001CBB97 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411D2BEE65C8001CBB97 /* ContentView.swift */; };
+		AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */; };
 		AC9141202BEE65C9001CBB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC91411F2BEE65C9001CBB97 /* Assets.xcassets */; };
 		AC9141242BEE65C9001CBB97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9141232BEE65C9001CBB97 /* Preview Assets.xcassets */; };
+		AC9B6D182BEE723D00A26E66 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */; };
+		AC9B6D1F2BEE760A00A26E66 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D1E2BEE760A00A26E66 /* FeedView.swift */; };
+		AC9B6D212BEE762500A26E66 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D202BEE762500A26E66 /* CreateView.swift */; };
+		AC9B6D232BEE763000A26E66 /* SovetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D222BEE763000A26E66 /* SovetsView.swift */; };
+		AC9B6D252BEE764100A26E66 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D242BEE764100A26E66 /* ProfileView.swift */; };
+		AC9B6D292BEE799F00A26E66 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D282BEE799F00A26E66 /* ImageName.swift */; };
 		D5EEC51707B9B8A10E0DA08F /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,10 +25,16 @@
 		9BDB03F56F1D323F57D9BF0E /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
 		AC9141182BEE65C8001CBB97 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poliv_iosApp.swift; sourceTree = "<group>"; };
-		AC91411D2BEE65C8001CBB97 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalendarView.swift; sourceTree = "<group>"; };
 		AC91411F2BEE65C9001CBB97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9141212BEE65C9001CBB97 /* Poliv_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliv_ios.entitlements; sourceTree = "<group>"; };
 		AC9141232BEE65C9001CBB97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		AC9B6D1E2BEE760A00A26E66 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		AC9B6D202BEE762500A26E66 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		AC9B6D222BEE763000A26E66 /* SovetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SovetsView.swift; sourceTree = "<group>"; };
+		AC9B6D242BEE764100A26E66 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AC9B6D282BEE799F00A26E66 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
 		CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,7 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */,
-				AC91411D2BEE65C8001CBB97 /* ContentView.swift */,
+				AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */,
+				AC9B6D272BEE794600A26E66 /* Utilities */,
+				AC9B6D262BEE793800A26E66 /* Modules */,
 				AC91411F2BEE65C9001CBB97 /* Assets.xcassets */,
 				AC9141212BEE65C9001CBB97 /* Poliv_ios.entitlements */,
 				AC9141222BEE65C9001CBB97 /* Preview Content */,
@@ -82,6 +96,66 @@
 				AC9141232BEE65C9001CBB97 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC9B6D192BEE75C100A26E66 /* MainCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */,
+			);
+			path = MainCalendar;
+			sourceTree = "<group>";
+		};
+		AC9B6D1A2BEE75CD00A26E66 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B6D1E2BEE760A00A26E66 /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AC9B6D1B2BEE75DD00A26E66 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B6D202BEE762500A26E66 /* CreateView.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		AC9B6D1C2BEE75EA00A26E66 /* Sovets */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B6D222BEE763000A26E66 /* SovetsView.swift */,
+			);
+			path = Sovets;
+			sourceTree = "<group>";
+		};
+		AC9B6D1D2BEE75F500A26E66 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B6D242BEE764100A26E66 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AC9B6D262BEE793800A26E66 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B6D192BEE75C100A26E66 /* MainCalendar */,
+				AC9B6D1A2BEE75CD00A26E66 /* Feed */,
+				AC9B6D1B2BEE75DD00A26E66 /* Create */,
+				AC9B6D1C2BEE75EA00A26E66 /* Sovets */,
+				AC9B6D1D2BEE75F500A26E66 /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC9B6D272BEE794600A26E66 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B6D282BEE799F00A26E66 /* ImageName.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F5EB689D3E71CE63CDBDDAD0 /* Pods */ = {
@@ -207,8 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC91411E2BEE65C8001CBB97 /* ContentView.swift in Sources */,
+				AC9B6D1F2BEE760A00A26E66 /* FeedView.swift in Sources */,
+				AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */,
+				AC9B6D232BEE763000A26E66 /* SovetsView.swift in Sources */,
+				AC9B6D182BEE723D00A26E66 /* MainTabBarView.swift in Sources */,
 				AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */,
+				AC9B6D252BEE764100A26E66 /* ProfileView.swift in Sources */,
+				AC9B6D212BEE762500A26E66 /* CreateView.swift in Sources */,
+				AC9B6D292BEE799F00A26E66 /* ImageName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

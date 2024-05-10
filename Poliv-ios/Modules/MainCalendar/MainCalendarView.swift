@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainCalendarView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Главный экран с календарем")
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    MainCalendarView()
 }
