@@ -1,5 +1,5 @@
 use_frameworks!
-platform :ios, '17'
+platform :ios, '15'
 
 
 target 'Poliv-ios' do
