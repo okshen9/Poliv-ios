@@ -37,6 +37,7 @@ struct MainTabBarView: View {
                     Label(Constants.TabText.profile, systemImage:  .TabBarImageName.profile)
                 }
         }
+        .tint(.topGreen)
     }
 }
 

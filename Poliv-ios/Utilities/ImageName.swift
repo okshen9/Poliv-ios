@@ -16,4 +16,6 @@ extension String {
         static let sovets = "doc.text"
         static let profile = "person.crop.circle"
     }
+    
+    static let watering = "drop.circle.fill"
 }
