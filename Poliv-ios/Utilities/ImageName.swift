@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension String {
     enum TabBarImageName {
         static let calendar = "calendar"
