@@ -33,7 +33,7 @@ struct MainCalendarView: View {
                        displayedComponents: .date)
             .datePickerStyle(.graphical)
             .tint(.topGreen)
-//            lkjhkjlh
+
             TaskToDayView()
         }
         .padding(.top)
