@@ -24,6 +24,7 @@
 		ACB7FEFC2BEFC04500E0B150 /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFA2BEFC04500E0B150 /* mybase.db */; };
 		ACB7FEFD2BEFC04500E0B150 /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFB2BEFC04500E0B150 /* mybase.sql */; };
 		D5EEC51707B9B8A10E0DA08F /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */; };
+		EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		ACB7FEFA2BEFC04500E0B150 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
 		ACB7FEFB2BEFC04500E0B150 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
 		CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */,
+				EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */,
 				AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */,
 				ACB7FEF92BEFC04500E0B150 /* sqllite */,
 				AC9B6D272BEE794600A26E66 /* Utilities */,
@@ -327,6 +330,7 @@
 				AC9B6D252BEE764100A26E66 /* ProfileView.swift in Sources */,
 				AC9B6D212BEE762500A26E66 /* CreateView.swift in Sources */,
 				AC9B6D2E2BEE96F800A26E66 /* TaskViewCell.swift in Sources */,
+				EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */,
 				AC9B6D2B2BEE7E1E00A26E66 /* TaskToDayView.swift in Sources */,
 				AC9B6D292BEE799F00A26E66 /* ImageName.swift in Sources */,
 			);
