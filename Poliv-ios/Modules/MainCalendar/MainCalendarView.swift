@@ -32,9 +32,10 @@ struct MainCalendarView: View {
                     .padding(.all, 20)
                     .frame(maxWidth: .infinity,
                            alignment: .center)
-                    .background(.white)
+                    .background(Color.topGreen)
+                    .foregroundColor(.white)
                     .cornerRadius(20)
-
+                    .font(Font.custom("kudry", size: 20))
                 DatePicker("Календарь",
                            selection: $selectedDate,
                            displayedComponents: .date)

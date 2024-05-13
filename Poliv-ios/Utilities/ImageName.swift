@@ -10,10 +10,10 @@ import Foundation
 extension String {
     enum TabBarImageName {
         static let calendar = "calendar"
-        static let feed = "square.2.layers.3d.bottom.filled"
-        static let create = "plus.circle"
-        static let sovets = "doc.text"
-        static let profile = "person.crop.circle"
+        static let feed = "square.stack.3d.up"
+        static let create = "plus"
+        static let sovets = "book"
+        static let profile = "person"
     }
     
     static let watering = "drop.circle.fill"
