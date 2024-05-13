@@ -22,19 +22,18 @@ struct TaskToDayView: View {
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .watering,
                                                                workProgress: .done))
-                    .listRowBackground(Color.white)
+              
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .transfer,
                                                                workProgress:.inProgress))
-                    .listRowBackground(Color.white)
+
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .fertilizer,
                                                                workProgress: .done))
-                    .listRowBackground(Color.white)
+
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .pruning,
                                                                workProgress: .todo))
-                    .listRowBackground(Color.white)
                 }
                 
                 .listRowSpacing(8)
@@ -43,8 +42,6 @@ struct TaskToDayView: View {
                 .scrollContentBackground(.hidden)
             }
             .padding(.vertical, 16)
-            .background(.gray)
-            .cornerRadius(20)
     }
 }
 
