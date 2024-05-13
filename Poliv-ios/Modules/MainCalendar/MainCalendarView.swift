@@ -31,6 +31,7 @@ struct MainCalendarView: View {
             DatePicker("Календарь",
                        selection: $selectedDate,
                        displayedComponents: .date)
+            .environment(\.locale, Locale.init(identifier: "ru"))
             .datePickerStyle(.graphical)
             .tint(.topGreen)
 
