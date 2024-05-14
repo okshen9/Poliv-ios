@@ -1,5 +1,5 @@
 --
--- Файл сгенерирован с помощью SQLiteStudio v3.4.4 в Вс мая 12 04:23:04 2024
+-- Файл сгенерирован с помощью SQLiteStudio v3.4.4 в Пн мая 13 02:34:59 2024
 --
 -- Использованная кодировка текста: UTF-8
 --
@@ -13,8 +13,8 @@ CREATE TABLE Plants (
                      PRIMARY KEY ASC AUTOINCREMENT,
     Name     TEXT    NOT NULL
                      UNIQUE,
-    Age      TEXT    NOT NULL,
-    Type     TEXT    NOT NULL,
+    Age      TEXT,
+    Vid      TEXT    NOT NULL,
     Comm     TEXT    NOT NULL,
     Height   TEXT    NOT NULL,
     Breeding TEXT    NOT NULL,
@@ -26,7 +26,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -61,7 +61,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -90,7 +90,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -126,7 +126,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -154,7 +154,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -190,7 +190,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -224,7 +224,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -254,7 +254,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -279,7 +279,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -309,7 +309,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -340,7 +340,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -364,7 +364,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -391,7 +391,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -416,7 +416,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -440,7 +440,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -469,7 +469,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -496,7 +496,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -522,7 +522,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -546,7 +546,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -571,7 +571,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -600,7 +600,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -628,7 +628,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -653,7 +653,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -678,7 +678,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -703,7 +703,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -732,7 +732,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -757,7 +757,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -782,7 +782,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -807,7 +807,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -849,7 +849,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -878,7 +878,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -905,7 +905,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -929,7 +929,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -954,7 +954,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -984,7 +984,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1009,7 +1009,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1036,7 +1036,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1061,7 +1061,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1086,7 +1086,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1121,7 +1121,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1146,7 +1146,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1171,7 +1171,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1196,7 +1196,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1221,7 +1221,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1250,7 +1250,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1274,7 +1274,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1301,7 +1301,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1328,7 +1328,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1353,7 +1353,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1384,7 +1384,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1410,7 +1410,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1434,7 +1434,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1458,7 +1458,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1485,7 +1485,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1517,7 +1517,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1540,7 +1540,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1565,7 +1565,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1590,7 +1590,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1613,7 +1613,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1651,7 +1651,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1676,7 +1676,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1701,7 +1701,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1726,7 +1726,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1751,7 +1751,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1793,7 +1793,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1818,7 +1818,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1845,7 +1845,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1870,7 +1870,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1903,7 +1903,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1927,7 +1927,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1962,7 +1962,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -1991,7 +1991,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2021,7 +2021,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2046,7 +2046,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2073,7 +2073,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2098,7 +2098,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2123,7 +2123,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2148,7 +2148,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2173,7 +2173,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2198,7 +2198,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2228,7 +2228,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2260,7 +2260,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2287,7 +2287,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2316,7 +2316,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2358,7 +2358,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2383,7 +2383,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2409,7 +2409,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2434,7 +2434,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2459,7 +2459,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2484,7 +2484,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2509,7 +2509,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2542,7 +2542,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2575,7 +2575,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2604,7 +2604,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2627,7 +2627,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2650,7 +2650,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2675,7 +2675,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2700,7 +2700,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2723,7 +2723,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2748,7 +2748,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2773,7 +2773,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2798,7 +2798,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2823,7 +2823,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2846,7 +2846,7 @@ INSERT INTO Plants (
                        PlantID,
                        Name,
                        Age,
-                       Type,
+                       Vid,
                        Comm,
                        Height,
                        Breeding,
@@ -2865,6 +2865,653 @@ INSERT INTO Plants (
                        'Нивяник Наибольший
 Растение высотой 50–100 см, листья лопатчатые или продолговатые, соцветия — корзинки. Язычковые цветки белые, расположены по краю в 1–2 ряда, трубчатые желтые — в центре. Имеются махровые формы.
 '
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       121,
+                       'Баклажан',
+                       'однолетнее',
+                       'садовое',
+                       'Требуют почвы с pH 6,5-7,2, легкой структуры. Высаживать лучше всего после капусты, кабачков, огурцов, репы, редьки, тыквы, Зонтичных культур. Уход: поливать теплой водой, подкормка 3-5 раз за сезон. Баклажан – влаголюбивое растение, при недостатке влаги у него опадают плоды и цветы, останавливается развитие. Подвязывать сильнорослые сорта, удалять лишние побеги и листья (ниже развилки). Убирать плоды через 4-5 дней после их потемнения.',
+                       '40-150',
+                       'Семена для рассады сажают в конце февраля или в начале марта, а высадку в открытый грунт проводят с 20 мая по 10 июня. Баклажан – теплолюбивое растение, оптимальная температура для хорошего прорастания семян составляет 22–26 °C. Семена дают всходы через 10–15 дней.',
+                       '',
+                       'Деликатес – ранний сорт, популярен в Центральном Черноземье, на юге и юго-востоке России. Растение высотой до 40 см, приносит плоды укороченной грушевидной формы массой до 40–120 г, красивого темно-фиолетового цвета с глянцем. Мякоть белая, с чуть зеленоватым оттенком, вкусная, без горечи. Подходит для выращивания в открытом грунте в Подмосковье. Гряды надо разбивать в хорошо прогреваемом, солнечном, защищенном от господствующих ветров месте участка или использовать защитные кулисы из кукурузы и подсолнечника.
+Длинный фиолетовый – ранний сорт, приносит удлиненные, красивого глянцевого фиолетового оттенка плоды массой до 300 г, с желтоватой мякотью. Растение компактное, высотой до 50 см, отличается быстрым и активным ростом куста.
+Алексеевский – раннеспелый сорт, отлично растет в открытом грунте, куст небольшой, но достаточно ветвистый, около 70 см высотой. Приносит плоды цилиндрической формы темно- фиолетового цвета массой до 145 г, белоснежная мякоть приятная на вкус и без горечи.
+Алмаз – среднеспелый высокоурожайный сорт, приносит темно- фиолетовые плоды цилиндрической формы, с хорошим вкусом, массой до 350–400 г, мякоть белая. Куст компактный, невысокий, плоды созревают дружно.
+Донской 14 – сорт подходит для Подмосковья, приносит небольшие плоды грушевидной формы массой до 200 г, окраска фиолетовая с красноватым оттенком. Мякоть приятного вкуса, без горечи.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       122,
+                       'Кабачок',
+                       'однолетнее',
+                       'садовое',
+                       'Для посадки кабачков в начале мая подготовить грядки, удобрить почву черноземом, перегноем или компостом. Высаживать рассаду на расстоянии 70-80 см между растениями или семенами квадратно-гнездовым способом. Прищипывать верхушечные почки после появления 4-го листа. Удалять 1-3 листа во время плодоношения для вентиляции и предотвращения гнили. Поливать теплой водой и подкармливать 4-5 раз за вегетацию. Снимать молодые завязи кабачков 2 раза в неделю, чтобы не допустить перезревания. С одного растения можно собрать до 18 плодов.',
+                       '25-90',
+                       'Кабачки – это теплолюбивая культура, поэтому их можно высаживать в открытый грунт семенами в начале июня. Чтобы получить плоды раньше обычного срока, семена высеивают в середине апреля в горшочки. Через месяц рассаду уже можно высадить в открытый грунт, лучший срок для этого – период с середины мая до середины июня.',
+                       '',
+                       'Белоплодный – раннеспелый холодостойкий сорт, приносит плоды цилиндрической формы белесой окраски. Плод гладкий, у основания слаборебристый, массой 600–700 г, с деревянистой корой средней толщины и вкусной мякотью белого или светло-желтого цвета. Плоды достаточно устойчивы к бактериозу, но поражаются серой гнилью.
+Белый – раннеспелый холодостойкий сорт, устойчив к серой гнили и мучнистой росе. Приносит плоды цилиндрической формы массой до 1 кг, мякоть белая сочная.
+Белогор F1 – раннеспелый гибрид с компактным кустом и коротким побегом. Плод цилиндрической формы, с гладкой поверхностью, зеленовато-белого цвета, массой до 1 кг, мякоть белая, несладкая.
+Грибовский‐37 – скороспелый урожайный сорт, выведен специально для Нечерноземья, приносит светло-зеленые цилиндрические плоды небольшой длины, массой 0,7–1,3 кг, с молочно-белой мякотью и хорошим вкусом. Достаточно устойчив к гнилям плодов, мучнистой росе и бактериозу.
+Немчиновский – скороспелый урожайный сорт, приносит светло- зеленые цилиндрические плоды массой 600–700 г, с белой сочной и нежной мякотью.
+Золотинка – раннеспелый сорт, приносит ярко-желтые или оранжевые плоды цилиндрической формы массой 400–800 г. Плотная и сочная мякоть светло-оранжевого цвета. Сорт относительно стойкий к мучнистой росе.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       123,
+                       'Капуста Белокочанная',
+                       'двулетнее',
+                       'садовое',
+                       'Почва для капусты должна: иметь легкий состав; водопроницаемый подпочвенный слой; нейтральную реакцию; хорошо прогреваться весной; быть достаточно влажной, но без переувлажнения. Раннюю капусту лучше сажать после огурцов и гороха; среднеспелую – после лука, гороха, огурцов, свеклы и томатов; позднюю – после моркови, огурцов, однолетних и многолетних трав, свеклы и лука на репку. Это светолюбивая культура, при ранних посевах ей нужна подсветка. Во время выращивания рассады проводят две подкормки.  Для высаживания рассады ранней капусты в открытый грунт нужно выбрать плодородный участок, защищенный от северных ветров. На каждое растение должно приходиться по 50 × 50 см площади грядки. Каждые 10 дней растения надо поливать теплой водой (не ниже 20 °C) малыми нормами. Среднеспелую капусту сажают в грунт по 1,2–1,5 г семян на 10 м2. После прореживания всходов площадь питания должна составлять 60 × 40 см. За вегетацию надо провести до 10 поливов, 3–4 рыхления почвы в рядах и междурядьях. Одновременно с поливом проводить раз в 10–20 дней подкормки капусты жидким удобрением, используя настой навоза, компоста или крапивы. Лучше всего поливать утром или вечером. Но полив нужно ограничить в период созревания капусты, чтобы не было растрескивания кочанов. Ранние сорта первый раз окучивают через 15–20 дней после высадки рассады, а поздние – через 25 дней, это вызывает рост дополнительных корешков. При проведении позднего окучивания можно повредить корневую систему и смыкающую розетку листьев. Первый урожай ранней капусты готов в конце июня – начале июля. Урожай средней и поздней капусты можно собирать индивидуально, проверяя вызревание кочанов.',
+                       '30-50',
+                       'Для ранней капусты семена высевают в теплице 10-25 марта, а в открытый грунт высаживают в конце апреля - начале мая. Среднеспелую капусту высаживают в возрасте 35-40 дней, обычно в парниках или теплицах. Семена среднепоздних сортов высевают на рассаду с 15 апреля, а высадка происходит через 30-35 дней. Оптимальная температура для прорастания семян капусты – плюс 18–20 °C, но фактически они начинают прорастать при 2–3 °C.',
+                       '',
+                       'Дитмарская – ранняя, кочаны по 0,8–1,1 кг, урожай через 40–45 дней после посадки рассады.
+Золотой гектар – ранняя, кочаны по 1,6–3,3 кг, урожай через 60–65 дней после посадки рассады.
+Июньская – ранняя, кочаны по 1–1,2 кг, урожай через 65 дней после посадки рассады.
+Скороспелая – ранняя, кочаны до 2 кг, урожай через 95–103 дня после появления всходов.
+Малахит – ранний гибридный сорт, кочаны по 1–1,5 кг, урожай через 55 дней после посадки рассады.
+Соло – ранний гибридный сорт, кочаны по 1,5 кг, от появления всходов до урожая – 85–95 дней.
+Трансфер – ранний гибридный сорт, кочаны по 1–1,4 кг, урожай через 45–55 дней после высадки рассады.
+Надежда – среднеспелая, кочаны по 3,5 кг, урожай на 123-й день после появления всходов, высокие вкусовые качества.
+Подарок – среднеспелая, кочаны по 2,6–4,6 кг, урожай на 103– 117-й день после посадки рассады.
+Слава 1305 – среднеспелая, кочаны по 2,4–4,5 кг, урожай на 80– 95-й день после высадки рассады.
+Питон – среднеспелый гибридный сорт, кочаны по 3–4 кг, урожай через 90–95 дней после высадки рассады.
+Амагер – поздний, кочаны по 3–4 кг, урожай через 132 дня после высадки рассады.
+Московская поздняя – поздний, кочаны по 6–8 кг, урожай через 128 дней после высадки рассады.
+Колобок – поздний гибридный, кочаны по 2–3 кг, урожай через 150 дней после высадки рассады.
+Крюмон – поздний гибридный, кочаны по 2–3 кг, урожай через 170 дней после высадки рассады.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       124,
+                       'Капуста Цветная',
+                       'однолетнее',
+                       'садовое',
+                       'На кислых почвах капуста цветная не удается, предпочитает слабощелочные. Почву необходимо подготовить осенью, заправив комплексными минеральными или органическими удобрениями, но по свежему навозу сажать капусту не рекомендуется. Возделывание цветной капусты не отличается от выращивания белокочанной, за исключением некоторых моментов. Чтобы головки цветной капусты не изменяли своего цвета, обеспечивают ей некоторое притенение (высаживают в междурядьях молодых плодовых деревьев, прикрывают ее собственными листьями, соединив их над головкой капусты и пр.). На постоянном месте размещают рассаду по схеме 35 × 50 см. Цветная капуста нуждается в подкормке. Первую проводят примерно через 10–12 дней после посадки, вторую – через 12–15 дней, третью – в фазе формирования соцветия. Капуста относится к влаголюбивым культурам, частота и объем полива такие же, как у белокочанной, при этом желательно, чтобы вода не попадала на листья. Убирать надо капусту своевременно, по мере созревания, иначе головки распадаются на соцветия и теряют товарный вид. Цветную капусту можно оставлять на доращивание. Растение надо выдернуть с корнем и поместить в прохладный подвал.',
+                       '15-70',
+                       'Цветную капусту выращивают рассадным способом. Семена сажают в парники в середине апреля. Возраст рассады перед высадкой в открытый грунт должен составлять 50–55 дней.',
+                       '',
+                       'Сноуболл – суперранний, подходит для употребления в свежем виде и переработки.
+Гарантия – ранний, используется для детского и диетического питания.
+Экспресс МС – ранний, с устойчивостью к растрескиванию.
+Регент – среднеспелый, с отличными вкусовыми качествами.
+Спейс стар – среднеспелый, очень урожайный, масса головок до 3 кг.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       125,
+                       'Капуста Кольраби',
+                       'однолетнее',
+                       'садовое',
+                       'Кольраби – культура неприхотливая, хорошо переносит как слабокислые, так и слабощелочные почвы, главное, чтобы она была достаточно плодородной. В отличие от белокочанной капусты кольраби допускает небольшое затенение и не переносит свежий навоз в качестве удобрения. Для получения раннего урожая выращивают капусту через рассаду. Пикируют сеянцы в фазе семядольных листиков, а подросшие растения высаживают в открытый грунт в конце апреля – начале мая. При второй посадке пикировать растения необязательно – просто пересадить их на постоянное место, как только освободится грядка. При посадке соблюдают схему расположения растений 25 × 40 см. Начинают убирать урожай, когда съедобная часть плода достигнет 7–10 см в диаметре.',
+                       '25-50',
+                       'Для получения раннего урожая первый посев семян на рассаду проводят 10–20 марта. Одновременно сеют семена в открытый грунт для второго урожая. Для третьего урожая сеют семена в конце июня, чтобы к концу июля – началу августа пересадить растения на отведенное место.',
+                       '',
+                       'Атена – ранний, съедобная часть зеленая, мякоть белая, сочная.
+Венская белая – ранний, съедобная часть светло-зеленая, подвержен цветушности.
+Картаго F1 – среднеспелый, съедобная часть светло-зеленая, мякоть белая, устойчивость к растрескиванию.
+Корист F1 – среднеспелый, съедобная часть светло-зеленая, мякоть белая.
+Виолетта – поздний, съедобная часть темно-фиолетовая, мякоть белая, сочная, устойчив к морозам.
+Гигант – поздний, мякоть белая, сочная, долго хранится.
+Коссак F1 – поздний, съедобная часть желтовато-зеленая, мякоть белая.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       126,
+                       'Картофель',
+                       'однолетнее',
+                       'садовое',
+                       'Для получения высокого урожая картофеля требуются хорошо удобренные почвы. Лучше всего отдавать под картофель легкие почвы с содержанием гумуса не менее 2 %, которые на протяжении всего периода вегетации будут сохранять рыхлость, не заплывать после дождей, иметь нейтральную или слабокислую реакцию. Длительность вегетации составляет 60–180 дней в зависимости от сорта. Картофель рекомендуется сажать после капусты или огурцов, на второй год после внесения в почву органики. Наилучшая температура для роста растений и образования клубней 17–18 °C. При более низкой и более высокой температуре формирование клубней замедляется, при 30 °C оно совсем прекращается. Можно использовать для посадки части клубней, верхушки, глазки, ростки и стебли сильных кустов. Рациональное расстояние между рядами картофеля примерно 50–60 см. Расстояние между кустами в ряду: при посадке целыми клубнями – 30–35 см; при посадке верхушками – 25 см; при посадке рассадой или ростками – 20 см. Первое окучивание картофеля нужно выполнить мотыгой или окучником при высоте ботвы около 12–15 см, через 12–15 дней еще раз окучить растения после дождя или полива. Регулярный полив картофеля в сухую погоду дает рост урожайности в 2–3 раза. Поливать нужно при сильно развитой ботве, в период цветения и образования клубней. Вначале расход воды на каждый куст равен 2–3 л, затем его доводят до 4–5 л. За время вегетации подкармливают 3-4 раза органическими или минеральными удобрениями. К уборке ранних сортов приступают в июле или начале августа, среднеранних – в августе. Среднеспелые и среднепоздние сорта, годные для зимнего хранения, убирают в конце августа – начале сентября. Полную уборку продовольственного картофеля желательно проводить спустя определенное число дней после посадки: • среднеспелые сорта – через 90–100 дней; • среднепоздние – через 100–110 дней; • поздние – через 120 дней. Убранные клубни тщательно высушить в темноте, на сквозняке или с принудительным продуванием при температуре 10–20 °C.',
+                       '25-50',
+                       'Посадку картофеля лучше производить, когда почва на глубине 10–12 см прогреется до 7–8 °C. Это происходит в первой половине мая.',
+                       '',
+                       'Ранняя роза – скороспелый, со средней урожайностью.
+Приекульский ранний – скороспелый, ракоустойчивый и урожайный.
+Эпикур – скороспелый, среднеурожайный.
+Эпрон – скороспелый, высокоурожайный.
+Берлихинген – среднепоздний, ракоустойчивый.
+Лорх – среднепоздний, высокоурожайный.
+Октябренок – среднепоздний, ракоустойчивый, высокоурожайный.
+Передовик – среднепоздний, ракоустойчивый, среднеурожайный.
+Вольтман – позднеспелый, засухоустойчивый.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       127,
+                       'Кукуруза',
+                       'однолетнее',
+                       'садовое',
+                       'Для выращивания кукурузы требуются влажные плодородные, немного кислые почвы и умеренный климат. Лучшие предшественники для нее – бобовые, картофель, свекла. Кукуруза теплолюбива, ее семена прорастают при температуре 22–25 °C. Слишком влажная или плохо прогретая почва снижает всхожесть семян. При подготовке грядок следует внести органические и фосфорные удобрения. Подзолистые почвы с повышенной кислотностью нужно известковать (200–300 г извести или тукового известняка на 1 м2). При посадке заделывать семена на глубину 6–8 см, оставляя промежуток между растениями в ряду 15–25 см, расстояние между рядами – 60–80 см.Кукуруза – это южная культура короткого светового дня, около 20–30 дней всходы надо искусственно затемнять на 12–16 ч в день. Режим затемнения: или с 17 до 5 ч утра, или с 18 до 9 ч утра.Сначала не надо часто поливать кукурузу, это поможет корням развиваться вглубь. После образования метелок поливать кукурузу нужно по мере подсыхания верхнего слоя почвы. Уход за посадками состоит в рыхлении почвы между рядами, в легком окучивании растений, для увеличения урожая при появлении 7–8 листочков можно применить пасынкование – удалять боковые побеги для получения крупных початков. Еще кукурузе нужно давать органоминеральные подкормки в жидком виде 3-4 раза за период вегетации. Кукурузу надо убирать в фазе молочно-восковой спелости, когда зерна плотно сомкнуты на початке и сохраняют свою сочность. Ранние сорта и гибриды можно убирать во второй половине августа. Для сохранения вкусовых свойств кукурузу следует замораживать или консервировать в течение нескольких часов после снятия с грядки. Сахара в зернах кукурузы быстро начинают разрушаться в течение нескольких часов после сбора урожая, поэтому самая сочная и вкусная только что сорванная кукуруза.',
+                       '100-400',
+                       'Для получения рассады семена сажают в начале мая. В южных регионах ее семена можно высаживать в открытый грунт в середине мая, а в средней полосе России – в конце мая или начале июня.',
+                       '',
+                       'Заря – раннеспелый сорт, растение низкорослое (130 см), дает початок слегка конусовидной формы до 15 см длиной. Желтое широкое зерно используют для консервирования.
+Гамма – раннеспелый гибрид до 180–220 см высотой, с ровными початками длиной 17–20 см. Зерно крупное, светло-желтое; используется для варки и консервирования.
+Сандэнс – раннеспелый низкорослый сорт, дает 1–2 початка на одном стебле. Початок цилиндроконической формы, 18–20 см в длину. Желтое зерно средних размеров, слабо удлиненное, его используют для консервирования.
+Краснодарская – среднеспелый урожайный сорт, высота главного стебля растения достигает 180 см. Початок конической формы, 17– 20 см длиной, с желтым сплюснутым зерном, хорошими вкусовыми качествами. Сорт годен для потребления в свежем виде, заморозки и консервирования.
+Сахарная – раннеспелый сорт, высота растений – 140–200 см, дает слабоконусовидные початки до 14–18 см длиной, зерно оранжево-желтое; используется для варки.
+Краснодарский сахарный 250 – среднеранний гибридный сорт с высотой растений 210–215 см, конической формы початок 17–20 см длиной. Зерно сплюснутое, желтое. Сорт подходит для заморозки, консервирования, в качестве гарнира в вареном и тушеном виде. Гибрид устойчив к пузырчатой головне и стеблевым гнилям.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       128,
+                       'Лук Репчатый',
+                       'двулетнее',
+                       'садовое',
+                       'Лук хорошо растет на плодородных супесчано-суглинистых почвах со слабой кислотностью (pH до 6,5). В первую половину вегетации лук особенно требователен к воде. Лук хорошо растет после белокочанной капусты и овощной кукурузы. На прежнее место его можно возвращать лишь через 3 года, чтобы не допустить ущерба от насекомых и вредителей. Перед посадкой почву удобряют и перекапывают. Для посева нужно брать только свежие (предыдущего года) семена лука, поскольку они быстро теряют всхожесть. Их можно высевать ранней весной после схода снега, как только созреет почва. Предварительно семена желательно замочить и просушить до сыпучего состояния. На участке их можно высевать рядовым способом через 15–20 см на глубину 1–1,5 см, расход семян – 8–10 г на 10 м2. Для создания лучших условий прорастания семян надо мульчировать посевы небольшим слоем перегноя. Всходы при температуре 18–20 °C и достаточном увлажнении почвы появляются на 10–12-й день. Прореживание проводят дважды, для развития луковицы нужно 14–15 листьев. Подкормку делают органикой. Зелень получают в течение всего периода вегетации, луковицы – после пожелтения и полегания зелени. Луковицы подкапывают совком, вытаскивают из почвы и оставляют на грядке для просушки, периодически вороша, затем оттирают шелуху руками. Здоровые и неповрежденные луковицы отправляют на хранение в ящики. Оптимальной для хранения считается температура 18–20 °C. Для последующего выращивания следует отбирать лук-севок диаметром 0,8–2 см.',
+                       '30-70',
+                       'Для получения рассады семена сажают в начале мая. В южных регионах ее семена можно высаживать в открытый грунт в середине мая, а в средней полосе России – в конце мая или начале июня.',
+                       '',
+                       'Ранний желтый – раннеспелый, урожайный, дает луковицы массой до 80 г, с острым вкусом.
+Эльдорадо – среднеспелый, урожайный, дает луковицы массой до 130 г, с острым вкусом, обладает хорошей лежкостью.
+Солнечный – среднепоздний, урожайный, дает луковицы массой до 65 г, с острым вкусом, обладает хорошей лежкостью.
+Луганский – позднеспелый, высокоурожайный. По вкусу луковицы занимают промежуточное место между острыми и полуострыми сортами.
+Испанский‐313 – позднеспелый, высокоурожайный, дает луковицы массой до 80–90 г, с острым вкусом.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       129,
+                       'Морковь',
+                       'двулетнее',
+                       'садовое',
+                       'Морковь предпочитает рыхлые, супесчаные и суглинистые почвы с нейтральной кислотностью и хорошим дренажом. Выращивать её следует на освещённых участках, через 5 лет после предыдущей посадки. Морковь холодостойка, ее всходы выдерживают заморозки до – 4 °C, но высокая температура (выше 35 °C) останавливает рост корнеплодов и вызывает их огрубение, особенно при недостатке влаги в почве. Она дает хороший прирост в конце вегетационного периода при температуре 8–10 °C, но корнеплоды не выносят заморозка на почве ниже –2 °C. Хорошие предшественники моркови: злаковые; лук; ранний картофель; столовая свекла. Перед посевом почву культивируют и удобряют минеральным удобрением. В удобрение должны входить три основных элемента: азот, фосфор и калий. Кроме того, там должны быть микроэлементы: кобальт, молибден, медь, цинк, марганец, бор, магний и кальций. Если нет удобрения с полным набором микроэлементов, то в нем должны присутствовать хотя бы некоторые из них. Морковь удобней высевать лентами трехстрочным методом в бороздки на ровной поверхности или на невысоких грядах, оставляя расстояние между строчками по 18–20 см. Морковь требует умеренного полива и прореживания всходов для обеспечения света и пространства для роста. Подкормку проводят дважды: после первого прореживания и через 15–20 дней. Морковь, предназначенную для зимнего хранения, лучше убирать осенью при наступлении похолодания с учетом вероятных заморозков. В центральных районах России следует завершить уборку моркови в конце сентября. Для того чтобы не повредить лопатой корнеплоды, убирать лучше всего вилами. Затем в течение недолгого времени просушить морковь на огороде и обрезать ножом ботву, не повреждая корнеплода.',
+                       '20-70',
+                       'В средней полосе России эту культуру сажают с 20 апреля по 5 мая.',
+                       '',
+                       'У раннего сорта несладкие зрелые корнеплоды, они недолго хранятся, урожайность невысокая. У среднеспелых сортов корнеплоды слаще, чем у ранних, но не такие сладкие, как у поздних. Поздние сорта дают самые сладкие и лежкие корнеплоды. Поэтому имеет смысл посадить сразу несколько сортов, разных по срокам созревания.
+Нантская морковь – это группа похожих ранних или среднеранних сортов. Чаще всего выращивают два сорта – Нантская 4 и Нантская 14. Корнеплод типа Нантской всегда яркого оранжево-красного цвета. Он похож на тонкий длинный цилиндр, почти одинаковый у мякоти и сердцевины, с затупленным кончиком. Первые молодые корнеплоды готовы к сбору уже через 50–55 дней после появления всходов, полное созревание моркови этого сорта можно ожидать примерно через 90 дней (иногда до 120) со дня появления всходов. Нантская морковь достаточно требовательна к почвам: красивые и качественные корнеплоды формируются лишь в легких грунтах.
+Шантене – среднеранний высокоурожайный сорт, не уступающий по популярности Нантской, но по вкусу его корнеплоды слабее. Сорт дает крупные оранжево-красные корнеплоды правильной удлиненноконической формы. Его можно выращивать на более тяжелых почвах.
+Гибрид Болеро F1 – высокоурожайный гибрид среднего срока созревания, устойчивый к мучнистой росе и альтернариозу. Подходит для выращивания в сложных климатических условиях. Корнеплоды похожи на Нантскую морковь, но ярко-оранжевые и длинные.
+Королева осени – позднеспелый сорт (срок вегетации 120–130 дней) с яркими оранжево-красными крупными корнеплодами. Мякоть у них сочная и нежная, но самые большие морковины грубоватые и невкусные. Ее всходы выдерживают похолодание до 4 °C. Сорт устойчив к цветушности, корнеплоды не растрескиваются.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       130,
+                       'Огурцы',
+                       'однолетнее',
+                       'садовое',
+                       'Огурцы – растения, которые любят тепло и свет. Хорошо растут на защищенных от ветра участках с суглинистой почвой, богатой перегноем. Лучшие условия для их выращивания – это место на южном склоне, рядом с водоемом, который помогает регулировать температуру и влажность воздуха. Для посадки огурцов подходит участок после картофеля, томатов, бобовых или корнеплодов, но не после тыквенных, чтобы избежать болезней. Семена огурцов нужно подготовить, прогрев на батарее и обработав марганцовкой и водой с микроэлементами. Ширина гребней и междурядий колеблется от 70 до 90 см, это зависит от сорта. При рядовом посеве для короткоплетистых сортов достаточно расстояния между рядами 45–60 см. На сильно увлажненных почвах нужны высокие гряды (30–40 см и более) с насыпным грунтом из смеси перепревшего или свежего навоза, перегноя, торфа или легкой дерновой земли. Семена лучше всего проращивать при температуре 20–30 °C во влажных опилках, мхе, песке или в увлажненном холсте, сверху покрытом войлоком. Проращивать нужно до тех пор, пока не образуется небольшой корешок – в 1/2 длины семени. Пророщенные семена можно высевать, когда температура почвы на глубине 6–10 см достигнет 16–18 °C. Уход за посевами: защита растений от заморозков; рыхление почвы; полив; подкормка; подвязка плетей; борьба с сорняками, вредителями и болезнями. Всходы огурцов положено прореживать при появлении первого настоящего листа, в зависимости от сорта промежуток между растениями должен составлять 6–12 см. При прореживании лишние растения следует выщипывать, чтобы не повредить корневую систему остающихся экземпляров. Огурцы надо поливать умеренно и только теплой водой. Не замульчированную почву следует рыхлить после каждого полива или дождя до тех пор, пока растения в рядках не начнут смыкаться, и появится опасность их повреждения. Огурцы лучше всего подкармливать после дождя или полива. Перед началом плодоношения их нужно подкормить азотом и калием, во время плодоношения дать 1–2 подкормки из расчета на 1 м2: 15–20 г мочевины или 20–25 г аммиачной селитры, 40–50 г суперфосфата и 20–25 г сернокислого калия. В приготовленный раствор добавить по 0,5 г сернокислой меди и сернокислого магния. Огурцы дают первый урожай уже через 30–45 дней после появления всходов, убирают плоды сначала через 2–3, а затем через 1–2 дня.',
+                       '50-250',
+                       'Высевают семена в открытый грунт, когда минует угроза возвратных весенних заморозков (в середине или конце мая).',
+                       '',
+                       'Самородок – салатный сорт приятного вкуса, его можно выращивать в открытом грунте и в пленочных теплицах, опыляется он пчелами. Самый высокий урожай он дает под временными пленочными укрытиями, устойчив к корневым гнилям.
+Ласточка F1 – засолочный гибрид, районирован для выращивания в открытом грунте по Центрально-Черноземному, Северо-Кавказскому и Нижневолжскому регионам России. Сорт устойчив к поражению настоящей мучнистой и ложной мучнистой росой (пероноспорозом).
+Фермер – универсальный позднеспелый сорт, употребляемый в свежем виде, для засолки и консервирования. Сорт достаточно устойчив к похолоданиям, можно выращивать его в грунте. Но там, где холодновато или слишком сухо, лучше выращивать под временным пленочным укрытием.
+Вязниковский‐37 – ранний универсальный сорт, предпочитает открытый грунт.
+Кустовой – скороспелый урожайный универсальный сорт с кустовой формой растения и отличным вкусом.
+F1 Маша – самый ранний универсальный гибрид, устойчивый к вирусам мозаики огурца, кладоспориозу, мучнистой росе. Можно выращивать в теплицах и открытом грунте.
+F1 Новый Нежинский – урожайный скороспелый засолочный гибрид с длинными плетьми, опыляется пчелами. Подходит для теплиц и открытого грунта.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       131,
+                       'Редис',
+                       'однолетнее',
+                       'садовое',
+                       'Редис дает хороший урожай на рыхлых суглинистых почвах, подходят и супеси, и окультуренные торфяники. При осенней перекопке почвы из органических удобрений вносят компост или перегной (от свежего навоза страдает качество корнеплодов). Весенняя подготовка почвы обычная – рыхление, разравнивание. Редис – растение холодостойкое. Для прорастания семян достаточно, чтобы почва прогрелась до 2–3 °C (причем всего лишь на 3–4 см), ему не страшны кратковременные понижения температуры до –5 °C, но для ускорения прорастания желательно накрыть посевы полиэтиленовой пленкой. Высевают семена полосами по схеме 1–2 см × 8–10 см, причем рекомендуется придерживаться такой последовательности: высевать следующую порцию семян после того, как взойдет первая. Это позволит иметь непрерывный конвейер витаминной продукции, редис не будет перерастать и терять свои вкусовые качества. Если погода стоит дождливая, то поливать редис необязательно, отсутствие природной влаги – сигнал для полива, поскольку в сухой почве корнеплод грубеет. При хорошо заправленной осенью почве подкормку можно не проводить, тем более что редис имеет короткий вегетативный период. Уход в основном состоит из рыхления и прополки. Урожай редиса собирают через 3–5 недель после посадки в зависимости от сорта.',
+                       '6-80',
+                       'Редис сажают с апреля по сентябрь.',
+                       '',
+                       'Редис 18 дней – суперранний, корнеплоды красные, мякоть сочная, нежная.
+Жара – ранний, корнеплоды круглые, темно-красные, мякоть нежная и сочная.
+Любава – ранний, корнеплоды продолговатые, красные с белым кончиком, мякоть с хорошим вкусом.
+Ранний красный – ранний, корнеплоды круглые, темно-красные, мякоть плотная, сочная, высокоурожайный, устойчив к цветушности.
+Маяк – среднеспелый, корнеплоды округлые, красные с белым кончиком, мякоть сочная, слабоострая, устойчивость к холоду и цветушности.
+Алый шар – среднеспелый, корнеплоды круглые, алые, мякоть нежная.
+Сосулька – позднеспелый, корнеплоды белые, длиной 15–20 см, мякоть сочная, слабоострая.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       132,
+                       'Свекла',
+                       'двулетнее',
+                       'садовое',
+                       'Требует умеренной влажности грунта, особенно в период всходов и формирования урожая. Излишек влаги может замедлить рост и снизить урожайность, в то время как её недостаток приводит к одеревенению корнеплодов. Свекла предпочитает нейтральные почвы. Хорошо реагирует на микроудобрения, особенно борные и марганцевые. Выращивание возможно как рассадой, так и посадкой семенами на постоянное место. Лучшие предшественники: лук, капуста, картофель, горох, томаты и тыквенные. Под свеклу в почву нельзя вносить свежий навоз и компост, иначе корнеплоды будут копить нитраты, вредные для нашего организма. Семена свеклы нужно сеять достаточно редко, на глубину 3–4 см, тогда она лучше растет и меньше сил уйдет на прореживание. Между рядками следует оставлять такое расстояние, которое позволяет удобно полоть и прореживать. Если свекла плохо всходит на грядке, то можно подсадить на пустые участки уже пророщенные семена. Уход за посевами примерно такой же, как и посевами моркови. Когда появившиеся всходы свеклы немного подрастут, примерно на 3–4 см от земли, их надо прополоть. По достижении растениями высоты 5–10 см свеклу следует проредить. Для летнего употребления выбирают корнеплоды по мере необходимости, на хранение убирают урожай в сентябре-октябре.',
+                       '20-90',
+                       'Поскольку свекла не боится холода, то в зависимости от региона высевать можно во второй половине марта или начале апреля. В это время земля холодная, но влажная. Но лучше сеять семена в открытый грунт в два срока с перерывом в 2 недели – иногда первые посевы вымерзают. Под воздействием заморозков ростки свеклы спешат выпустить цветочную стрелку, чтобы дать вызреть семенам. Вторые посевы чаще всего бывают урожайнее.',
+                       '',
+                       'Египетская плоская – скороспелый сорт с корнеплодами плоской и округлоплоской формы, мякоть красно-фиолетовая.
+Бордо 337 – среднеспелый сорт с корнеплодами округлой формы, мякоть темно-красная, хорош для выращивания через рассаду.
+Багровый шар – один из новых высокоурожайных среднеспелых сортов. Дает шаровидные корнеплоды с гладкой кожицей, прекрасным вкусом сочной мякоти красивого темного цвета.
+Богема – среднеспелый сорт столовой свеклы, устойчивый к ряду заболеваний, его не требуется прореживать. Дает корнеплоды округлой или округлоплоской формы, темно-бордовой окраски. Мякоть сочная и нежная, темно-бордовая, без колец.
+Цилиндра – высокоурожайный позднеспелый сорт, дает длинноватые вкусные и сладкие корнеплоды, в середине темно- бордового цвета.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       133,
+                       'Сельдерей',
+                       'двулетнее',
+                       'садовое',
+                       'Сельдерей нормально развивается и формирует качественный корнеплод на слабощелочных почвах с высоким содержанием гумуса. Сельдерей нормально развивается и формирует качественный корнеплод на слабощелочных почвах с высоким содержанием гумуса. Поскольку корнеплод имеет длительный вегетативный период, то его следует выращивать через рассаду, тем более что она неплохо удается. При посадке не заглубляют растения, ориентируясь по уровню грунта в рассадном ящике. Сельдерей можно выращивать как на отдельной грядке, так и в смешанных посадках. В первом случае соблюдают схему 10–15 × 40 см, во втором оставляют между растениями 15–20 см. Уход за сельдереем: полив; рыхление почвы; удаление сорняков. Растение влаголюбивое, поэтому надо обеспечить его частыми, однако не очень объемными поливами. Кроме того, 2–3 раза за сезон подкормить минеральными удобрениями (первый раз полным, второй и третий – с преобладанием калийных удобрений). Помимо корневого, огородники практикуют выращивание черешкового и листового сельдерея. Все требования к агротехнике сохраняются, кроме того, черешковый сельдерей необходимо отбеливать, слегка окучивая растения (лучше завернуть в мешковину, бумагу). Зависит от вида и сорта сельдерея. Ранние сорта собирают с июля по сентябрь, среднеспелые – с сентября по начало октября, поздние сорта – с начала октября по начало ноября.',
+                       '20-40',
+                       'Поскольку свекла не боится холода, то в зависимости от региона высевать можно во второй половине марта или начале апреля. В это время земля холодная, но влажная. Но лучше сеять семена в открытый грунт в два срока с перерывом в 2 недели – иногда первые посевы вымерзают. Под воздействием заморозков ростки свеклы спешат выпустить цветочную стрелку, чтобы дать вызреть семенам. Вторые посевы чаще всего бывают урожайнее.',
+                       '',
+                       'Яблочный – скороспелый, листовой.
+Золотое перо – скороспелый, черешковый.
+Корневой Грибовский – среднеспелый корневой.'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       134,
+                       'Сладкий перец',
+                       'двулетнее',
+                       'садовое',
+                       'Для выращивания перца нужно подобрать чистый от сорняков участок, защищенный от ветра и с плодородной почвой. Почва должна быть дренированной и хорошо удерживать влагу. Желательно, чтобы ранее на участке росли бобовые, огурцы, корнеплоды или зеленные культуры. Перец ни в коем случае нельзя сажать там, где ранее росли томаты, картофель, табак, физалис, баклажаны или тот же перец. Оптимальная температура для прорастания семян перца составляет 25–27 °C, при низких температурах семена набухнут и сгниют, не дав всходов. Для рассады надо приготовить кассеты или горшки, набитые умеренно увлажненным питательным субстратом – избыток влаги ведет к недостатку воздуха. Растения не должны затенять друг друга, поскольку, быстро формируя зеленую массу, они начинают угнетать одно другое, ухудшая качество рассады сладкого перца. Правильно выращенная рассада должна иметь высоту 25–30 см и уже заложенные цветочные почки. В грунт рассаду перца нужно пересаживать методом перевалки. При высадке рассады перца нужно оставлять между саженцами расстояние 40 см и не менее 50 см между рядами, углубляя растения в почву до первых листочков. До цветения перец нужно поливать раз в неделю из лейки, расход воды по 10–12 л на 1 м2, в жаркую солнечную погоду полив можно увеличить до 2-х раз в неделю. В период цветения и плодоношения надо поливать под корень по 10–12 л на 1 м2 1–2 раза в неделю, определяясь по погоде. Поливать следует только теплой водой (около 25 °C), полив холодной водой задерживает рост растений. Корневую систему перца за весь период вегетации требуется подкармливать 3–5 раз, выдерживая промежутки между подкормками до 12 дней. Компактный куст перца с развитыми боковыми побегами формируют, удаляя верхушки главного стебля, когда растение достигнет 20–25 см высоты. Если растение прищипнуть, то оно начинает ветвиться. Затем из выросших побегов надо оставить четыре верхних, все остальные удалить. Благодаря такому приему урожай формируется на основных побегах, принося примерно 20– 25 плодов от одного растения. Уборку урожая проводят, когда перец достигнет технической зрелости.',
+                       '20-60',
+                       'Предварительно нужно подготовить рассаду, в домашних условиях семена болгарского перца лучше высевать на рассаду 10–15 февраля.',
+                       '',
+                       'Князь Серебряный – урожайный сорт раннего срока созревания, достигает высоты 45–68 см, устойчив ко многим болезням. Приносит конусовидные гладкие плоды, желтые в технической спелости и красные в биологической. В открытый грунт можно высаживать после последних заморозков при температуре почвы свыше 10 °C.
+Кардинал F1 – раннеспелый урожайный сорт, куст до 100 см высотой. Дает крупные, кубовидной формы плоды фиолетового цвета массой до 250 г.
+Геракл – среднеспелый урожайный сорт, компактное штамбовое растение около 40–60 см высотой. Приносит кубовидные гладкие плоды массой до 200 г, темно-зеленые в технической и красные – в биологической спелости. Сорт устойчив к комплексу болезней.
+Арсенал – среднеспелый урожайный сорт, куст около 36–70 см высотой, с пониклым положением плода на растении. Конусовидные плоды массой до 120 г, светло-зеленые в технической спелости и красные в биологической.
+Золотая Тамара – среднеспелый сорт, устойчивый к ряду болезней. По форме его крупные мясистые сочные плоды массой от 200 г напоминают томаты.
+Воловье ухо – среднеспелый урожайный сорт, растение около 65– 80 см высотой. Дает удлиненно-конусовидные гладкие плоды, иногда массой до 220 г, темно-зеленые в технической спелости и красные в биологической. Плоды с длительным сроком сохранности.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       135,
+                       'Томат',
+                       'однолетнее/многолетнее',
+                       'садовое',
+                       'Томат – растение тепло- и светолюбивое, поэтому отводят под него участки, соответствующие его потребностям. Лучшими для него являются супеси и суглинки с pH 6. Почву готовят осенью, заправив органическими, а весной – калийными и фосфорными удобрениями. Лучшие предшественники для томатов: бобовые; корнеплоды; зеленные культуры. Отобранные семена надо высушить, поместить в марлевые мешочки, опустить для обеззараживания на 20 мин в раствор марганцовки. Дополнительно обработать семена в растворе из горячей воды и небольшого количества борной кислоты. Их следует слегка промыть и высушить, всплывшие при мытье пустые семена выкинуть. Закалка семян на 20 часов в холодильнике повышает их теплостойкость. Почву для рассады готовят с осени, обогащая её огородной землей, дерновым грунтом, перегноем и золой. Рассаду выращивают в ящиках, семена углубляют на 1,5 см и поливают водой, после чего присыпают прокаленным песком. С появлением первых признаков роста полив допустим только раз в неделю. Через неделю после высадки рассады начать подкормку, распределив по осевой линии грядки (9 м) 225 г смеси с азофоской, не насыпая на листья во избежание ожогов. Далее производить подкормки через каждые 7–10 дней с обязательным поливом. Во время роста растений землю на грядке не нужно рыхлить или полоть. В самом начале выращивания можно укрыть рассаду нетканым материалом, он защитит растения от вероятных заморозков и жгучего солнца. Каждый кустик обеспечить прутом для подвязки. Верхние концы прутьев прислонить к центральной опоре так, чтобы получилось подобие шатра. Для защиты от сорняков замульчировать землю вокруг томатов толстым слоем свежескошенной травы. Убирают урожай по мере созревания плодов.',
+                       '50-200',
+                       'Рассаду нужно готовить начиная с середины марта. Подходящее время для посадки рассады в открытый грунт – с 15 мая по 4–10 июня.',
+                       '',
+                       'Анюта – ранний сорт, плодоношение через 75–80 дней после появления всходов, плоды округлые, приплюснутые, красные, массой 110–120 г.
+Вундеркинд – ранний, плодоношение через 90–95 дней после появления всходов, плоды кубовидные, красные, массой 75 г, высокие вкусовые качества, устойчивость к основным болезням томатов.
+Юниор – ранний, плодоношение через 80–85 дней после появления всходов, плоды округлые, приплюснутые, красные, массой 70–100 г.
+Крепыш – среднеспелый, плодоношение через 105 дней после появления всходов, плоды округлые, красные, массой 160 г, устойчивость к основным болезням и хорошая транспортабельность.
+Отличник – среднеспелый, плодоношение через 100 дней после появления всходов, плоды кубовидные, красные, массой 85 г.
+Толстячок – среднеспелый, плодоношение через 100 дней после появления всходов, плоды округлые, красные, массой 220 г, отличный вкус, хорошо плодоносит при холодной погоде.'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       136,
+                       'Чеснок',
+                       'однолетнее/многолетнее',
+                       'садовое',
+                       'Чеснок предпочитает богатую полезными веществами и нейтральную (pH 7) почву, имеющую рыхлую структуру, в которой корни полноценно питаются и насыщаются влагой. Чеснок отдает предпочтение солнечному местоположению, но может мириться с небольшим затенением. Не рекомендуется выращивать после картофеля, поскольку растения поражает фузариоз, а также на землях, заправленных свежим навозом. Лучше заправлять почву торфом. Предпочитает место после гороха, пекинской капусты, салата, укропа и шпината. Для посадки следует брать лишь наружные зубки, они более урожайны и лучше растут. Самые крупные фракции следует высаживать через 12–15 см одну от другой; крупные фракции – через 10 см; средние и мелкие – через 5–7 см. Внесенный в лунки песок создает вокруг зубца и далее вокруг растущей головки чеснока микродренаж, что избавит чеснок от переувлажнения. На зиму посевы следует укрыть, а весной снять укрытия, как только созреет почва. К концу лета можно собирать полноценный урожай.Весной с появлением первых всходов нужно провести азотную подкормку озимого чеснока. Всего за сезон следует дать 2–3 подкормки, уничтожать сорняки и проводить рыхления. Ради получения крупной луковицы надо регулярно удалять цветочные стрелки, как только они достигнут 10–12 см в длину. Яровой чеснок нужно высаживать только зубчиками, по возможности рано, с небольшой глубиной заделки – всего 2–3 см, и расстоянием между рядами до 25–30 см. Как только появятся всходы, следует окучить растения. Можно высевать чеснок воздушными луковичками как двухлетнюю культуру. Воздушные луковички следует сажать в бороздки с промежутками между ними в 30–40 см, заделывая на 4–5 см в глубину. В первый год формируется круглая однозубковая луковица, ее надо посадить и на второй год получить уже многозубковую луковицу. Стрелкующийся чеснок следует убирать при пожелтении листьев, а нестрелкующийся – при полегании пера.',
+                       '20-150',
+                       'Чеснок сажают: во второй половине сентября – начале октября; в марте – первой декаде апреля. Осенью нужно выбрать такой срок для посадки чеснока (чаще это середина сентября), чтобы зубки успели укорениться до наступления заморозков, но их всходы не вышли на поверхность почвы.',
+                       '',
+                       'Широколистный‐220 – озимый нестрелкующийся урожайный сорт, но со слабой лежкостью, луковицы до 120 г.
+Элегант – озимый нестрелкующийся урожайный сорт, со средней лежкостью. Дает луковицы массой до 35 г.
+Тяньшанский‐320 – озимый стрелкующийся урожайный сорт, дает мелкие луковицы массой до 10 г, со слабой лежкостью.
+Тонус – озимый стрелкующийся урожайный сорт со средней зимостойкостью и хорошей лежкостью. Дает мелкие луковицы массой до 11 г.
+Сочинский‐56 – урожайный яровой сорт с хорошей лежкостью. Дает луковицы массой до 25–35 г.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       137,
+                       'Базилик',
+                       'однолетнее/многолетнее',
+                       'садовое',
+                       'Базилик хорошо растет на легких супесчаных почвах с большим добавлением органических удобрений, место посадки должно прогреваться солнцем и быть защищено от холодных северных ветров. Хорошими предшественниками базилика считаются картофель, бобовые, томаты и огурцы. Если почва глинистая или суглинистая, под зиму следует сформировать гряды, а весной прорыхлить их мотыгой на глубину 10–12 см. Пока базилик полностью не прижился, его систематически поливают из расчета по 0,5–1 л воды на одно растение. Как только рассада прижилась, полив на некоторое время следует прекратить, а потом поливать по мере необходимости. Посев семян на рассаду проводят в конце марта – начале апреля, заглубляя их на 0,5–1 см. Оптимальной для прорастания семян считается температура 20–30 °C. Примерно через 1,5–2 недели появятся всходы. В открытый грунт базилик высаживают в начале июня, когда уже нет опасности заморозков, используя рядовой способ. Ряды располагают на расстоянии 30–40 см друг от друга, расстояние между растениями должно составлять 25 см. При выращивании на грядках используют трехстрочную схему посадки, при этом между лентами оставляют 50–60 см, между строчками – 15–30 см, а между растениями в одном ряду – 20–25 см. В каждую лунку выливают 1–1,5 л воды комнатной температуры, рассаду высаживают на глубину 6–8 см, но центральная почка с листьями должна остаться снаружи. Верхние побеги рекомендуется срывать, тогда базилик будет расти гуще. Цветочные бутоны необходимо удалять, листики срывать по мере роста. Базилик следует регулярно рыхлить, пропалывать и поливать. Когда у растений появится 2–3 пары листьев, их необходимо проредить, чтобы расстояние между ними в ряду составляло 10–12 см. Употреблять листики молодых растений в пищу можно, как только длина побегов составит 10–12 см.',
+                       '20-60',
+                       'Посев семян на рассаду: конец марта – начало апреля; высадка в открытый грунт – начало июня.',
+                       '',
+                       'Арарат – растение с фиолетовыми листьями, которые постепенно зеленеют, и перечным ароматом.
+Гвоздичный аромат – растение с зелеными листьями и ароматом гвоздики.
+Лимонный аромат – растение с зелеными листьями и ароматом лимона.
+Ереванский – растение с фиолетовыми листьями и пряным ароматом.
+Карамельный – растение с фиолетовыми листьями и фруктово- карамельным ароматом.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       138,
+                       'Арбуз',
+                       'однолетнее',
+                       'садовое',
+                       'Оптимально, если есть возможность отвести под арбуз южный, хорошо освещенный склон. Наилучшими являются рыхлые супесчаные почвы (тяжелые глинистые категорически не подходят), в суглинки необходимо добавить компост или перепревшие опилки, чтобы улучшить водопроницаемость и аэрированность грунта. Внести стандартные порции удобрений в зависимости от питательности почвы (свежий навоз исключается, используйте перегной или компост – 4–5 кг на 1 м2; из минеральных удобрений – суперфосфат (25 г), сульфат калия (20 г) на 1 м2). Выращивают арбуз в условиях либо защищенного грунта, либо в открытом грунте, накрыв пленкой в расстил. В местностях с непродолжительным летним периодом выращивают арбуз только через рассаду, для которой сеют семена, прошедшие предпосевную подготовку, в индивидуальные емкости. Возраст рассады на момент высадки в грунт должен быть 20– 25 дней. В процессе ухода за растениями умеренно поливают их, не давая почве пересыхать. Кроме того, потребуется дважды подкормить: перед бутонизацией (органическими и минеральными удобрениями); во время массового плодоношения (фосфорнокалийными удобрениями). Агротехника арбуза предполагает: прополку; рыхление; прищипку плетей, как только их длина достигнет 1 м. На каждой плети надо оставить не более 4–5 плодов. Убирают урожай по мере созревания арбузов. Нужно ориентироваться на следующие признаки: рисунок коры становится более четким и ярким, восковой налет истончается, при постукивании плоды издают глухой звук.',
+                       '15-40',
+                       'Высаживают растения в открытый грунт когда минует риск возвратных весенних заморозков (в конце апреля – начале мая), желательно накрыть их прозрачными индивидуальными укрытиями. ',
+                       '',
+                       'Ранние – Огонек, Ультраранний, Фотон, Лидер, Сибиряк, Скорик;
+Среднеранние – Казак.
+Для возделывания в теплице предназначен сорт Подарок солнца.'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       139,
+                       'Дыня',
+                       'однолетнее',
+                       'садовое',
+                       'Оптимально, если есть возможность отвести под дыню южный, хорошо освещенный склон. Наилучшими являются рыхлые супесчаные почвы (тяжелые глинистые категорически не подходят), в суглинки необходимо добавить компост или перепревшие опилки, чтобы улучшить водопроницаемость и аэрированность грунта. Внести стандартные порции удобрений в зависимости от питательности почвы (свежий навоз исключается, используйте перегной или компост – 4–5 кг на 1 м2; из минеральных удобрений – суперфосфат (25 г), сульфат калия (20 г) на 1 м2). Выращивают дыню в условиях либо защищенного грунта, либо в открытом грунте, накрыв пленкой в расстил. В местностях с непродолжительным летним периодом выращивают дыню только через рассаду, для которой сеют семена, прошедшие предпосевную подготовку, в индивидуальные емкости. Возраст рассады на момент высадки в грунт должен быть 25– 30 дней. Растения редко, но обильно поливают, не давая почве переувлажняться. Кроме того, потребуется дважды подкормить: перед бутонизацией (органическими и минеральными удобрениями); во время массового плодоношения (фосфорнокалийными удобрениями). Агротехника дыни предполагает: прополку; рыхление; прищипку плетей, как только их длина достигнет 1 м. На каждой плети надо оставить не более 5–6 плодов. Убирают урожай по мере созревания.',
+                       '20-50',
+                       'Высаживают растения в открытый грунт когда минует риск возвратных весенних заморозков (в конце апреля – начале мая), желательно накрыть их прозрачными индивидуальными укрытиями. ',
+                       '',
+                       'Раннеспелые – Миллениум F1, Злато скифов F1.
+Среднеранние – Галилей F1, Ирокез.
+Среднеспелые: Ожен.'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       140,
+                       'Абрикос',
+                       'многолетнее',
+                       'садовое',
+                       'Абрикосы выращивают на почвах с повышенным содержанием органических веществ и калия. Эти деревья предпочитают рыхлые легкие суглинистые почвы с хорошей проницаемостью для воздуха и воды, нейтральной или слабощелочной реакции. Для посадки абрикосов выбирают участок с залеганием грунтовых вод и известняка на глубине 2 м. На тяжелых почвах с избыточной влажностью абрикосы не выживают. При понижении температуры свыше −34 °C возможно повреждение корней и скелетных веток. Неблагоприятными для абрикосов являются смена оттепели и морозов. Такие резкие изменения климата приводят к повреждению цветочных почек. Абрикос является светолюбивой культурой, устойчивой к засухе. От построек его следует сажать на расстоянии не менее 3 м. Прививать абрикос наиболее эффективно весной – в конце апреля или начале мая. Сажают абрикосы весной. Посадочные ямы глубиной 40–50 см и шириной 60–80 см располагают на расстоянии 5–6 м друг от друга. За 2 недели до намеченного срока посадки в них добавляют почву с удобрениями. Саженцы абрикоса после приобретения на 1–2 дня помещают корнями в воду, чтобы они лучше прижились после посадки. Первый раз деревья поливают в апреле, затем в мае. Третий полив приходится на начало июля, когда начинают созревать плоды. Последний раз абрикосы поливают осенью (по 5–6 ведер воды на 1 м2 почвы). Для хорошего роста и плодоношения абрикосу необходимы уход за почвой и ежегодные (со второго года) подкормки. Обрезку абрикосов рекомендуется проводить весной. На дереве оставляют не более 5–8 скелетных ветвей. При обрезке у абрикоса оставляют те боковые ветви, которые отходят от ствола под углом 60–65° и находятся на расстоянии 40– 50 см друг от друга. В высоту рост дерева ограничивают до 3–4 м. ',
+                       '250-1200',
+                       'Абрикос размножается семенами и вегетативными способами. Если вы решили посадить один абрикос, лучше купить саженец. Если вы хотите вырастить дерево, которое будет иметь определенные свойства конкретного экземпляра в саду, то семена для размножения не стоит использовать.',
+                       'апрель-май',
+                       'Абрикос Саратовский рубин принадлежит к числу среднеранних сортов: спелость плодов наступает в середине июля. Плоды довольно крупные: около 40 г, имеют очень хороший вкус и восхитительный внешний вид. Максимальная зарегистрированная масса одного плода — 66,7 гр. В стадии полной зрелости окраска абрикосов отвечает названию: основной цвет оранжево-рубиновый, очень насыщенный.
+Абрикос Чемпион Севера представляет собой небольшое дерево, высотой до 3 м. Продолжительность продуктивного плодоношения — от 20 до 30 лет. Плоды крупного размера, овальной формы, средней массой до 65 г. созревают в июле и поражают невиданным урожаем. Оболочка бархатистая, яркого оранжево-красного цвета с румяным бочком, на вкус кисловатая. Мякоть плодов сочная.
+Абрикос Триумф Севера - высотой около 3,5 м. с раскидистой кроной. Зимостойкость отличная, до -33 градусов. Плоды слегка вытянутые округлые, равномерные массой 30-50 г. Созревшие плоды имеют приятный желто-розовый цвет с багровым румянцем. Кожица средней толщины, слегка опушенная. Мякоть вкусная, сочная, сладкая. Косточки легко отделяются от мякоти.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       141,
+                       'Вишня',
+                       'многолетнее',
+                       'садовое',
+                       'Вишню предпочтительно высаживать на хорошо освещенных и возвышенных участках, которые прогревает солнце, а также на южных теплых склонах, где не застаивается холодный воздух. На участке для посадки вишни должна быть умеренно влажная, плодородная и легкая почва, доступная для проникновения воздуха и воды. Уровень кислотности почвы должен быть в определенных пределах (рН 7). Уровень грунтовых вод для вишни допустим не выше 150– 200 см. Прививка применяется в тех случаях, когда нужно выполнить размножение через подвой. Сажая вишню, выдерживают расстояние 4 м между деревьями в ряду и 4–5 м между рядами. Посадочные ямы делают 40–50 см глубиной и 55–80 см в диаметре. В нижнюю часть ямы вносят: 25 г хлористого калия; 40 суперфосфата; сверху добавляют перегной, перемешанный с верхним слоем грунта. Прежде чем высаживать саженец, ближе к краю ямы вбивают кол для последующей подвязки. Вишня в первые годы после посадки нуждается в особо частых поливах, иногда до 12-ти за сезон. В засушливое лето эту норму нужно увеличить. Последний раз вишню поливают в начале октября, после опадения листьев. Можно проводить подкормку ежегодно азотными удобрениями в течение первых 4-х лет. Деревья старше 4-х лет подкармливают, внося раз в 3 года по 2 кг перегноя на 1 м2. Все виды обрезки проводят весной, до начала распускания почек – вишня уже благополучно перезимовала, но еще находится в состоянии покоя. У сортов вишни древовидного типа желательно формировать разреженноярусную крону из 5–6-и скелетных ветвей первого порядка. Крону ограничивают в росте на высоте 1,5–2,5 м, срезая центральный проводник на расстоянии 25–30 см от верхней скелетной ветви. У вишни кустовидной формы при формирующей обрезке оставляют 2–3 ствола. ',
+                       '100-2000',
+                       'Выращивание вишни из косточки порой приводит к непредсказуемым результатам. Поэтому имеет смысл одновременно высадить несколько косточек, затем выбрать из них самые удачные деревца, а от прочих просто избавиться. Вишни лучше всего высаживать весной (апрель – начало мая), поскольку молодые саженцы могут не перенести зимовку. Оптимальный срок для посадки саженцев – спустя 3–5 дней после полного оттаивания почвы.',
+                       'апрель-май',
+                       'Вишня войлочная Красавица Востока - ягоды появляются на 4-й год после посадки растения. По срокам созревания сорт относится к поздним разновидностям. Средний вес плода – 3-3,5 гр. Форма плодов округлая. В основании каждой ягоды имеется глубокая воронка. Кожица опушена короткими, еле заметными волосками. Окрас темно-розовый. Мякоть красная, плотная, хрящеватая. Вес косточки – 0,16 гр. От мякоти не отделяется. Самобесплодный. Опылителем может являться аналогичная культура, которая цветет в тоже время. Зимостойкость до -23 С.
+Вишня Десертная Морозовой - плоды крупные, округлые, бордово-красные, их средняя масса составляет 3-6 граммов. Косточка средних размеров, округлая и легко отделяется от мякоти. Урожай, при условии солнечной теплой погоды, снимается уже в первой декаде июня. Плодоносить посаженный саженец начинает на 3-4 год после посадки. Урожайность до 35 кг за год.
+Вишня Черри – плодовая культура, полученная в результате переопыления вишни и черешни. Отличается высокой морозостойкостью, характерной для вишни, и хорошей урожайностью со сладкими плодами — это присуще черешне. Спокойно переносит заморозки до — 20 °С. Дерево вырастает до 3 м. в высоту. Ягоды обладают крупными размерами, каждая из них по весу может достигать 10 гр. Созревают плоды в среднем в конце июня. С взрослого здорового дерева можно снять до 10 кг. свежих ягод.
+'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       142,
+                       'Груша',
+                       'многолетнее',
+                       'садовое',
+                       'Груша является теплолюбивой культурой. Она выносит зимние морозы в пределах −30 °C. Дерево сажают на рыхлых сухих почвах с высоким содержанием питательных веществ. Подходят для выращивания груши лесные и песчано-глинистые почвы. Груша нуждается в солнечном свете и хуже переносит тень, устойчива к засухе. Для прививки используют почки и черенки груши, которые прививают на другие сорта груши и иные совместимые деревья. На глинистой почве посадочные ямы копают диаметром 60–80 см и глубиной 100–120 см. Вбивают туда колья, свободная часть кола должна составлять 50–70 см, к ней впоследствии подвязывают тонкий ствол. Часто груша поражается ржавчиной, паршой, плодовой гнилью, септориозом и бактериальным раком. Ее вредителями являются плодожорка, цветоед, галловый клещ и грушевая медяница. В течение года растение рекомендуется 3 раза обрабатывать для защиты от болезней. Груша нуждается в удобрении почвы при посадке и дальнейших регулярных подкормках. В первые годы после посадки проводят формирующую обрезку груш. Если отгибание ветвей не проведено своевременно, то ветви, образующие со стволом острые углы, удаляют. Оставляют только ветви, которые от ствола отходят почти горизонтально. У груш пятого года после посадки прореживают крону, удаляют ветки, которые растут в центр кроны или с повреждениями. Во второй половине плодоносящего периода у груши веток с цветочными почками образуется крайне мало. Для стимуляции плодоношения проводят омолаживающую обрезку.',
+                       '500-1500',
+                       'Оптимальное время посадки груши – конец сентября. В это теплое время дерево успевает до зимы прижиться на новом месте. Предпочтительнее использовать саженцы возрастом 1–2 года.',
+                       'апрель-май',
+                       'Груша Красуля - плоды массой более 110 гр.(средний вес обычных сортов около 70 гр.), в зрелом виде груши данного сорта светло желтого цвета с ярким темно-красным румянцем на солнечной стороне. Груша легко выдерживает морозы до -45 С. Плодоношение наступает на третий год после посадки. Десятилетнее дерево имеет 3 м. высоту.
+Груша Августинка - сорт селекции Саратовской опытной станции садоводства и Саратовского ГАУ им. Н.И. Вавилова. Плоды крупные, массой 200–400 г. Форма плода широкогрушевидная, поверхность бугристая. Основная окраска желтая. Покровная окраска в виде оранжево-красного румянца по всей поверхности плода. Кожица средней плотности. Сорт скороплодный, вступает в плодоношение на сильнорослом подвое на 5-6-й год; урожайность до 40,0 т/га, зимостойкий, устойчивый к грибным заболеваниям.
+Груша Лучистая - плоды крупные, средней массой 220 г, максимальной – 280 г, одномерные, грушевидной формы. Поверхность плода гладкая, кожица тонкая, сухая на ощупь. Основная окраска желтая, с румянцем на солнечной стороне. Съемная зрелость наступает в первой декаде сентября. Сорт отличается устойчивостью к парше и термическому ожогу листьев, достаточно высокой зимостойкостью. Цветет в среднепоздние сроки, имеет склонность к самоопылению.'
+                   );
+
+INSERT INTO Plants (
+                       PlantID,
+                       Name,
+                       Age,
+                       Vid,
+                       Comm,
+                       Height,
+                       Breeding,
+                       Bloom,
+                       Popular
+                   )
+                   VALUES (
+                       143,
+                       'Яблоня',
+                       'многолетнее',
+                       'садовое',
+                       'Яблони успешно растут на участках с легкой почвой, которая имеет хорошую проницаемость для воды и воздуха. Предпочитают почву с умеренным и повышенным содержанием питательных веществ, особенно азота, и небольшой кислотностью. Яблони часто подвергают прививке. Проводят ее весной до начала цветения, летом и осенью. Посадочные ямы для этой культуры подготавливают заранее – за 7–10 дней. Их располагают в ряду с интервалом 3 м, а между рядами оставляют по 6 м. Посадочные ямы делают шириной 80–100 см, глубиной 60–80 см и наполняют плодородным грунтом. После весенней посадки яблони нуждаются в регулярном поливе. Летом яблони продолжают поливать обильнее (1–2 раза в неделю). Деревья периодически обрабатывают ядохимикатами для защиты от болезней и вредителей. Весной и осенью стволы яблонь белят. На зиму их укрывают различными материалами, в том числе опилками, лапником. Для того чтобы яблони давали стабильный урожай, их необходимо ежегодно подкармливать. Для этого используют натуральные органические удобрения (торф, компост, навоз, птичий помет) и комплексные минеральные удобрения (аммофос, нитрофос, нитрофоску). Обрезку проводят ранней весной или поздней осенью, температура окружающей среды не должна быть ниже 5 °C. Формирование кроны яблони проводят в первые 4 года после посадки. Удаляют загущающие и затеняющие ветви. В период активного плодоношения (на 6–12-й год) яблони в большей степени подвергают санитарной обрезке.',
+                       '200-1000',
+                       'Оптимальное время для посадки саженцев яблони – ранняя весна (до распускания почек) и начало осени.',
+                       'апрель-май',
+                       'Яблоня Северный синап - позднезимний сорт, Вкус слегка пряный, освежающий, кисловато-сладкий. Структура – мелкозернистая, цвет слегка зеленоватый. Очень сочные. Величина плодов от 90 до 170 г. Дерево мощное, высокое, крона имеет пирамидальную форму. Плодоносить начинает на второй год после посадки. Яблоки поспевают к октябрю, отлично хранятся вплоть до нового урожая и даже дольше. Частично самоплодный, но если есть подходящий опылитель, урожайность возрастает в несколько раз и может доходить до 70 кг с одного дерева.
+Яблоня Антоновка - позднеосенний или осенний сорт. Устойчива к большинству болезней. Плоды очень сочные, имеют неповторимый, ярко выраженный, аромат. Мякоть нежная, мелкозернистая, гармоничного кисло-сладкого вкуса. Форма слегка ребристая, цвет зеленовато-желтый. Размер варьирует от 120 до 300 г.'
                    );
 
 

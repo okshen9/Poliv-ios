@@ -9,9 +9,17 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Тут будет профиль")
+        ZStack{
+            Image("backimage")
+                .resizable()
+                .ignoresSafeArea()
+            VStack{
+                Text("Тут будет лента со вкладками действия/заметки")
+                    .padding()
+            }
+        }
     }
-}
+    }
 
 #Preview {
     ProfileView()

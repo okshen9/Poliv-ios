@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct SovetsView: View {
-    var body: some View {
-        Text("Тут будут советы")
+    var body: some View { 
+        ZStack{
+        Image("backimage")
+            .resizable()
+            .ignoresSafeArea()
+        VStack{
+            Text("sovets")
+                .padding()
+        }
+    }
     }
 }
 

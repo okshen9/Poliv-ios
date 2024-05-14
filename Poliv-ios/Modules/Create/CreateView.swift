@@ -9,7 +9,15 @@ import SwiftUI
 
 struct CreateView: View {
     var body: some View {
-        Text("Тут будем создавать новые записи")
+        ZStack{
+            Image("backimage")
+                .resizable()
+                .ignoresSafeArea()
+            VStack{
+                Text("tut create")
+                    .padding()
+            }
+        }
     }
 }
 

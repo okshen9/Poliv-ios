@@ -14,43 +14,42 @@ struct MainCalendarView: View {
         formatter.dateStyle = .long
         return formatter
     }()
-    
+
+
     //MARK: Private Property
     @State private var selectedDate = Date.now
     
     
     //MARK: Body
     var body: some View {
-        VStack {
-            Text("\(selectedDate, formatter: dateFormatter)")
-                .padding(.all, 20)
-                .frame(maxWidth: .infinity,
-                       alignment: .center)
-                .background(.gray)
-                .cornerRadius(20)
-            DatePicker("Календарь",
-                       selection: $selectedDate,
-                       displayedComponents: .date)
-            .environment(\.locale, Locale.init(identifier: "ru"))
-            .datePickerStyle(.graphical)
-            .tint(.topGreen)
+        ZStack{
+            Image("backimage")
+                .resizable()
+                .ignoresSafeArea()
+            VStack {
+                Text("Сегодня: \(Date.now, formatter: dateFormatter)") //в заголовке отображается сегодняшняя дата
+                    .environment(\.locale, Locale.init(identifier: "ru"))
+                    .padding(.all, 20)
+                    .frame(maxWidth: .infinity,
+                           alignment: .center)
+                    .background(Color.topGreen)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .font(Font.custom("kudry", size: 20))
+                DatePicker("Календарь",
+                           selection: $selectedDate,
+                           displayedComponents: .date)
+                .environment(\.locale, Locale.init(identifier: "ru"))
+                .datePickerStyle(.graphical)
+                .tint(.topGreen)
 
-            TaskToDayView()
+                TaskToDayView()
+            }
+            .padding(.top)
+            .padding(.horizontal, 20)
         }
-        .padding(.top)
-        .padding(.horizontal, 20)
-        .background(LinearGradient(gradient: Gradient(colors: [Color.topGreen,
-                                                                   Color.middleGreen,
-                                                                   Color.botomGreen]),
-                                   startPoint: .top,
-                                   endPoint: .bottom))
-        
     }
-    
-    
-    
 }
-
 #Preview {
     MainCalendarView()
 }

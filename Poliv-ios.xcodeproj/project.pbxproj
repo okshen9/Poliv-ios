@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */; };
 		AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */; };
-		AC9141202BEE65C9001CBB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC91411F2BEE65C9001CBB97 /* Assets.xcassets */; };
 		AC9141242BEE65C9001CBB97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9141232BEE65C9001CBB97 /* Preview Assets.xcassets */; };
 		AC9B6D182BEE723D00A26E66 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */; };
 		AC9B6D1F2BEE760A00A26E66 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D1E2BEE760A00A26E66 /* FeedView.swift */; };
@@ -25,6 +24,8 @@
 		ACB7FEFD2BEFC04500E0B150 /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFB2BEFC04500E0B150 /* mybase.sql */; };
 		D5EEC51707B9B8A10E0DA08F /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */; };
 		EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */; };
+		EC602A972BF2BB8B00279AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC602A962BF2BB8B00279AD0 /* Assets.xcassets */; };
+		EC602A992BF2BD7900279AD0 /* kudry.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC602A982BF2BD7900279AD0 /* kudry.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,6 @@
 		AC9141182BEE65C8001CBB97 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poliv_iosApp.swift; sourceTree = "<group>"; };
 		AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalendarView.swift; sourceTree = "<group>"; };
-		AC91411F2BEE65C9001CBB97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC9141212BEE65C9001CBB97 /* Poliv_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poliv_ios.entitlements; sourceTree = "<group>"; };
 		AC9141232BEE65C9001CBB97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
@@ -50,6 +50,9 @@
 		ACB7FEFB2BEFC04500E0B150 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
 		CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EC602A962BF2BB8B00279AD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC602A982BF2BD7900279AD0 /* kudry.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kudry.otf; sourceTree = "<group>"; };
+		EC602A9A2BF2BEEC00279AD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,15 +96,17 @@
 		AC91411A2BEE65C8001CBB97 /* Poliv-ios */ = {
 			isa = PBXGroup;
 			children = (
+				EC602A9A2BF2BEEC00279AD0 /* Info.plist */,
 				AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */,
 				EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */,
 				AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */,
 				ACB7FEF92BEFC04500E0B150 /* sqllite */,
 				AC9B6D272BEE794600A26E66 /* Utilities */,
 				AC9B6D262BEE793800A26E66 /* Modules */,
-				AC91411F2BEE65C9001CBB97 /* Assets.xcassets */,
 				ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */,
+				EC602A962BF2BB8B00279AD0 /* Assets.xcassets */,
 				AC9141212BEE65C9001CBB97 /* Poliv_ios.entitlements */,
+				EC602A982BF2BD7900279AD0 /* kudry.otf */,
 				AC9141222BEE65C9001CBB97 /* Preview Content */,
 			);
 			path = "Poliv-ios";
@@ -265,10 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC9141242BEE65C9001CBB97 /* Preview Assets.xcassets in Resources */,
-				AC9141202BEE65C9001CBB97 /* Assets.xcassets in Resources */,
 				ACB7FEFC2BEFC04500E0B150 /* mybase.db in Resources */,
 				ACB7FEEF2BEEB0B900E0B150 /* Color.xcassets in Resources */,
+				EC602A992BF2BD7900279AD0 /* kudry.otf in Resources */,
 				ACB7FEFD2BEFC04500E0B150 /* mybase.sql in Resources */,
+				EC602A972BF2BB8B00279AD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +473,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poliv-ios/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -506,6 +513,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poliv-ios/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
