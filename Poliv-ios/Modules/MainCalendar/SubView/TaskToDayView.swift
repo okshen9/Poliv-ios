@@ -18,7 +18,7 @@ struct TaskToDayView: View {
                            alignment: .leading)
                 Divider()
                 
-                List {
+                VStack(spacing: 6) {
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .watering,
                                                                workProgress: .done))
@@ -34,14 +34,10 @@ struct TaskToDayView: View {
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .pruning,
                                                                workProgress: .todo))
-                }
-                
-                .listRowSpacing(8)
-                .padding(.horizontal, -20)
-                .listStyle(.inset)
-                .scrollContentBackground(.hidden)
-            }
+                }            }
             .padding(.vertical, 16)
+            .background(.gray.opacity(0.8))
+            .cornerRadius(20)
     }
 }
 

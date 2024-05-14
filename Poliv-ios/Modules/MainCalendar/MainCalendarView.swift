@@ -39,14 +39,17 @@ struct MainCalendarView: View {
                     .foregroundColor(.white)
                     .cornerRadius(20)
                     .font(Font.custom("kudry", size: 20))
-                DatePicker("Календарь",
-                           selection: $selectedDate,
-                           displayedComponents: .date)
-                .environment(\.locale, Locale.init(identifier: "ru"))
-                .datePickerStyle(.graphical)
-                .tint(.topGreen)
-
-                TaskToDayView()
+                ScrollView {
+                    DatePicker("Календарь",
+                               selection: $selectedDate,
+                               displayedComponents: .date)
+                    .environment(\.locale, Locale.init(identifier: "ru"))
+                    .datePickerStyle(.graphical)
+                    .tint(.topGreen)
+                    
+                    TaskToDayView()
+                }
+                .scrollIndicators(.hidden)
             }
             .padding(.top)
             .padding(.horizontal, 20)

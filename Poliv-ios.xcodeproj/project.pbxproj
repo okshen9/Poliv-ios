@@ -105,11 +105,10 @@
 				EC602A9A2BF2BEEC00279AD0 /* Info.plist */,
 				AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */,
 				EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */,
-				AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */,
 				ACFAA8EB2BF3F58C00934AC2 /* DataBaseManager */,
-				ACB7FEF92BEFC04500E0B150 /* sqllite */,
 				AC9B6D262BEE793800A26E66 /* Modules */,
 				AC9B6D272BEE794600A26E66 /* Utilities */,
+				ACB7FEF92BEFC04500E0B150 /* sqllite */,
 				ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */,
 				EC602A962BF2BB8B00279AD0 /* Assets.xcassets */,
 				AC9141212BEE65C9001CBB97 /* Poliv_ios.entitlements */,
@@ -171,6 +170,7 @@
 		AC9B6D262BEE793800A26E66 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */,
 				AC9B6D192BEE75C100A26E66 /* MainCalendar */,
 				AC9B6D1A2BEE75CD00A26E66 /* Feed */,
 				AC9B6D1B2BEE75DD00A26E66 /* Create */,
