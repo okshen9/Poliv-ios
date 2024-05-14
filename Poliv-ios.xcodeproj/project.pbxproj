@@ -22,6 +22,9 @@
 		ACB7FEEF2BEEB0B900E0B150 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */; };
 		ACB7FEFC2BEFC04500E0B150 /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFA2BEFC04500E0B150 /* mybase.db */; };
 		ACB7FEFD2BEFC04500E0B150 /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFB2BEFC04500E0B150 /* mybase.sql */; };
+		ACFAA8EA2BF3F50500934AC2 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8E92BF3F50500934AC2 /* DataBaseManager.swift */; };
+		ACFAA8ED2BF3F5A100934AC2 /* TestTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8EC2BF3F5A100934AC2 /* TestTable.swift */; };
+		ACFAA8F02BF3FAEE00934AC2 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8EF2BF3FAEE00934AC2 /* Plant.swift */; };
 		D5EEC51707B9B8A10E0DA08F /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */; };
 		EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */; };
 		EC602A972BF2BB8B00279AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC602A962BF2BB8B00279AD0 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 		ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ACB7FEFA2BEFC04500E0B150 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
 		ACB7FEFB2BEFC04500E0B150 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
+		ACFAA8E92BF3F50500934AC2 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		ACFAA8EC2BF3F5A100934AC2 /* TestTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTable.swift; sourceTree = "<group>"; };
+		ACFAA8EF2BF3FAEE00934AC2 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		EC602A962BF2BB8B00279AD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,9 +106,10 @@
 				AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */,
 				EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */,
 				AC9B6D172BEE723D00A26E66 /* MainTabBarView.swift */,
+				ACFAA8EB2BF3F58C00934AC2 /* DataBaseManager */,
 				ACB7FEF92BEFC04500E0B150 /* sqllite */,
-				AC9B6D272BEE794600A26E66 /* Utilities */,
 				AC9B6D262BEE793800A26E66 /* Modules */,
+				AC9B6D272BEE794600A26E66 /* Utilities */,
 				ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */,
 				EC602A962BF2BB8B00279AD0 /* Assets.xcassets */,
 				AC9141212BEE65C9001CBB97 /* Poliv_ios.entitlements */,
@@ -199,6 +206,24 @@
 			);
 			path = sqllite;
 			sourceTree = SOURCE_ROOT;
+		};
+		ACFAA8EB2BF3F58C00934AC2 /* DataBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAA8E92BF3F50500934AC2 /* DataBaseManager.swift */,
+				ACFAA8EE2BF3FAE000934AC2 /* DataModels */,
+			);
+			path = DataBaseManager;
+			sourceTree = "<group>";
+		};
+		ACFAA8EE2BF3FAE000934AC2 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAA8EC2BF3F5A100934AC2 /* TestTable.swift */,
+				ACFAA8EF2BF3FAEE00934AC2 /* Plant.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
 		};
 		F5EB689D3E71CE63CDBDDAD0 /* Pods */ = {
 			isa = PBXGroup;
@@ -327,18 +352,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFAA8ED2BF3F5A100934AC2 /* TestTable.swift in Sources */,
 				AC9B6D1F2BEE760A00A26E66 /* FeedView.swift in Sources */,
 				ACB7FEED2BEEB08A00E0B150 /* ExtenstionColor.swift in Sources */,
 				AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */,
 				AC9B6D232BEE763000A26E66 /* SovetsView.swift in Sources */,
 				AC9B6D182BEE723D00A26E66 /* MainTabBarView.swift in Sources */,
 				AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */,
+				ACFAA8F02BF3FAEE00934AC2 /* Plant.swift in Sources */,
 				AC9B6D252BEE764100A26E66 /* ProfileView.swift in Sources */,
 				AC9B6D212BEE762500A26E66 /* CreateView.swift in Sources */,
 				AC9B6D2E2BEE96F800A26E66 /* TaskViewCell.swift in Sources */,
 				EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */,
 				AC9B6D2B2BEE7E1E00A26E66 /* TaskToDayView.swift in Sources */,
 				AC9B6D292BEE799F00A26E66 /* ImageName.swift in Sources */,
+				ACFAA8EA2BF3F50500934AC2 /* DataBaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

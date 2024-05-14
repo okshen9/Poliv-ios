@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainCalendarView: View {
     
+    let dataBaseManager = DataBaseManager()
+    
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -22,7 +24,8 @@ struct MainCalendarView: View {
     
     //MARK: Body
     var body: some View {
-        ZStack{
+        dataBaseManager.getDataFromBase()
+        return ZStack{
             Image("backimage")
                 .resizable()
                 .ignoresSafeArea()
