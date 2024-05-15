@@ -9,8 +9,12 @@ import SwiftUI
 
 
 struct MainTabBarView: View {
+    
     var body: some View {
-        TabView {
+
+
+
+        return TabView {
             Group {
                 MainCalendarView()
                     .tabItem {
@@ -21,6 +25,7 @@ struct MainTabBarView: View {
                     .tabItem {
                         Label(Constants.TabText.feed, systemImage:  .TabBarImageName.feed)
                     }
+                
 
                 CreateView()
                     .tabItem {

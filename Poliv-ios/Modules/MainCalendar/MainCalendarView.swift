@@ -50,6 +50,7 @@ struct MainCalendarView: View {
                     TaskToDayView()
                 }
                 .scrollIndicators(.hidden)
+                Spacer()
             }
             .padding(.top)
             .padding(.horizontal, 20)

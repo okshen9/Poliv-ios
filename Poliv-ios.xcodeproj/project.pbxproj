@@ -18,6 +18,10 @@
 		AC9B6D292BEE799F00A26E66 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D282BEE799F00A26E66 /* ImageName.swift */; };
 		AC9B6D2B2BEE7E1E00A26E66 /* TaskToDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D2A2BEE7E1E00A26E66 /* TaskToDayView.swift */; };
 		AC9B6D2E2BEE96F800A26E66 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B6D2D2BEE96F800A26E66 /* TaskViewCell.swift */; };
+		ACB3028A2BF40EFC004639F1 /* AddPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB302892BF40EFC004639F1 /* AddPlantView.swift */; };
+		ACB3028C2BF41F69004639F1 /* TypePlants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3028B2BF41F69004639F1 /* TypePlants.swift */; };
+		ACB3028E2BF4211B004639F1 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3028D2BF4211B004639F1 /* PickerTextField.swift */; };
+		ACB302902BF429D7004639F1 /* View+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3028F2BF429D7004639F1 /* View+Extention.swift */; };
 		ACB7FEED2BEEB08A00E0B150 /* ExtenstionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7FEEC2BEEB08A00E0B150 /* ExtenstionColor.swift */; };
 		ACB7FEEF2BEEB0B900E0B150 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */; };
 		ACB7FEFC2BEFC04500E0B150 /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFA2BEFC04500E0B150 /* mybase.db */; };
@@ -47,6 +51,10 @@
 		AC9B6D282BEE799F00A26E66 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
 		AC9B6D2A2BEE7E1E00A26E66 /* TaskToDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskToDayView.swift; sourceTree = "<group>"; };
 		AC9B6D2D2BEE96F800A26E66 /* TaskViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
+		ACB302892BF40EFC004639F1 /* AddPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantView.swift; sourceTree = "<group>"; };
+		ACB3028B2BF41F69004639F1 /* TypePlants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePlants.swift; sourceTree = "<group>"; };
+		ACB3028D2BF4211B004639F1 /* PickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
+		ACB3028F2BF429D7004639F1 /* View+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extention.swift"; sourceTree = "<group>"; };
 		ACB7FEEC2BEEB08A00E0B150 /* ExtenstionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtenstionColor.swift; sourceTree = "<group>"; };
 		ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ACB7FEFA2BEFC04500E0B150 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
@@ -163,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				AC9B6D242BEE764100A26E66 /* ProfileView.swift */,
+				ACB302892BF40EFC004639F1 /* AddPlantView.swift */,
+				ACB3028B2BF41F69004639F1 /* TypePlants.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -185,6 +195,8 @@
 			children = (
 				AC9B6D282BEE799F00A26E66 /* ImageName.swift */,
 				ACB7FEEC2BEEB08A00E0B150 /* ExtenstionColor.swift */,
+				ACB3028D2BF4211B004639F1 /* PickerTextField.swift */,
+				ACB3028F2BF429D7004639F1 /* View+Extention.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -352,16 +364,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB3028A2BF40EFC004639F1 /* AddPlantView.swift in Sources */,
 				ACFAA8ED2BF3F5A100934AC2 /* TestTable.swift in Sources */,
 				AC9B6D1F2BEE760A00A26E66 /* FeedView.swift in Sources */,
 				ACB7FEED2BEEB08A00E0B150 /* ExtenstionColor.swift in Sources */,
+				ACB302902BF429D7004639F1 /* View+Extention.swift in Sources */,
 				AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */,
 				AC9B6D232BEE763000A26E66 /* SovetsView.swift in Sources */,
 				AC9B6D182BEE723D00A26E66 /* MainTabBarView.swift in Sources */,
+				ACB3028E2BF4211B004639F1 /* PickerTextField.swift in Sources */,
 				AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */,
 				ACFAA8F02BF3FAEE00934AC2 /* Plant.swift in Sources */,
 				AC9B6D252BEE764100A26E66 /* ProfileView.swift in Sources */,
 				AC9B6D212BEE762500A26E66 /* CreateView.swift in Sources */,
+				ACB3028C2BF41F69004639F1 /* TypePlants.swift in Sources */,
 				AC9B6D2E2BEE96F800A26E66 /* TaskViewCell.swift in Sources */,
 				EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */,
 				AC9B6D2B2BEE7E1E00A26E66 /* TaskToDayView.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Разширение для констант названий картинок
 extension String {
     enum TabBarImageName {
         static let calendar = "calendar"
@@ -17,4 +18,7 @@ extension String {
     }
     
     static let watering = "drop.circle.fill"
+    static let tree = "tree.fill"
 }
+
+

@@ -8,13 +8,8 @@
 import Foundation
 import SwiftUI
 
-extension View {
-//    @inlinable public func addMainGragient()  -> some View {
-//        self.background(LinearGradient(gradient: Gradient(colors: [Color.topGreen,
-//                                                                   Color.middleGreen,
-//                                                                   Color.botomGreen]),
-//                                   startPoint: .top,
-//                                   endPoint: .bottom))
-//        return self
-//    }
+/// Разширение Цветовой палитры
+extension ShapeStyle where Self == Color {
+    static var gray80: Color { Color.gray.opacity(0.8) }
+    static var white80: Color { Color.white.opacity(0.8) }
 }
