@@ -25,14 +25,14 @@ struct TaskToDayView: View {
               
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .transfer,
-                                                               workProgress:.inProgress))
+                                                               workProgress:.done))
 
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
-                                                               cellType: .fertilizer,
+                                                               cellType: .fertilize,
                                                                workProgress: .done))
 
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
-                                                               cellType: .pruning,
+                                                               cellType: .cutting,
                                                                workProgress: .todo))
                 }            }
             .padding(.vertical, 16)
@@ -46,6 +46,6 @@ struct TaskToDayView: View {
 
 extension TaskToDayView {
     enum Constants {
-        static let todayText = "Нужно сделать:"
+        static let todayText = "Сегодня нужно сделать:"
     }
 }

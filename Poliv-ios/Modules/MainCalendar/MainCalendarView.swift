@@ -46,7 +46,9 @@ struct MainCalendarView: View {
                     .environment(\.locale, Locale.init(identifier: "ru"))
                     .datePickerStyle(.graphical)
                     .tint(.topGreen)
-                    
+                    .background(.white.opacity(0.8))
+                    .cornerRadius(20)
+
                     TaskToDayView()
                 }
                 .scrollIndicators(.hidden)

@@ -12,7 +12,7 @@ extension String {
     enum TabBarImageName {
         static let calendar = "calendar"
         static let feed = "square.stack.3d.up"
-        static let create = "plus"
+        static let create = "plus.viewfinder"
         static let sovets = "book"
         static let profile = "person"
     }

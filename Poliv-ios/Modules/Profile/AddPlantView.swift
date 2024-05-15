@@ -50,7 +50,6 @@ struct AddPlantView: View {
                             content: { ImagePicker(image: $selectedImage)
                     })
                     Spacer()
-                    
                     Text("Создадим новое растение!").frame(maxWidth: .infinity, alignment: .center).padding(.horizontal, 16)
 
                     TextField("Имя растения",

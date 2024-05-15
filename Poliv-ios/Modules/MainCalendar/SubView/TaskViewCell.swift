@@ -18,9 +18,9 @@ struct TaskViewCell: View {
     var body: some View {
         HStack() {
             Image(systemName: state.cellType.imageName)
-                .imageScale(.large)
-                .foregroundStyle(.indigo)
-            Text(state.cellType.rawValue + " " + state.nameFlower)
+                .frame(width: 20, height: 20)
+                .foregroundStyle(.topGreen)
+            Text(state.cellType.rawValue + " " + state.nameFlower).padding(.leading, 8)
             Spacer()
             Text(state.workProgress.rawValue)
                 .background(Color.gray.opacity(0.1))
@@ -40,25 +40,30 @@ extension TaskViewCell {
         var workProgress: WorkProgress
         
         enum CellType: String {
-            /// Полив цветочков
             case watering = "Полить"
-            /// Пересадка цветочков
             case transfer = "Пересадить"
-            /// Удобрение цветочков
-            case fertilizer = "Удобрить"
-            /// Обрезание цветочков
-            case pruning = "Обрезать"
-            
+            case fertilize = "Удобрить"
+            case cutting = "Обрезать"
+            case meds = "Обработать"
+            case grafting = "Привить"
+            case propagating = "Черенкование"
+
             var imageName: String {
                 switch self {
                 case .watering:
-                    return "drop.circle"
+                    return "drop.halffull"
                 case .transfer:
-                    return "signpost.right.and.left"
-                case .fertilizer:
-                    return "leaf.arrow.triangle.circlepath"
-                case .pruning:
-                    return "scissors.circle"
+                    return "arrowshape.bounce.right"
+                case .fertilize:
+                    return "eyedropper.halffull"
+                case .cutting:
+                    return "scissors"
+                case .meds:
+                    return "cross.case"
+                case .grafting:
+                    return "laurel.trailing"
+                case .propagating:
+                    return "leaf"
                 }
             }
         }
@@ -66,10 +71,8 @@ extension TaskViewCell {
         enum WorkProgress: String {
             /// готово
             case done = "Выполнено"
-            /// в процессе исполнения
-            case inProgress = "В процессе"
             /// надо сделать
-            case todo = "Надо делать"
+            case todo = "Надо сделать"
         }
     }
 }
@@ -78,6 +81,6 @@ extension TaskViewCell {
 
 #Preview {
     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Test",
-                                               cellType: .watering,
+                                               cellType: .fertilize,
                                                workProgress: .done))
 }
