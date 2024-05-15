@@ -27,6 +27,8 @@ struct TaskViewCell: View {
                 .cornerRadius(4)
         }
         .padding(.horizontal, 8)
+        .background(.white.opacity(0.8))
+        .cornerRadius(10)
     }
 }
 

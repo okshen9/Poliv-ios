@@ -36,7 +36,6 @@ struct TaskToDayView: View {
                                                                workProgress: .todo))
                 }            }
             .padding(.vertical, 16)
-            .background(.gray.opacity(0.8))
             .cornerRadius(20)
     }
 }

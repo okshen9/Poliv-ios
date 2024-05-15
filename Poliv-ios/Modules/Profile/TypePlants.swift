@@ -9,5 +9,5 @@ import Foundation
 
 enum TypePlants: String {
     case home = "Комнатное"
-    case gaden = "Садовое"
+    case garden = "Садовое"
 }
