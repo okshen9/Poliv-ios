@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainCalendarView: View {
     
-    let dataBaseManager = DataBaseManager()
+    let dataBaseManager = DataBaseManagerSqlLite()
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

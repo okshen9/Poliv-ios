@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC55BAC42BF62C6400D5D55A /* MyPlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55BAC32BF62C6400D5D55A /* MyPlantModel.swift */; };
+		AC55BAC62BF63C6100D5D55A /* ProfilePlantCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55BAC52BF63C6100D5D55A /* ProfilePlantCellView.swift */; };
 		AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */; };
 		AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */; };
 		AC9141242BEE65C9001CBB97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9141232BEE65C9001CBB97 /* Preview Assets.xcassets */; };
@@ -26,7 +28,7 @@
 		ACB7FEEF2BEEB0B900E0B150 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */; };
 		ACB7FEFC2BEFC04500E0B150 /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFA2BEFC04500E0B150 /* mybase.db */; };
 		ACB7FEFD2BEFC04500E0B150 /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = ACB7FEFB2BEFC04500E0B150 /* mybase.sql */; };
-		ACFAA8EA2BF3F50500934AC2 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8E92BF3F50500934AC2 /* DataBaseManager.swift */; };
+		ACFAA8EA2BF3F50500934AC2 /* DataBaseManagerSqlLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8E92BF3F50500934AC2 /* DataBaseManagerSqlLite.swift */; };
 		ACFAA8ED2BF3F5A100934AC2 /* TestTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8EC2BF3F5A100934AC2 /* TestTable.swift */; };
 		ACFAA8F02BF3FAEE00934AC2 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFAA8EF2BF3FAEE00934AC2 /* Plant.swift */; };
 		D5EEC51707B9B8A10E0DA08F /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		4372C414ED8BAA0C1DA7D94F /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9BDB03F56F1D323F57D9BF0E /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
+		AC55BAC32BF62C6400D5D55A /* MyPlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantModel.swift; sourceTree = "<group>"; };
+		AC55BAC52BF63C6100D5D55A /* ProfilePlantCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePlantCellView.swift; sourceTree = "<group>"; };
 		AC9141182BEE65C8001CBB97 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poliv_iosApp.swift; sourceTree = "<group>"; };
 		AC91411D2BEE65C8001CBB97 /* MainCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalendarView.swift; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		ACB7FEEE2BEEB0B900E0B150 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ACB7FEFA2BEFC04500E0B150 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
 		ACB7FEFB2BEFC04500E0B150 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
-		ACFAA8E92BF3F50500934AC2 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		ACFAA8E92BF3F50500934AC2 /* DataBaseManagerSqlLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManagerSqlLite.swift; sourceTree = "<group>"; };
 		ACFAA8EC2BF3F5A100934AC2 /* TestTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTable.swift; sourceTree = "<group>"; };
 		ACFAA8EF2BF3FAEE00934AC2 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		CD504E8137CCAC2607FDEE93 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC55BAC02BF62C0200D5D55A /* DataBaseManegerSwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				AC55BAC32BF62C6400D5D55A /* MyPlantModel.swift */,
+			);
+			path = DataBaseManegerSwiftData;
+			sourceTree = "<group>";
+		};
 		AC91410F2BEE65C8001CBB97 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +125,8 @@
 				EC602A9A2BF2BEEC00279AD0 /* Info.plist */,
 				AC91411B2BEE65C8001CBB97 /* Poliv_iosApp.swift */,
 				EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */,
-				ACFAA8EB2BF3F58C00934AC2 /* DataBaseManager */,
+				AC55BAC02BF62C0200D5D55A /* DataBaseManegerSwiftData */,
+				ACFAA8EB2BF3F58C00934AC2 /* DataBaseManagerSQLLite */,
 				AC9B6D262BEE793800A26E66 /* Modules */,
 				AC9B6D272BEE794600A26E66 /* Utilities */,
 				ACB7FEF92BEFC04500E0B150 /* sqllite */,
@@ -172,6 +185,7 @@
 			children = (
 				AC9B6D242BEE764100A26E66 /* ProfileView.swift */,
 				ACB302892BF40EFC004639F1 /* AddPlantView.swift */,
+				AC55BAC52BF63C6100D5D55A /* ProfilePlantCellView.swift */,
 				ACB3028B2BF41F69004639F1 /* TypePlants.swift */,
 			);
 			path = Profile;
@@ -219,13 +233,13 @@
 			path = sqllite;
 			sourceTree = SOURCE_ROOT;
 		};
-		ACFAA8EB2BF3F58C00934AC2 /* DataBaseManager */ = {
+		ACFAA8EB2BF3F58C00934AC2 /* DataBaseManagerSQLLite */ = {
 			isa = PBXGroup;
 			children = (
-				ACFAA8E92BF3F50500934AC2 /* DataBaseManager.swift */,
+				ACFAA8E92BF3F50500934AC2 /* DataBaseManagerSqlLite.swift */,
 				ACFAA8EE2BF3FAE000934AC2 /* DataModels */,
 			);
-			path = DataBaseManager;
+			path = DataBaseManagerSQLLite;
 			sourceTree = "<group>";
 		};
 		ACFAA8EE2BF3FAE000934AC2 /* DataModels */ = {
@@ -371,6 +385,7 @@
 				ACB302902BF429D7004639F1 /* View+Extention.swift in Sources */,
 				AC91411E2BEE65C8001CBB97 /* MainCalendarView.swift in Sources */,
 				AC9B6D232BEE763000A26E66 /* SovetsView.swift in Sources */,
+				AC55BAC62BF63C6100D5D55A /* ProfilePlantCellView.swift in Sources */,
 				AC9B6D182BEE723D00A26E66 /* MainTabBarView.swift in Sources */,
 				ACB3028E2BF4211B004639F1 /* PickerTextField.swift in Sources */,
 				AC91411C2BEE65C8001CBB97 /* Poliv_iosApp.swift in Sources */,
@@ -382,7 +397,8 @@
 				EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */,
 				AC9B6D2B2BEE7E1E00A26E66 /* TaskToDayView.swift in Sources */,
 				AC9B6D292BEE799F00A26E66 /* ImageName.swift in Sources */,
-				ACFAA8EA2BF3F50500934AC2 /* DataBaseManager.swift in Sources */,
+				ACFAA8EA2BF3F50500934AC2 /* DataBaseManagerSqlLite.swift in Sources */,
+				AC55BAC42BF62C6400D5D55A /* MyPlantModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
