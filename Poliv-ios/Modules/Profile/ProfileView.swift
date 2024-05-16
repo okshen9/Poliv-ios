@@ -14,7 +14,7 @@ struct ProfileView: View {
     @Environment(\.modelContext) var modelContext
     
     // Сама вьюшка
-    @State private var image = UIImage()
+    @State private var image = UIImage(systemName: .tree)!
     @State private var showSheet = false
 
     var body: some View {
@@ -28,8 +28,8 @@ struct ProfileView: View {
                             .resizable()
                             .frame(width: 100,
                                    height: 100)
-                            .background(.gray)
-                            .cornerRadius(50)
+                            .background(.topGreen)
+                            .cornerRadius(20)
                             .onTapGesture {
                               showSheet = true
                             }
