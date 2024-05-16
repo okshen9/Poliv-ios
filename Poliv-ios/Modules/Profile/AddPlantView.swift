@@ -132,11 +132,12 @@ struct AddPlantView: View {
                                     datePlanting: datePlanting,
                                     dateNote: dateNote,
                                     imagePlant: imagePlant)
-        if isEdit {
-            myCurrentPlant?.setNewData(editedPlant: myPlants)
-        } else {
-            modelContext.insert(myPlants)
+        if isEdit,
+           let myCurrentPlant,
+           let oldModel = modelContext.model(for: myCurrentPlant.id) as? MyPlantModel {
+            modelContext.delete(oldModel)
         }
+        modelContext.insert(myPlants)
         self.presentationMode.wrappedValue.dismiss()
     }
     

@@ -12,11 +12,11 @@ struct ProfilePlantCellView: View {
     @Environment(\.modelContext) var modelContext
     
     init(myPlant: MyPlantModel?) {
-        self.myPlant = myPlant
-        self.namePlant = myPlant?.namePlant ?? "Error"
+        self._myPlant = State(initialValue: myPlant)
+        self._namePlant = State(initialValue: myPlant?.namePlant ?? "Error")
     }
     
-    private var myPlant: MyPlantModel?
+    @State private var myPlant: MyPlantModel?
     @State private var namePlant: String
     
     var body: some View {
