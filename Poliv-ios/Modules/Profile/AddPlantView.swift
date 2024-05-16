@@ -55,7 +55,8 @@ struct AddPlantView: View {
                             .resizable()
                             .frame(width: 150,
                                    height: 150)
-                            .background(.gray)
+                            .background(.topGreen)
+                            .cornerRadius(20)
                             .padding(.vertical, 20)
                             .onTapGesture {
                         showSheet = true

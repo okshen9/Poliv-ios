@@ -30,6 +30,7 @@ struct ProfileView: View {
                                    height: 100)
                             .background(.topGreen)
                             .cornerRadius(20)
+                            .padding(.vertical, 20)
                             .onTapGesture {
                               showSheet = true
                             }
