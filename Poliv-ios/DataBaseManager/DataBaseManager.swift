@@ -1,10 +1,3 @@
-//
-//  DataBaseManager.swift
-//  Poliv-ios
-//
-//  Created by artem on 14.05.2024.
-//
-
 import Foundation
 import GRDB
 
@@ -19,20 +12,20 @@ class DataBaseManager {
             getTestTable()
         }
         catch {
-            print("NeshkoErrorPath")
+            print("ErrorPath")
         }
     }
     
     func getTestTable() {
         do {
-            guard let dataBase else { return print("NeshkoBaseNil")}
-            let players: [Plants] = try dataBase.read { db in
+            guard let dataBase else { return print("BaseNil")}
+            let plants: [Plants] = try dataBase.read { db in
                 try Plants.fetchAll(db)
             }
-            print(players)
+            print(plants)
         }
         catch {
-            print("NeshkoErrorRead")
+            print("ErrorRead")
         }
 
     }

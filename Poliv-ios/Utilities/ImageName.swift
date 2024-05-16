@@ -1,13 +1,6 @@
-//
-//  ImageName.swift
-//  Poliv-ios
-//
-//  Created by artem on 10.05.2024.
-//
-
 import Foundation
 
-/// Разширение для констант названий картинок
+/// Раcширение для констант названий картинок
 extension String {
     enum TabBarImageName {
         static let calendar = "calendar"

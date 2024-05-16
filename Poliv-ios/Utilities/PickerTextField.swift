@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  Poliv-ios
-//
-//  Created by artem on 15.05.2024.
-//
-
 import SwiftUI
 
 struct PickerField: UIViewRepresentable {
