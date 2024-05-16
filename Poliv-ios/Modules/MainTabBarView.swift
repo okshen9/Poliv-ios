@@ -40,6 +40,7 @@ struct MainTabBarView: View {
                     }
 
                 ProfileView()
+                    .modelContainer(for: MyPlantModel.self)
                     .tabItem {
                         Label(Constants.TabText.profile, systemImage:  .TabBarImageName.profile)
                     }

@@ -1,7 +1,7 @@
 import Foundation
 import GRDB
 
-class DataBaseManager {
+class DataBaseManagerSqlLite {
     var dataBase: DatabaseQueue?
     
     

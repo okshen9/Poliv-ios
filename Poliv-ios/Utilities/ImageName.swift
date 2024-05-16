@@ -12,6 +12,8 @@ extension String {
     
     static let watering = "drop.circle.fill"
     static let tree = "tree.fill"
+    static let edit = "pencil.and.list.clipboard"
+    static let trash = "trash"
 }
 
 

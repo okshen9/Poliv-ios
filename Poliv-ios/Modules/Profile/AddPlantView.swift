@@ -1,21 +1,48 @@
 import SwiftUI
+import SwiftData
 
 struct AddPlantView: View {
+    /// доступ к бд свифта
+    @Environment(\.modelContext) var modelContext
     
-    @State private var image = UIImage()
+    /// Для возвращения назад в навигации
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var showSheet = false
 
-    let saveButton = Button("eee", systemImage: "checkmark") {
-        print("About tapped!")
-    }
-
-    @State private var namePlant: String = ""
-    @State private var notePlant: String = ""
-    @State private var descriptionPlant: String = ""
+    @State private var namePlant: String
+    @State private var notePlant: String
+    @State private var descriptionPlant: String
     @State private var selectedTypePlant: Int?
     @State private var selectedTypeNote: Int?
-    @State private var datePlanting: Date = Date()
-    @State private var dateNote: Date = Date()
+    @State private var datePlanting: Date
+    @State private var dateNote: Date
+    @State private var imagePlant: UIImage
+    
+    private var isEdit = false
+    private var myCurrentPlant: MyPlantModel?
+    
+    init(_ myPlant: MyPlantModel?) {
+        if myPlant != nil {
+            self.isEdit = true
+            self.myCurrentPlant = myPlant
+        }
+        if let imageData = myPlant?.imagePlantData {
+            self._imagePlant = State(initialValue: UIImage(data: imageData) ?? UIImage(systemName: .tree)!)
+        } else
+        {
+            self._imagePlant = State(initialValue: UIImage(systemName: .tree)!)
+        }
+        
+        self._namePlant = State(initialValue: myPlant?.namePlant ?? "")
+        self._notePlant = State(initialValue: myPlant?.notePlant ?? "")
+        self._descriptionPlant = State(initialValue: myPlant?.descriptionPlant ?? "")
+        self._selectedTypePlant = State(initialValue: typesPlant.firstIndex(of: myPlant?.selectedTypePlant ?? "") ?? 0)
+        self._selectedTypeNote = State(initialValue: typeNoteDate.firstIndex(of: myPlant?.selectedTypeNote ?? "") ?? 0)
+        self._datePlanting = State(initialValue: myPlant?.datePlanting ?? Date())
+        self._dateNote = State(initialValue: myPlant?.dateNote ?? Date())
+        
+    }
     
     var body: some View {
         ZStack {
@@ -24,18 +51,19 @@ struct AddPlantView: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
-                        Image(uiImage: self.image)
+                    Image(uiImage: self.imagePlant)
                             .resizable()
                             .frame(width: 150,
                                    height: 150)
-                            .background(.gray)
+                            .background(.topGreen)
+                            .cornerRadius(20)
                             .padding(.vertical, 20)
                             .onTapGesture {
                         showSheet = true
                     }
                        .sheet(isPresented: $showSheet) {
                     // Pick an image from the photo library:
-                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$imagePlant)
             }
 
                     TextField("Введите имя растения",
@@ -63,7 +91,7 @@ struct AddPlantView: View {
 
                     HStack {
                         PickerField(title: getTypeNote(),
-                                    data: momentDate,
+                                    data: typeNoteDate,
                                     selectionIndex: $selectedTypeNote)
                         .frame(height: 16)
                         
@@ -86,13 +114,32 @@ struct AddPlantView: View {
         }
         .navigationTitle("Добавить растение")
         .toolbar {
-            saveButton
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("",
+                       systemImage: "checkmark",
+                       action: savePlant)
+            }
         }
     }
     
     // MARK: - Private Func
     
-    func bind() {
+    private func savePlant() {
+        let myPlants = MyPlantModel(namePlant: namePlant,
+                                    notePlant: notePlant,
+                                    descriptionPlant: descriptionPlant,
+                                    selectedTypePlant: typesPlant[selectedTypePlant ?? 0],
+                                    selectedTypeNote: typeNoteDate[selectedTypeNote ?? 0],
+                                    datePlanting: datePlanting,
+                                    dateNote: dateNote,
+                                    imagePlant: imagePlant)
+        if isEdit,
+           let myCurrentPlant,
+           let oldModel = modelContext.model(for: myCurrentPlant.id) as? MyPlantModel {
+            modelContext.delete(oldModel)
+        }
+        modelContext.insert(myPlants)
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     private func getNameTypePlant() -> String {
@@ -102,12 +149,12 @@ struct AddPlantView: View {
     
     private func getTypeNote() -> String {
         guard let selectedTypePlant  else { return "Событие"}
-        return momentDate[selectedTypePlant]
+        return typeNoteDate[selectedTypePlant]
     }
     
     
     // MARK: - Constants
-    let momentDate = [
+    let typeNoteDate = [
         "Последняя пересадка",
         "Последний полив",
         "Последняя обработка",
@@ -123,5 +170,5 @@ struct AddPlantView: View {
 }
 
 #Preview {
-    AddPlantView()
+    AddPlantView(nil)
 }
