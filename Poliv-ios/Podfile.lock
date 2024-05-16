@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.9.0)
+  - Alamofire (5.9.1)
   - GRDB.swift (6.24.1):
     - GRDB.swift/standard (= 6.24.1)
   - GRDB.swift/standard (6.24.1)
@@ -22,11 +22,11 @@ SPEC REPOS:
     - SQLite.swift
 
 SPEC CHECKSUMS:
-  Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   GRDB.swift: 136dcb5d8dddca50aae3ba7d77475f79e7232cd8
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SQLite.swift: 8d054987f02728cc912b0eb5a9659650573a65a2
 
 PODFILE CHECKSUM: a84f8065606660540f5d9c2eac25a6e1cf7fecf4
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2

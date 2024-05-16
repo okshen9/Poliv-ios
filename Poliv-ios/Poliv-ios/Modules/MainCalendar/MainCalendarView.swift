@@ -42,7 +42,8 @@ struct MainCalendarView: View {
                     .background(.white.opacity(0.8))
                     .cornerRadius(20)
 
-                    TaskToDayView()
+                    TaskToDayView().background(.white.opacity(0.8))
+                        .cornerRadius(20)
                 }
                 .scrollIndicators(.hidden)
                 Spacer()

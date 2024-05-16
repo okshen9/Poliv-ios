@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */; };
+		EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488282BF6C462002A1A54 /* MyPlantModel.swift */; };
+		EC24884F2BF6C462002A1A54 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2488292BF6C462002A1A54 /* Color.xcassets */; };
+		EC2488502BF6C462002A1A54 /* kudry.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC24882A2BF6C462002A1A54 /* kudry.otf */; };
+		EC2488512BF6C462002A1A54 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */; };
+		EC2488522BF6C462002A1A54 /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24882E2BF6C462002A1A54 /* MainCalendarView.swift */; };
+		EC2488532BF6C462002A1A54 /* TaskToDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488302BF6C462002A1A54 /* TaskToDayView.swift */; };
+		EC2488542BF6C462002A1A54 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488312BF6C462002A1A54 /* TaskViewCell.swift */; };
+		EC2488552BF6C462002A1A54 /* SovetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488332BF6C462002A1A54 /* SovetsView.swift */; };
+		EC2488562BF6C462002A1A54 /* Poliv_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488342BF6C462002A1A54 /* Poliv_iosApp.swift */; };
+		EC2488572BF6C462002A1A54 /* TypePlants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488362BF6C462002A1A54 /* TypePlants.swift */; };
+		EC2488582BF6C462002A1A54 /* AddPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488372BF6C462002A1A54 /* AddPlantView.swift */; };
+		EC2488592BF6C462002A1A54 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488382BF6C462002A1A54 /* ProfileView.swift */; };
+		EC24885A2BF6C463002A1A54 /* ProfilePlantCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488392BF6C462002A1A54 /* ProfilePlantCellView.swift */; };
+		EC24885B2BF6C463002A1A54 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24883B2BF6C462002A1A54 /* FeedView.swift */; };
+		EC24885C2BF6C463002A1A54 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24883D2BF6C462002A1A54 /* CreateView.swift */; };
+		EC24885E2BF6C463002A1A54 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488402BF6C462002A1A54 /* ImagePicker.swift */; };
+		EC24885F2BF6C463002A1A54 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488422BF6C462002A1A54 /* PickerTextField.swift */; };
+		EC2488602BF6C463002A1A54 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488432BF6C462002A1A54 /* ImageName.swift */; };
+		EC2488612BF6C463002A1A54 /* ExtenstionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */; };
+		EC2488622BF6C463002A1A54 /* View+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488452BF6C462002A1A54 /* View+Extention.swift */; };
+		EC2488632BF6C463002A1A54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2488472BF6C462002A1A54 /* Preview Assets.xcassets */; };
+		EC2488642BF6C463002A1A54 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24884A2BF6C462002A1A54 /* Plant.swift */; };
+		EC2488652BF6C463002A1A54 /* TestTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24884B2BF6C462002A1A54 /* TestTable.swift */; };
+		EC2488662BF6C463002A1A54 /* DataBaseManagerSqlLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24884C2BF6C462002A1A54 /* DataBaseManagerSqlLite.swift */; };
+		EC2488692BF6C514002A1A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2488682BF6C514002A1A54 /* Assets.xcassets */; };
+		EC24886E2BF6C708002A1A54 /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = EC24886C2BF6C708002A1A54 /* mybase.db */; };
+		EC24886F2BF6C708002A1A54 /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = EC24886D2BF6C708002A1A54 /* mybase.sql */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
+		EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC2488262BF6C462002A1A54 /* Poliv-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poliv-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC2488282BF6C462002A1A54 /* MyPlantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlantModel.swift; sourceTree = "<group>"; };
+		EC2488292BF6C462002A1A54 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		EC24882A2BF6C462002A1A54 /* kudry.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kudry.otf; sourceTree = "<group>"; };
+		EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		EC24882E2BF6C462002A1A54 /* MainCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCalendarView.swift; sourceTree = "<group>"; };
+		EC2488302BF6C462002A1A54 /* TaskToDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskToDayView.swift; sourceTree = "<group>"; };
+		EC2488312BF6C462002A1A54 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
+		EC2488332BF6C462002A1A54 /* SovetsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SovetsView.swift; sourceTree = "<group>"; };
+		EC2488342BF6C462002A1A54 /* Poliv_iosApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poliv_iosApp.swift; sourceTree = "<group>"; };
+		EC2488362BF6C462002A1A54 /* TypePlants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypePlants.swift; sourceTree = "<group>"; };
+		EC2488372BF6C462002A1A54 /* AddPlantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlantView.swift; sourceTree = "<group>"; };
+		EC2488382BF6C462002A1A54 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EC2488392BF6C462002A1A54 /* ProfilePlantCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePlantCellView.swift; sourceTree = "<group>"; };
+		EC24883B2BF6C462002A1A54 /* FeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		EC24883D2BF6C462002A1A54 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		EC24883F2BF6C462002A1A54 /* Poliv_ios.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Poliv_ios.entitlements; sourceTree = "<group>"; };
+		EC2488402BF6C462002A1A54 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EC2488422BF6C462002A1A54 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
+		EC2488432BF6C462002A1A54 /* ImageName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtenstionColor.swift; sourceTree = "<group>"; };
+		EC2488452BF6C462002A1A54 /* View+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extention.swift"; sourceTree = "<group>"; };
+		EC2488472BF6C462002A1A54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC24884A2BF6C462002A1A54 /* Plant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		EC24884B2BF6C462002A1A54 /* TestTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTable.swift; sourceTree = "<group>"; };
+		EC24884C2BF6C462002A1A54 /* DataBaseManagerSqlLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManagerSqlLite.swift; sourceTree = "<group>"; };
+		EC2488682BF6C514002A1A54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		EC24886A2BF6C5D0002A1A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EC24886C2BF6C708002A1A54 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
+		EC24886D2BF6C708002A1A54 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC21DE5A2BF6BF8A00AFB4E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D29996A6CA07B04D49520B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */,
+				BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6862AEA9031FF7023CBDF6CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC21DE542BF6BF8A00AFB4E0 = {
+			isa = PBXGroup;
+			children = (
+				EC24886B2BF6C708002A1A54 /* sqllite */,
+				EC21DE5F2BF6BF8A00AFB4E0 /* Poliv-ios */,
+				EC21DE5E2BF6BF8A00AFB4E0 /* Products */,
+				5D29996A6CA07B04D49520B9 /* Pods */,
+				6862AEA9031FF7023CBDF6CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC21DE5E2BF6BF8A00AFB4E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC21DE5F2BF6BF8A00AFB4E0 /* Poliv-ios */ = {
+			isa = PBXGroup;
+			children = (
+				EC24886A2BF6C5D0002A1A54 /* Info.plist */,
+				EC21DE662BF6BF8C00AFB4E0 /* Preview Content */,
+				EC2488292BF6C462002A1A54 /* Color.xcassets */,
+				EC2488682BF6C514002A1A54 /* Assets.xcassets */,
+				EC2488482BF6C462002A1A54 /* DataBaseManagerSQLLite */,
+				EC2488272BF6C462002A1A54 /* DataBaseManegerSwiftData */,
+				EC2488402BF6C462002A1A54 /* ImagePicker.swift */,
+				EC24882A2BF6C462002A1A54 /* kudry.otf */,
+				EC24882B2BF6C462002A1A54 /* Modules */,
+				EC24883F2BF6C462002A1A54 /* Poliv_ios.entitlements */,
+				EC2488462BF6C462002A1A54 /* Preview Content */,
+				EC2488412BF6C462002A1A54 /* Utilities */,
+				EC2488262BF6C462002A1A54 /* Poliv-ios-Bridging-Header.h */,
+			);
+			path = "Poliv-ios";
+			sourceTree = "<group>";
+		};
+		EC21DE662BF6BF8C00AFB4E0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC2488272BF6C462002A1A54 /* DataBaseManegerSwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488282BF6C462002A1A54 /* MyPlantModel.swift */,
+			);
+			path = DataBaseManegerSwiftData;
+			sourceTree = "<group>";
+		};
+		EC24882B2BF6C462002A1A54 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */,
+				EC24882D2BF6C462002A1A54 /* MainCalendar */,
+				EC2488322BF6C462002A1A54 /* Sovets */,
+				EC2488352BF6C462002A1A54 /* Profile */,
+				EC24883A2BF6C462002A1A54 /* Feed */,
+				EC24883C2BF6C462002A1A54 /* Create */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EC24882D2BF6C462002A1A54 /* MainCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				EC24882E2BF6C462002A1A54 /* MainCalendarView.swift */,
+				EC24882F2BF6C462002A1A54 /* SubView */,
+			);
+			path = MainCalendar;
+			sourceTree = "<group>";
+		};
+		EC24882F2BF6C462002A1A54 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488302BF6C462002A1A54 /* TaskToDayView.swift */,
+				EC2488312BF6C462002A1A54 /* TaskViewCell.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		EC2488322BF6C462002A1A54 /* Sovets */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488332BF6C462002A1A54 /* SovetsView.swift */,
+				EC2488342BF6C462002A1A54 /* Poliv_iosApp.swift */,
+			);
+			path = Sovets;
+			sourceTree = "<group>";
+		};
+		EC2488352BF6C462002A1A54 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488362BF6C462002A1A54 /* TypePlants.swift */,
+				EC2488372BF6C462002A1A54 /* AddPlantView.swift */,
+				EC2488382BF6C462002A1A54 /* ProfileView.swift */,
+				EC2488392BF6C462002A1A54 /* ProfilePlantCellView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EC24883A2BF6C462002A1A54 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				EC24883B2BF6C462002A1A54 /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		EC24883C2BF6C462002A1A54 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				EC24883D2BF6C462002A1A54 /* CreateView.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		EC2488412BF6C462002A1A54 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488422BF6C462002A1A54 /* PickerTextField.swift */,
+				EC2488432BF6C462002A1A54 /* ImageName.swift */,
+				EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */,
+				EC2488452BF6C462002A1A54 /* View+Extention.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EC2488462BF6C462002A1A54 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488472BF6C462002A1A54 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC2488482BF6C462002A1A54 /* DataBaseManagerSQLLite */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488492BF6C462002A1A54 /* DataModels */,
+				EC24884C2BF6C462002A1A54 /* DataBaseManagerSqlLite.swift */,
+			);
+			path = DataBaseManagerSQLLite;
+			sourceTree = "<group>";
+		};
+		EC2488492BF6C462002A1A54 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC24884A2BF6C462002A1A54 /* Plant.swift */,
+				EC24884B2BF6C462002A1A54 /* TestTable.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		EC24886B2BF6C708002A1A54 /* sqllite */ = {
+			isa = PBXGroup;
+			children = (
+				EC24886C2BF6C708002A1A54 /* mybase.db */,
+				EC24886D2BF6C708002A1A54 /* mybase.sql */,
+			);
+			path = sqllite;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC21DE5C2BF6BF8A00AFB4E0 /* Poliv-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC21DE6B2BF6BF8C00AFB4E0 /* Build configuration list for PBXNativeTarget "Poliv-ios" */;
+			buildPhases = (
+				00CBD6C21A74D1FBA096BAED /* [CP] Check Pods Manifest.lock */,
+				EC21DE592BF6BF8A00AFB4E0 /* Sources */,
+				EC21DE5A2BF6BF8A00AFB4E0 /* Frameworks */,
+				EC21DE5B2BF6BF8A00AFB4E0 /* Resources */,
+				187FDD814757C21941A237DD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Poliv-ios";
+			productName = "Poliv-ios";
+			productReference = EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC21DE552BF6BF8A00AFB4E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					EC21DE5C2BF6BF8A00AFB4E0 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
+				};
+			};
+			buildConfigurationList = EC21DE582BF6BF8A00AFB4E0 /* Build configuration list for PBXProject "Poliv-ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC21DE542BF6BF8A00AFB4E0;
+			productRefGroup = EC21DE5E2BF6BF8A00AFB4E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC21DE5C2BF6BF8A00AFB4E0 /* Poliv-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC21DE5B2BF6BF8A00AFB4E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */,
+				EC24884F2BF6C462002A1A54 /* Color.xcassets in Resources */,
+				EC24886E2BF6C708002A1A54 /* mybase.db in Resources */,
+				EC2488632BF6C463002A1A54 /* Preview Assets.xcassets in Resources */,
+				EC2488692BF6C514002A1A54 /* Assets.xcassets in Resources */,
+				EC2488502BF6C462002A1A54 /* kudry.otf in Resources */,
+				EC24886F2BF6C708002A1A54 /* mybase.sql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00CBD6C21A74D1FBA096BAED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Poliv-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		187FDD814757C21941A237DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC21DE592BF6BF8A00AFB4E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */,
+				EC2488532BF6C462002A1A54 /* TaskToDayView.swift in Sources */,
+				EC2488592BF6C462002A1A54 /* ProfileView.swift in Sources */,
+				EC24885E2BF6C463002A1A54 /* ImagePicker.swift in Sources */,
+				EC2488642BF6C463002A1A54 /* Plant.swift in Sources */,
+				EC2488552BF6C462002A1A54 /* SovetsView.swift in Sources */,
+				EC2488612BF6C463002A1A54 /* ExtenstionColor.swift in Sources */,
+				EC24885B2BF6C463002A1A54 /* FeedView.swift in Sources */,
+				EC2488582BF6C462002A1A54 /* AddPlantView.swift in Sources */,
+				EC2488542BF6C462002A1A54 /* TaskViewCell.swift in Sources */,
+				EC2488562BF6C462002A1A54 /* Poliv_iosApp.swift in Sources */,
+				EC24885C2BF6C463002A1A54 /* CreateView.swift in Sources */,
+				EC2488512BF6C462002A1A54 /* MainTabBarView.swift in Sources */,
+				EC24885F2BF6C463002A1A54 /* PickerTextField.swift in Sources */,
+				EC2488662BF6C463002A1A54 /* DataBaseManagerSqlLite.swift in Sources */,
+				EC2488622BF6C463002A1A54 /* View+Extention.swift in Sources */,
+				EC24885A2BF6C463002A1A54 /* ProfilePlantCellView.swift in Sources */,
+				EC2488522BF6C462002A1A54 /* MainCalendarView.swift in Sources */,
+				EC2488602BF6C463002A1A54 /* ImageName.swift in Sources */,
+				EC2488652BF6C463002A1A54 /* TestTable.swift in Sources */,
+				EC2488572BF6C462002A1A54 /* TypePlants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EC21DE692BF6BF8C00AFB4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC21DE6A2BF6BF8C00AFB4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC21DE6C2BF6BF8C00AFB4E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Poliv-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = A5QM45RU6L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poliv-ios/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kovdari.Poliv-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Poliv-ios/Poliv-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC21DE6D2BF6BF8C00AFB4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Poliv-ios/Preview Content\"";
+				DEVELOPMENT_TEAM = A5QM45RU6L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poliv-ios/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kovdari.Poliv-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Poliv-ios/Poliv-ios-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC21DE582BF6BF8A00AFB4E0 /* Build configuration list for PBXProject "Poliv-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC21DE692BF6BF8C00AFB4E0 /* Debug */,
+				EC21DE6A2BF6BF8C00AFB4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC21DE6B2BF6BF8C00AFB4E0 /* Build configuration list for PBXNativeTarget "Poliv-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC21DE6C2BF6BF8C00AFB4E0 /* Debug */,
+				EC21DE6D2BF6BF8C00AFB4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC21DE552BF6BF8A00AFB4E0 /* Project object */;
+}

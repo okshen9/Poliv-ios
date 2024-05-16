@@ -15,12 +15,17 @@ struct TaskViewCell: View {
             Text(state.cellType.rawValue + " " + state.nameFlower).padding(.leading, 8)
             Spacer()
             Text(state.workProgress.rawValue)
-                .background(Color.gray.opacity(0.1))
-                .cornerRadius(4)
+                .padding(.all, 5)
+                .background(Color.gray.opacity(0.8))
+                .cornerRadius(5)
+                .padding(.all, 5)
+                .frame(minWidth: 110)
+                .contextMenu {
+                    Button("Готово") { state.workProgress = .done }
+                    Button("В процессе", role: .destructive) { state.workProgress = .todo }
+                }
         }
         .padding(.horizontal, 8)
-        .background(.white.opacity(0.8))
-        .cornerRadius(10)
     }
 }
 
@@ -64,7 +69,7 @@ extension TaskViewCell {
             /// готово
             case done = "Выполнено"
             /// надо сделать
-            case todo = "Надо сделать"
+            case todo = "Не выполнено"
         }
     }
 }

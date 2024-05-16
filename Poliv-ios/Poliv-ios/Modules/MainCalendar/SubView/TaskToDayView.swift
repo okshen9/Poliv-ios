@@ -25,12 +25,11 @@ struct TaskToDayView: View {
                                                                cellType: .fertilize,
                                                                workProgress: .done))
 
-                    TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
+                    TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Каланхое",
                                                                cellType: .cutting,
                                                                workProgress: .todo))
                 }            }
             .padding(.vertical, 16)
-            .cornerRadius(20)
     }
 }
 

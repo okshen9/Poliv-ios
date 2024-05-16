@@ -45,7 +45,7 @@ struct SovetsView: View {
                     }
                     .onAppear {
                         var db: OpaquePointer?
-                        if sqlite3_open("/Users/artemnesko/WorkProject/poliv2/Poliv-ios/sqllite/mybase.db", &db) == SQLITE_OK {
+                        if sqlite3_open("/Users/artemnesko/WorkProject/Pet Project and PlayGround/Poliv3/sqllite/mybase.db", &db) == SQLITE_OK {
                             var queryStatement: OpaquePointer?
                             let queryString = "SELECT * FROM plants ORDER BY Name"
                             if sqlite3_prepare_v2(db, queryString, -1, &queryStatement, nil) == SQLITE_OK {
