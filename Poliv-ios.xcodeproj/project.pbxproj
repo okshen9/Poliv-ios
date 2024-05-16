@@ -35,8 +35,6 @@
 		EC0297182BEFF9DC0090DCF2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0297172BEFF9DC0090DCF2 /* ImagePicker.swift */; };
 		EC602A972BF2BB8B00279AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC602A962BF2BB8B00279AD0 /* Assets.xcassets */; };
 		EC602A992BF2BD7900279AD0 /* kudry.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC602A982BF2BD7900279AD0 /* kudry.otf */; };
-		ECFF3AEF2BF64C50004ECB5A /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFF3AEE2BF64C50004ECB5A /* Tutor.swift */; };
-		ECFF3AF12BF65153004ECB5A /* Tutor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFF3AF02BF65152004ECB5A /* Tutor.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +71,6 @@
 		EC602A962BF2BB8B00279AD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC602A982BF2BD7900279AD0 /* kudry.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kudry.otf; sourceTree = "<group>"; };
 		EC602A9A2BF2BEEC00279AD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		ECFF3AEE2BF64C50004ECB5A /* Tutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
-		ECFF3AF02BF65152004ECB5A /* Tutor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tutor.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +175,7 @@
 		AC9B6D1C2BEE75EA00A26E66 /* Sovets */ = {
 			isa = PBXGroup;
 			children = (
-				ECFF3AF02BF65152004ECB5A /* Tutor.xcassets */,
 				AC9B6D222BEE763000A26E66 /* SovetsView.swift */,
-				ECFF3AEE2BF64C50004ECB5A /* Tutor.swift */,
 			);
 			path = Sovets;
 			sourceTree = "<group>";
@@ -327,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC9141242BEE65C9001CBB97 /* Preview Assets.xcassets in Resources */,
-				ECFF3AF12BF65153004ECB5A /* Tutor.xcassets in Resources */,
 				ACB7FEFC2BEFC04500E0B150 /* mybase.db in Resources */,
 				ACB7FEEF2BEEB0B900E0B150 /* Color.xcassets in Resources */,
 				EC602A992BF2BD7900279AD0 /* kudry.otf in Resources */,
@@ -385,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECFF3AEF2BF64C50004ECB5A /* Tutor.swift in Sources */,
 				ACB3028A2BF40EFC004639F1 /* AddPlantView.swift in Sources */,
 				ACFAA8ED2BF3F5A100934AC2 /* TestTable.swift in Sources */,
 				AC9B6D1F2BEE760A00A26E66 /* FeedView.swift in Sources */,

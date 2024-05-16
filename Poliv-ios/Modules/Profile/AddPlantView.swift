@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct AddPlantView: View {
+    
     /// доступ к бд свифта
     @Environment(\.modelContext) var modelContext
     
@@ -51,26 +52,37 @@ struct AddPlantView: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
-                    Image(uiImage: self.imagePlant)
-                            .resizable()
-                            .frame(width: 150,
-                                   height: 150)
-                            .background(.topGreen)
-                            .cornerRadius(20)
-                            .padding(.vertical, 20)
-                            .onTapGesture {
-                        showSheet = true
-                    }
-                       .sheet(isPresented: $showSheet) {
-                    // Pick an image from the photo library:
-                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$imagePlant)
-            }
+                    HStack {
+                        Image(uiImage: self.imagePlant)
+                                .resizable()
+                                .frame(width: 150,
+                                       height: 150)
+                                .background(.white80)
+                                .cornerRadius(20)
+                                .padding(.vertical, 20)
+                                .padding(.horizontal, 16)
+                                .onTapGesture {
+                            showSheet = true
+                        }
+                           .sheet(isPresented: $showSheet) {
+                        // Pick an image from the photo library:
+                        ImagePicker(sourceType: .photoLibrary, selectedImage: self.$imagePlant)
+                       }
+                        Text("Выберите из Вашей галереи фотографию растения")
+                            .padding(.horizontal)
+                            .multilineTextAlignment(.center)
+                            .font(Font.custom("kudry", size: 20))
+
+                    }   .background(.topGreen)
+                        .foregroundColor(.white)
+                        .cornerRadius(20)
 
                     TextField("Введите имя растения",
                               text: $namePlant)
                     .background(.white80)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 10)
+                    .disableAutocorrection(true)
 
                     PickerField(title: getNameTypePlant(),
                                 data: typesPlant,
@@ -107,12 +119,13 @@ struct AddPlantView: View {
                     .lineLimit(5...7)
                     .background(.white80)
                     .padding(.horizontal, 16)
+                    .disableAutocorrection(true)
                     Spacer()
                 }
             }
             .scrollDismissesKeyboard(.interactively)
         }
-        .navigationTitle("Добавить растение")
+        .navigationTitle("Редактирование растения")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("",
