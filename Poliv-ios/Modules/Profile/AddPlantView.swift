@@ -1,32 +1,21 @@
-//
-//  AddPlantView.swift
-//  Poliv-ios
-//
-//  Created by artem on 15.05.2024.
-//
-
 import SwiftUI
 
 struct AddPlantView: View {
     
-    init() {
-        _selectedImage = Binding<UIImage>.constant(UIImage(systemName: .tree)!)
-    }
-    
+    @State private var image = UIImage()
+    @State private var showSheet = false
+
     let saveButton = Button("eee", systemImage: "checkmark") {
         print("About tapped!")
     }
 
-    @State private var showImagePicker = false
     @State private var namePlant: String = ""
     @State private var notePlant: String = ""
     @State private var descriptionPlant: String = ""
     @State private var selectedTypePlant: Int?
     @State private var selectedTypeNote: Int?
-    
     @State private var datePlanting: Date = Date()
     @State private var dateNote: Date = Date()
-    @Binding private var selectedImage: UIImage
     
     var body: some View {
         ZStack {
@@ -35,28 +24,26 @@ struct AddPlantView: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
-                    Button(action: {
-                        self.showImagePicker.toggle()
-                    }) {
-                        Image(uiImage: $selectedImage.wrappedValue)
+                        Image(uiImage: self.image)
                             .resizable()
-                            .foregroundStyle(.topGreen)
-                            .padding(10)
-                            .frame(width: 100,
-                                   height: 100)
-                            .background(.white80)
-                            .cornerRadius(50)
-                    }.sheet(isPresented: $showImagePicker,
-                            content: { ImagePicker(image: $selectedImage)
-                    })
-                    Spacer()
-                    Text("Создадим новое растение!").frame(maxWidth: .infinity, alignment: .center).padding(.horizontal, 16)
+                            .frame(width: 150,
+                                   height: 150)
+                            .background(.gray)
+                            .padding(.vertical, 20)
+                            .onTapGesture {
+                        showSheet = true
+                    }
+                       .sheet(isPresented: $showSheet) {
+                    // Pick an image from the photo library:
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+            }
 
-                    TextField("Имя растения",
+                    TextField("Введите имя растения",
                               text: $namePlant)
                     .background(.white80)
                     .padding(.horizontal, 16)
-                    
+                    .padding(.vertical, 10)
+
                     PickerField(title: getNameTypePlant(),
                                 data: typesPlant,
                                 selectionIndex: $selectedTypePlant)
@@ -70,6 +57,7 @@ struct AddPlantView: View {
                                displayedComponents: .date)
                     .background(.white80)
                     .padding(.horizontal, 16)
+                    .cornerRadius(20)
 
                     Text("Выберите из списка последнее известное событие:").frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal, 16).padding(.vertical, 10)
 
@@ -85,12 +73,10 @@ struct AddPlantView: View {
                     }
                     .background(.white80)
                     .padding(.horizontal, 16)
-                    
-                    Text("Вы можете добавить комментарий:").frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal, 16).padding(.vertical, 10)
 
-                    TextField("Напишите комментарий здесь",
+                    TextField("Вы можете добавить свой комментарий здесь",
                               text: $descriptionPlant, axis: .vertical)
-                    .lineLimit(5...10)
+                    .lineLimit(5...7)
                     .background(.white80)
                     .padding(.horizontal, 16)
                     Spacer()
@@ -110,12 +96,12 @@ struct AddPlantView: View {
     }
     
     private func getNameTypePlant() -> String {
-        guard let selectedTypePlant  else { return "Тип растения"}
+        guard let selectedTypePlant  else { return "Выберите тип растения"}
         return typesPlant[selectedTypePlant]
     }
     
     private func getTypeNote() -> String {
-        guard let selectedTypePlant  else { return "Дата посадки"}
+        guard let selectedTypePlant  else { return "Событие"}
         return momentDate[selectedTypePlant]
     }
     

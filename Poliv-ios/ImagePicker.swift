@@ -1,44 +1,44 @@
-//
-//  ImagePicker.swift
-//  Poliv-ios
-//
-//  Created by Артём Нешко on 11.05.2024.
-//
-
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
+    @Environment(\.presentationMode) private var presentationMode
+    var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @Binding var selectedImage: UIImage
 
-    @Binding var image: UIImage
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
 
-    func makeUIViewController(context: Context) -> some UIViewController {
         let imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = sourceType
         imagePicker.delegate = context.coordinator
+
         return imagePicker
     }
 
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {    }
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
 
-    func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
     }
 
-    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
         var parent: ImagePicker
 
-        init(parent: ImagePicker) {
+        init(_ parent: ImagePicker) {
             self.parent = parent
         }
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let selectImage = info[.editedImage] as? UIImage {
-                self.parent.image = selectImage
+
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                parent.selectedImage = image
             }
 
-            picker.dismiss(animated: true)
+            parent.presentationMode.wrappedValue.dismiss()
         }
+
     }
 }
-

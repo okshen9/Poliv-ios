@@ -19,7 +19,6 @@ struct TaskViewCell: View {
         HStack() {
             Image(systemName: state.cellType.imageName)
                 .frame(width: 20, height: 20)
-                .foregroundStyle(.topGreen)
             Text(state.cellType.rawValue + " " + state.nameFlower).padding(.leading, 8)
             Spacer()
             Text(state.workProgress.rawValue)

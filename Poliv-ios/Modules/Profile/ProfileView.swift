@@ -9,12 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    init() {
-        _selectedImage = Binding<UIImage>.constant(UIImage(systemName: .tree)!)
-    }
-
-    @State private var showImagePicker = false
-    @Binding private var selectedImage: UIImage
+    @State private var image = UIImage()
+    @State private var showSheet = false
 
     var body: some View {
         NavigationView {
@@ -23,27 +19,26 @@ struct ProfileView: View {
                     .resizable()
                     .ignoresSafeArea()
                 VStack {
-                    Button(action: {
-                        self.showImagePicker.toggle()
-                    }) {
-                        Image(uiImage: $selectedImage.wrappedValue)
+                        Image(uiImage: self.image)
                             .resizable()
-                            .foregroundStyle(.topGreen)
-                            .padding(10)
                             .frame(width: 100,
                                    height: 100)
-                            .background(.white80)
+                            .background(.gray)
                             .cornerRadius(50)
-                    }.sheet(isPresented: $showImagePicker,
-                            content: { ImagePicker(image: $selectedImage)
-                    })//картинка для профиля
-
+                            .onTapGesture {
+                              showSheet = true
+                            }
+                    
                     NavigationLink(destination: AddPlantView()) {
                         Text("Тут будет лента со вкладками действия/заметки").padding(10)
                     }
                 }
+                .sheet(isPresented: $showSheet) {
+                    // Pick an image from the photo library:
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                }
             }
-        }.navigationTitle("Профиль")
+        }
     }
 }
 

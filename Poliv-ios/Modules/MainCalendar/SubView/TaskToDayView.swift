@@ -11,13 +11,14 @@ struct TaskToDayView: View {
     var body: some View {
             VStack(alignment: .leading, spacing: 6) {
                 Text(Constants.todayText)
-                    .font(.title2)
+                    .font(Font.custom("kudry", size: 20))
                     .padding(.horizontal, 8)
                     .frame(
                            maxWidth: .infinity,
                            alignment: .leading)
+
                 Divider()
-                
+
                 VStack(spacing: 6) {
                     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Алое",
                                                                cellType: .watering,
