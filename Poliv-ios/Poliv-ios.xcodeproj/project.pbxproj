@@ -105,6 +105,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ACA407B12BF809A30098E597 /* HelpModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488362BF6C462002A1A54 /* TypePlants.swift */,
+			);
+			path = HelpModels;
+			sourceTree = "<group>";
+		};
 		EC21DE542BF6BF8A00AFB4E0 = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				EC2489712BF7D43A002A1A54 /* Poliv-ios-Bridging-Header.h */,
+				ACA407B12BF809A30098E597 /* HelpModels */,
 				EC24882B2BF6C462002A1A54 /* Modules */,
 				EC2488482BF6C462002A1A54 /* DataBaseManagerSQLLite */,
 				EC2488272BF6C462002A1A54 /* DataBaseManegerSwiftData */,
+				EC2488412BF6C462002A1A54 /* Utilities */,
 				EC24883F2BF6C462002A1A54 /* Poliv_ios.entitlements */,
 				EC2488342BF6C462002A1A54 /* Poliv_iosApp.swift */,
 				EC2488402BF6C462002A1A54 /* ImagePicker.swift */,
@@ -203,7 +213,6 @@
 		EC2488352BF6C462002A1A54 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				EC2488362BF6C462002A1A54 /* TypePlants.swift */,
 				EC2488372BF6C462002A1A54 /* AddPlantView.swift */,
 				EC2488382BF6C462002A1A54 /* ProfileView.swift */,
 				EC2488392BF6C462002A1A54 /* ProfilePlantCellView.swift */,
@@ -223,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				EC24883D2BF6C462002A1A54 /* CreateView.swift */,
-				EC2488412BF6C462002A1A54 /* Utilities */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -236,8 +244,7 @@
 				EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */,
 				EC2488452BF6C462002A1A54 /* View+Extention.swift */,
 			);
-			name = Utilities;
-			path = ../../Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		EC2488462BF6C462002A1A54 /* Preview Content */ = {

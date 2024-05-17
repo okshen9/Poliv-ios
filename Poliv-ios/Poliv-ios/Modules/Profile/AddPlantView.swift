@@ -168,14 +168,14 @@ struct AddPlantView: View {
     
     // MARK: - Constants
     let typeNoteDate = [
-        "Последняя пересадка",
-        "Последний полив",
-        "Последняя обработка",
-        "Последняя обрезка",
-        "Последнее черенкование",
-        "Последнее удобрение",
-        "Последнее опрыскивание",
-        "Последнее прививание"
+        TypeNoteDate.lastTransfer.rawValue,
+        TypeNoteDate.lastWatering.rawValue,
+        TypeNoteDate.lastTreatment.rawValue,
+        TypeNoteDate.lastTrimming.rawValue,
+        TypeNoteDate.lastCuttings.rawValue,
+        TypeNoteDate.lastFertilizer.rawValue,
+        TypeNoteDate.lastSpraying.rawValue,
+        TypeNoteDate.lastGrafting.rawValue
     ]
     
     private let typesPlant = [TypePlants.garden.rawValue,
