@@ -31,6 +31,9 @@ struct CreateView: View {
             ScrollView {
                 Spacer()
                 VStack(spacing: 24) {
+                    Text("Создадим новое событие для календаря")
+                        .multilineTextAlignment(.center)
+                        .font(Font.kudry(20))
                     DatePicker("Дата события",
                                selection: $dateNote,
                                displayedComponents: .date)
@@ -87,10 +90,10 @@ struct CreateView: View {
                                   plantId: myPalnts[myPlantModelIndex ?? 0].id.uuidString,
                                   typeNote: getModelTypeNote(selectedTypeNote).rawValue,
                                   noteDescription: notePlant)
-        print("Neshko{{{ \(taskModel)")
+        //print("Neshko{{{ \(taskModel)")
         
-        modelContext.insert(TestTaskModel(name: "Teeeest"))
-        modelContext.insert(taskModel)
+//        modelContext.insert(TestTaskModel(name: "Teeeest"))
+//        modelContext.insert(taskModel)
 //        print("SEVEERROR = \(try? modelContext.save())")
     }
     

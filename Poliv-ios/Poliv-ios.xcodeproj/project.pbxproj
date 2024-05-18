@@ -37,8 +37,8 @@
 		EC2488652BF6C463002A1A54 /* TestTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24884B2BF6C462002A1A54 /* TestTable.swift */; };
 		EC2488662BF6C463002A1A54 /* DataBaseManagerSqlLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24884C2BF6C462002A1A54 /* DataBaseManagerSqlLite.swift */; };
 		EC2488692BF6C514002A1A54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2488682BF6C514002A1A54 /* Assets.xcassets */; };
-		EC24886E2BF6C708002A1A54 /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = EC24886C2BF6C708002A1A54 /* mybase.db */; };
-		EC24886F2BF6C708002A1A54 /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = EC24886D2BF6C708002A1A54 /* mybase.sql */; };
+		EC7FFB5F2BF9189600C04EDC /* mybase.sql in Resources */ = {isa = PBXBuildFile; fileRef = EC7FFB5D2BF9189600C04EDC /* mybase.sql */; };
+		EC7FFB602BF9189600C04EDC /* mybase.db in Resources */ = {isa = PBXBuildFile; fileRef = EC7FFB5E2BF9189600C04EDC /* mybase.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,9 +76,9 @@
 		EC24884C2BF6C462002A1A54 /* DataBaseManagerSqlLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManagerSqlLite.swift; sourceTree = "<group>"; };
 		EC2488682BF6C514002A1A54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		EC24886A2BF6C5D0002A1A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC24886C2BF6C708002A1A54 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
-		EC24886D2BF6C708002A1A54 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
 		EC2489712BF7D43A002A1A54 /* Poliv-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Poliv-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC7FFB5D2BF9189600C04EDC /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
+		EC7FFB5E2BF9189600C04EDC /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
 		F55F3CFADB15DB287DF3604F /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,8 +284,8 @@
 		EC24886B2BF6C708002A1A54 /* sqllite */ = {
 			isa = PBXGroup;
 			children = (
-				EC24886C2BF6C708002A1A54 /* mybase.db */,
-				EC24886D2BF6C708002A1A54 /* mybase.sql */,
+				EC7FFB5E2BF9189600C04EDC /* mybase.db */,
+				EC7FFB5D2BF9189600C04EDC /* mybase.sql */,
 			);
 			path = sqllite;
 			sourceTree = "<group>";
@@ -352,12 +352,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */,
+				EC7FFB5F2BF9189600C04EDC /* mybase.sql in Resources */,
 				EC24884F2BF6C462002A1A54 /* Color.xcassets in Resources */,
-				EC24886E2BF6C708002A1A54 /* mybase.db in Resources */,
+				EC7FFB602BF9189600C04EDC /* mybase.db in Resources */,
 				EC2488632BF6C463002A1A54 /* Preview Assets.xcassets in Resources */,
 				EC2488692BF6C514002A1A54 /* Assets.xcassets in Resources */,
 				EC2488502BF6C462002A1A54 /* kudry.otf in Resources */,
-				EC24886F2BF6C708002A1A54 /* mybase.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

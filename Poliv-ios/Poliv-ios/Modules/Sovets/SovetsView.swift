@@ -5,7 +5,8 @@ struct SovetsView: View {
     
     @State private var isModalPresented = false
     @State private var selectedImage = "140"
-    
+    @State private var isDataLoaded = false
+
     @State private var plantIDs = [String]()
     @State private var plantNames = [String]()
     @State private var plantAges = [String]()
@@ -48,9 +49,6 @@ struct SovetsView: View {
                                         .cornerRadius(20)
                                         .padding(10)
                                         .onTapGesture { [plantIDs] in
-                                            print("Neshko\(plantIDs[index])")
-                                            print("Neshko\(plantIDs)")
-                                            print("Neshko\(index)")
                                             self.selectedImage = plantIDs[index]
                                             self.isModalPresented = true
                                         }
@@ -170,8 +168,11 @@ struct SovetsView: View {
                             .edgesIgnoringSafeArea(.all)
                     }
                     .onAppear {
+                        if !isDataLoaded {
                         getData()
-                    }
+                        isDataLoaded = true
+                                        }
+                                }
                 }
             }
         }
@@ -181,7 +182,7 @@ struct SovetsView: View {
         var db: OpaquePointer?
         if sqlite3_open(Bundle.main.path(forResource: "mybase", ofType: "db"), &db) == SQLITE_OK {
             var queryStatement: OpaquePointer?
-            let queryString = "SELECT * FROM plants ORDER BY Name"
+            let queryString = "select pl.PlantID, pl.Name, ag.AgeType, vd.VidType, cm.CommentText, hg.Text as Height, bd.Text as Breeding, bl.Text as Bloom, pp.Text as Popular from Plants pl JOIN Ages ag ON ag.AgeKey = pl.Age Join VidTypes vd ON vd.VidKey = pl.Vid Join Height hg ON hg.ID = pl.Height join Breeding bd ON bd.ID = pl.Breeding join Bloom bl ON bl.ID = pl.Bloom join Popular pp ON pp.ID = pl.Popular join Comments cm ON cm.CommentKey = pl.Comm order by pl.Name"
             if sqlite3_prepare_v2(db, queryString, -1, &queryStatement, nil) == SQLITE_OK {
                 repeat {
                     if let pID = sqlite3_column_text(queryStatement, 0) {

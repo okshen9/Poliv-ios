@@ -3,10 +3,6 @@ import SwiftData
 
 struct MainTabBarView: View {
 
-    init() {
-     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: "Avenir-Heavy", size: 15)! ], for: .normal)
-    }
-
     var body: some View {
 
         return TabView {
@@ -61,7 +57,7 @@ extension MainTabBarView {
     enum Constants {
         enum TabText {
             static let calendar = "Календарь"
-            static let feed = "Новости"
+            static let feed = "Лента"
             static let create = "Создать"
             static let sovets = "Советы"
             static let profile = "Профиль"

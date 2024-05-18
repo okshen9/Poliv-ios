@@ -16,7 +16,7 @@ struct FeedView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack{
-                Text("Тут будет лента со вкладками действия/заметки")
+                Text("Тут будет хронологическая лента событий")
                     .padding()
 //                List(myTask, rowContent: {
 //                    

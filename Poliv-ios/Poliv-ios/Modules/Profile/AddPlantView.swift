@@ -126,7 +126,7 @@ struct AddPlantView: View {
             }
             .scrollDismissesKeyboard(.interactively)
         }
-        .navigationTitle("Редактирование растения")
+        .navigationTitle("Ваше растение")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("",
