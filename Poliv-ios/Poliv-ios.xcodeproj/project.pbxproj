@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */; };
+		ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680F2BF83B1400C24F04 /* TaskModel.swift */; };
+		ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA68132BF8559900C24F04 /* TestTaskModel.swift */; };
 		BF7F4AFC78EFD5A9970FB40C /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */; };
 		EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */; };
 		EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488282BF6C462002A1A54 /* MyPlantModel.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionFont.swift; sourceTree = "<group>"; };
+		ACDA680F2BF83B1400C24F04 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		ACDA68132BF8559900C24F04 /* TestTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskModel.swift; sourceTree = "<group>"; };
 		BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
 		CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2489712BF7D43A002A1A54 /* Poliv-ios-Bridging-Header.h */,
+				EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */,
 				ACA407B12BF809A30098E597 /* HelpModels */,
 				EC24882B2BF6C462002A1A54 /* Modules */,
 				EC2488482BF6C462002A1A54 /* DataBaseManagerSQLLite */,
@@ -167,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				EC2488282BF6C462002A1A54 /* MyPlantModel.swift */,
+				ACDA680F2BF83B1400C24F04 /* TaskModel.swift */,
+				ACDA68132BF8559900C24F04 /* TestTaskModel.swift */,
 			);
 			path = DataBaseManegerSwiftData;
 			sourceTree = "<group>";
@@ -174,7 +183,6 @@
 		EC24882B2BF6C462002A1A54 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */,
 				EC24882D2BF6C462002A1A54 /* MainCalendar */,
 				EC24883A2BF6C462002A1A54 /* Feed */,
 				EC24883C2BF6C462002A1A54 /* Create */,
@@ -243,6 +251,7 @@
 				EC2488432BF6C462002A1A54 /* ImageName.swift */,
 				EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */,
 				EC2488452BF6C462002A1A54 /* View+Extention.swift */,
+				ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -402,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */,
+				ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */,
 				EC2488532BF6C462002A1A54 /* TaskToDayView.swift in Sources */,
 				EC2488592BF6C462002A1A54 /* ProfileView.swift in Sources */,
 				EC24885E2BF6C463002A1A54 /* ImagePicker.swift in Sources */,
@@ -418,6 +428,8 @@
 				EC2488662BF6C463002A1A54 /* DataBaseManagerSqlLite.swift in Sources */,
 				EC2488622BF6C463002A1A54 /* View+Extention.swift in Sources */,
 				EC24885A2BF6C463002A1A54 /* ProfilePlantCellView.swift in Sources */,
+				ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */,
+				ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */,
 				EC2488522BF6C462002A1A54 /* MainCalendarView.swift in Sources */,
 				EC2488602BF6C463002A1A54 /* ImageName.swift in Sources */,
 				EC2488652BF6C463002A1A54 /* TestTable.swift in Sources */,

@@ -19,7 +19,7 @@ struct TaskViewCell: View {
                 .background(Color.gray.opacity(0.8))
                 .cornerRadius(5)
                 .padding(.all, 5)
-                .frame(minWidth: 110)
+                .frame(width: 150)
                 .contextMenu {
                     Button("Готово") { state.workProgress = .done }
                     Button("В процессе", role: .destructive) { state.workProgress = .todo }

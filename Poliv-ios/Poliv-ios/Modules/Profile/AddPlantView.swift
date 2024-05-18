@@ -71,7 +71,7 @@ struct AddPlantView: View {
                         Text("Выберите из Вашей галереи фотографию растения")
                             .padding(.horizontal)
                             .multilineTextAlignment(.center)
-                            .font(Font.custom("kudry", size: 20))
+                            .font(Font.kudry(20))
 
                     }   .background(.topGreen)
                         .foregroundColor(.white)
@@ -89,7 +89,8 @@ struct AddPlantView: View {
                                 selectionIndex: $selectedTypePlant)
                     .frame(maxHeight: 24)
                     .background(.white80)
-                    .padding(.horizontal, 16).padding(.vertical, 10)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 10)
 
                     
                     DatePicker("Дата приобретения",

@@ -4,7 +4,7 @@ struct TaskToDayView: View {
     var body: some View {
             VStack(alignment: .leading, spacing: 6) {
                 Text(Constants.todayText)
-                    .font(Font.custom("kudry", size: 20))
+                    .font(Font.kudry(20))
                     .padding(.horizontal, 8)
                     .frame(
                            maxWidth: .infinity,

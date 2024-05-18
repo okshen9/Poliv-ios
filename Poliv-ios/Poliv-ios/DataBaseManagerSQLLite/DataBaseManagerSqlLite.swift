@@ -22,7 +22,7 @@ class DataBaseManagerSqlLite {
             let plants: [Plants] = try dataBase.read { db in
                 try Plants.fetchAll(db)
             }
-            print(plants)
+//            print(plants)
         }
         catch {
             print("ErrorRead")
