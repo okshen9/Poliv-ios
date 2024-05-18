@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E17482E6AF962429D5C0DC2 /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19BA0D029A766E54D5D084 /* Pods_Poliv_ios.framework */; };
 		EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */; };
 		EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488282BF6C462002A1A54 /* MyPlantModel.swift */; };
 		EC24884F2BF6C462002A1A54 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2488292BF6C462002A1A54 /* Color.xcassets */; };
@@ -38,8 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
+		309C92B3AC9E20CDCADE938D /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		EA19BA0D029A766E54D5D084 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC2488282BF6C462002A1A54 /* MyPlantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlantModel.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		EC24886C2BF6C708002A1A54 /* mybase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = mybase.db; sourceTree = "<group>"; };
 		EC24886D2BF6C708002A1A54 /* mybase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mybase.sql; sourceTree = "<group>"; };
 		EC2489712BF7D43A002A1A54 /* Poliv-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Poliv-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		F55F3CFADB15DB287DF3604F /* Pods-Poliv-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.release.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E17482E6AF962429D5C0DC2 /* Pods_Poliv_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,15 +91,16 @@
 		5D29996A6CA07B04D49520B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */,
-				BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */,
+				309C92B3AC9E20CDCADE938D /* Pods-Poliv-ios.debug.xcconfig */,
+				F55F3CFADB15DB287DF3604F /* Pods-Poliv-ios.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		6862AEA9031FF7023CBDF6CC /* Frameworks */ = {
+		920C60429DAA3C6F17F9CF08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA19BA0D029A766E54D5D084 /* Pods_Poliv_ios.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +112,7 @@
 				EC24886B2BF6C708002A1A54 /* sqllite */,
 				EC21DE5E2BF6BF8A00AFB4E0 /* Products */,
 				5D29996A6CA07B04D49520B9 /* Pods */,
-				6862AEA9031FF7023CBDF6CC /* Frameworks */,
+				920C60429DAA3C6F17F9CF08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,11 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC21DE6B2BF6BF8C00AFB4E0 /* Build configuration list for PBXNativeTarget "Poliv-ios" */;
 			buildPhases = (
-				00CBD6C21A74D1FBA096BAED /* [CP] Check Pods Manifest.lock */,
+				BA510C54166082310C6D0F30 /* [CP] Check Pods Manifest.lock */,
 				EC21DE592BF6BF8A00AFB4E0 /* Sources */,
 				EC21DE5A2BF6BF8A00AFB4E0 /* Frameworks */,
 				EC21DE5B2BF6BF8A00AFB4E0 /* Resources */,
-				187FDD814757C21941A237DD /* [CP] Embed Pods Frameworks */,
+				F16F960F3A2F5F59B5195127 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,7 +348,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00CBD6C21A74D1FBA096BAED /* [CP] Check Pods Manifest.lock */ = {
+		BA510C54166082310C6D0F30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,7 +370,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		187FDD814757C21941A237DD /* [CP] Embed Pods Frameworks */ = {
+		F16F960F3A2F5F59B5195127 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -538,7 +542,7 @@
 		};
 		EC21DE6C2BF6BF8C00AFB4E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D277EEFB6755C2FEC3DDC85 /* Pods-Poliv-ios.debug.xcconfig */;
+			baseConfigurationReference = 309C92B3AC9E20CDCADE938D /* Pods-Poliv-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -573,7 +577,7 @@
 		};
 		EC21DE6D2BF6BF8C00AFB4E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBCAAEDAAB67098D34DEFF95 /* Pods-Poliv-ios.release.xcconfig */;
+			baseConfigurationReference = F55F3CFADB15DB287DF3604F /* Pods-Poliv-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
