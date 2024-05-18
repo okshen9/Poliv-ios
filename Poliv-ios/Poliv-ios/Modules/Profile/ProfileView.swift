@@ -30,13 +30,13 @@ struct ProfileView: View {
                         Text("Добро пожаловать в Ваш профиль!")
                             .padding(.horizontal, 16)
                             .multilineTextAlignment(.center)
-                            .font(Font.custom("kudry", size: 20))
+                            .font(Font.kudry(20))
 
                     }
                     
                     Text("Здесь размещен список Ваших растений")
                         .multilineTextAlignment(.center)
-                        .font(Font.custom("kudry", size: 20))
+                        .font(Font.kudry(20))
 
                     NavigationLink(destination: AddPlantView(nil).modelContainer(for: MyPlantModel.self)
                     ) {
@@ -44,7 +44,7 @@ struct ProfileView: View {
                             .background(.topGreen)
                             .cornerRadius(20)
                             .foregroundColor(.white)
-                            .font(Font.custom("kudry", size: 20))
+                            .font(Font.kudry(20))
                     }
                     List(myPalnts) { myPlant in
                         ProfilePlantCellView(myPlant: myPlant)

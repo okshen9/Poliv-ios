@@ -11,7 +11,7 @@ import SwiftData
 
 @Model
 final class MyPlantModel {
-    let id: UUID
+    @Attribute(.unique) let id: UUID
     
     var namePlant: String
     var notePlant: String
@@ -32,6 +32,7 @@ final class MyPlantModel {
          imagePlant: UIImage?
     ) {
         self.id = UUID()
+        
         self.namePlant = namePlant
         self.notePlant = notePlant
         self.descriptionPlant = descriptionPlant

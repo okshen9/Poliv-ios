@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E17482E6AF962429D5C0DC2 /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA19BA0D029A766E54D5D084 /* Pods_Poliv_ios.framework */; };
+		ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */; };
+		ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680F2BF83B1400C24F04 /* TaskModel.swift */; };
+		ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA68132BF8559900C24F04 /* TestTaskModel.swift */; };
+		BF7F4AFC78EFD5A9970FB40C /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */; };
 		EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */; };
 		EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488282BF6C462002A1A54 /* MyPlantModel.swift */; };
 		EC24884F2BF6C462002A1A54 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2488292BF6C462002A1A54 /* Color.xcassets */; };
@@ -39,8 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		309C92B3AC9E20CDCADE938D /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		EA19BA0D029A766E54D5D084 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionFont.swift; sourceTree = "<group>"; };
+		ACDA680F2BF83B1400C24F04 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		ACDA68132BF8559900C24F04 /* TestTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskModel.swift; sourceTree = "<group>"; };
+		CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11BCA77AB15CB14A92403CA /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC2488282BF6C462002A1A54 /* MyPlantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlantModel.swift; sourceTree = "<group>"; };
@@ -81,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E17482E6AF962429D5C0DC2 /* Pods_Poliv_ios.framework in Frameworks */,
+				BF7F4AFC78EFD5A9970FB40C /* Pods_Poliv_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +97,8 @@
 		5D29996A6CA07B04D49520B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				309C92B3AC9E20CDCADE938D /* Pods-Poliv-ios.debug.xcconfig */,
 				F55F3CFADB15DB287DF3604F /* Pods-Poliv-ios.release.xcconfig */,
+				E11BCA77AB15CB14A92403CA /* Pods-Poliv-ios.debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -100,9 +106,17 @@
 		920C60429DAA3C6F17F9CF08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA19BA0D029A766E54D5D084 /* Pods_Poliv_ios.framework */,
+				CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACA407B12BF809A30098E597 /* HelpModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC2488362BF6C462002A1A54 /* TypePlants.swift */,
+			);
+			path = HelpModels;
 			sourceTree = "<group>";
 		};
 		EC21DE542BF6BF8A00AFB4E0 = {
@@ -128,9 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				EC2489712BF7D43A002A1A54 /* Poliv-ios-Bridging-Header.h */,
+				EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */,
+				ACA407B12BF809A30098E597 /* HelpModels */,
 				EC24882B2BF6C462002A1A54 /* Modules */,
 				EC2488482BF6C462002A1A54 /* DataBaseManagerSQLLite */,
 				EC2488272BF6C462002A1A54 /* DataBaseManegerSwiftData */,
+				EC2488412BF6C462002A1A54 /* Utilities */,
 				EC24883F2BF6C462002A1A54 /* Poliv_ios.entitlements */,
 				EC2488342BF6C462002A1A54 /* Poliv_iosApp.swift */,
 				EC2488402BF6C462002A1A54 /* ImagePicker.swift */,
@@ -157,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				EC2488282BF6C462002A1A54 /* MyPlantModel.swift */,
+				ACDA680F2BF83B1400C24F04 /* TaskModel.swift */,
+				ACDA68132BF8559900C24F04 /* TestTaskModel.swift */,
 			);
 			path = DataBaseManegerSwiftData;
 			sourceTree = "<group>";
@@ -164,7 +183,6 @@
 		EC24882B2BF6C462002A1A54 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				EC24882C2BF6C462002A1A54 /* MainTabBarView.swift */,
 				EC24882D2BF6C462002A1A54 /* MainCalendar */,
 				EC24883A2BF6C462002A1A54 /* Feed */,
 				EC24883C2BF6C462002A1A54 /* Create */,
@@ -203,7 +221,6 @@
 		EC2488352BF6C462002A1A54 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				EC2488362BF6C462002A1A54 /* TypePlants.swift */,
 				EC2488372BF6C462002A1A54 /* AddPlantView.swift */,
 				EC2488382BF6C462002A1A54 /* ProfileView.swift */,
 				EC2488392BF6C462002A1A54 /* ProfilePlantCellView.swift */,
@@ -223,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				EC24883D2BF6C462002A1A54 /* CreateView.swift */,
-				EC2488412BF6C462002A1A54 /* Utilities */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -235,9 +251,9 @@
 				EC2488432BF6C462002A1A54 /* ImageName.swift */,
 				EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */,
 				EC2488452BF6C462002A1A54 /* View+Extention.swift */,
+				ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */,
 			);
-			name = Utilities;
-			path = ../../Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		EC2488462BF6C462002A1A54 /* Preview Content */ = {
@@ -395,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */,
+				ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */,
 				EC2488532BF6C462002A1A54 /* TaskToDayView.swift in Sources */,
 				EC2488592BF6C462002A1A54 /* ProfileView.swift in Sources */,
 				EC24885E2BF6C463002A1A54 /* ImagePicker.swift in Sources */,
@@ -411,6 +428,8 @@
 				EC2488662BF6C463002A1A54 /* DataBaseManagerSqlLite.swift in Sources */,
 				EC2488622BF6C463002A1A54 /* View+Extention.swift in Sources */,
 				EC24885A2BF6C463002A1A54 /* ProfilePlantCellView.swift in Sources */,
+				ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */,
+				ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */,
 				EC2488522BF6C462002A1A54 /* MainCalendarView.swift in Sources */,
 				EC2488602BF6C463002A1A54 /* ImageName.swift in Sources */,
 				EC2488652BF6C463002A1A54 /* TestTable.swift in Sources */,
@@ -542,7 +561,7 @@
 		};
 		EC21DE6C2BF6BF8C00AFB4E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 309C92B3AC9E20CDCADE938D /* Pods-Poliv-ios.debug.xcconfig */;
+			baseConfigurationReference = E11BCA77AB15CB14A92403CA /* Pods-Poliv-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

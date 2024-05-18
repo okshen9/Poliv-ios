@@ -1,7 +1,8 @@
 import SwiftUI
+import SwiftData
 
 struct MainCalendarView: View {
-    
+    @Query private var myTask: [TaskModel]
     let dataBaseManager = DataBaseManagerSqlLite()
     
     let dateFormatter: DateFormatter = {
@@ -31,7 +32,7 @@ struct MainCalendarView: View {
                     .background(Color.topGreen)
                     .foregroundColor(.white)
                     .cornerRadius(20)
-                    .font(Font.custom("kudry", size: 20))
+                    .font(Font.kudry(20))
                 ScrollView {
                     DatePicker("Календарь",
                                selection: $selectedDate,
@@ -50,6 +51,9 @@ struct MainCalendarView: View {
             }
             .padding(.top)
             .padding(.horizontal, 20)
+        }
+        .onAppear {
+                    print("neshko myTask \(myTask)")
         }
     }
 }

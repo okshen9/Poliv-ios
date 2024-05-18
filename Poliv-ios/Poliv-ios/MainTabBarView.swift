@@ -1,5 +1,5 @@
 import SwiftUI
-
+import SwiftData
 
 struct MainTabBarView: View {
 
@@ -12,17 +12,23 @@ struct MainTabBarView: View {
         return TabView {
             Group {
                 MainCalendarView()
+//                    .modelContainer(for: MyPlantModel.self)
+                    .modelContainer(for: TaskModel.self)
                     .tabItem {
                         Label(Constants.TabText.calendar, systemImage:  .TabBarImageName.calendar)
                     }
 
                 FeedView()
+//                    .modelContainer(for: MyPlantModel.self)
+                    .modelContainer(for: TaskModel.self)
                     .tabItem {
                         Label(Constants.TabText.feed, systemImage:  .TabBarImageName.feed)
                     }
                 
 
                 CreateView()
+                    .modelContainer(for: MyPlantModel.self)
+                    .modelContainer(for: TaskModel.self)
                     .tabItem {
                         Label(Constants.TabText.create, systemImage:  .TabBarImageName.create)
                     }
@@ -45,6 +51,7 @@ struct MainTabBarView: View {
     }
 }
 
+
 #Preview {
     MainTabBarView()
 }
@@ -59,5 +66,13 @@ extension MainTabBarView {
             static let sovets = "Советы"
             static let profile = "Профиль"
         }
+    }
+    
+    enum SelectedTab: Int {
+        case calendar
+        case feed
+        case create
+        case sovets
+        case profile
     }
 }
