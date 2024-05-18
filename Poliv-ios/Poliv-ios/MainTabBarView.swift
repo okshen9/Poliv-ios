@@ -3,53 +3,46 @@ import SwiftData
 
 struct MainTabBarView: View {
 
-    
-    @State private var selectedTab: SelectedTab = .calendar
-    
-    
     init() {
      UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: "Avenir-Heavy", size: 15)! ], for: .normal)
     }
 
     var body: some View {
 
-        return TabView(selection: $selectedTab) {
+        return TabView {
             Group {
                 MainCalendarView()
+//                    .modelContainer(for: MyPlantModel.self)
                     .modelContainer(for: TaskModel.self)
                     .tabItem {
                         Label(Constants.TabText.calendar, systemImage:  .TabBarImageName.calendar)
                     }
-                    .tag(0)
 
                 FeedView()
-                    .modelContainer(for: TestTaskModel.self)
+//                    .modelContainer(for: MyPlantModel.self)
+                    .modelContainer(for: TaskModel.self)
                     .tabItem {
                         Label(Constants.TabText.feed, systemImage:  .TabBarImageName.feed)
                     }
-                    .tag(1)
+                
 
                 CreateView()
-//                    .modelContainer(for: TaskModel.Type)
-                    .modelContainer(for: TestTaskModel.self)
-//                    .modelContainer(for: MyPlantModel.self])
+                    .modelContainer(for: MyPlantModel.self)
+                    .modelContainer(for: TaskModel.self)
                     .tabItem {
                         Label(Constants.TabText.create, systemImage:  .TabBarImageName.create)
                     }
-                    .tag(2)
 
                 SovetsView()
                     .tabItem {
                         Label(Constants.TabText.sovets, systemImage:  .TabBarImageName.sovets)
                     }
-                    .tag(3)
 
                 ProfileView()
                     .modelContainer(for: MyPlantModel.self)
                     .tabItem {
                         Label(Constants.TabText.profile, systemImage:  .TabBarImageName.profile)
                     }
-                    .tag(4)
             }
             .toolbarBackground(.white, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
@@ -57,6 +50,7 @@ struct MainTabBarView: View {
         .tint(.topGreen)
     }
 }
+
 
 #Preview {
     MainTabBarView()

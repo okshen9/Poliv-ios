@@ -5,7 +5,7 @@ struct CreateView: View {
     
     /// доступ к бд свифта
     @Environment(\.modelContext) var modelContext
-    @Query private var myPalnts: [TestTaskModel]
+    @Query private var myPalnts: [MyPlantModel]
     
     
     /// Для возвращения назад в навигации
@@ -38,11 +38,7 @@ struct CreateView: View {
                     .cornerRadius(20)
                     
                     PickerField(title: "Выберите нужное растение",
-                                data: /*myPalnts.map { $0.namePlant }*/
-                                ["test1",
-                                 "test2"
-                                ]
-                                ,
+                                data: myPalnts.map({ $0.namePlant }),
                                 selectionIndex: $myPlantModelIndex)
                     .frame(height: 24)
                     .tint(.topGreen)
@@ -88,12 +84,13 @@ struct CreateView: View {
         
         let taskModel = TaskModel(stateTask: getSateTask(dateNote).rawValue,
                                   taskDate: dateNote,
-                                  plantId: "Test",//myPalnts[myPlantModelIndex].id.uuidString,
+                                  plantId: myPalnts[myPlantModelIndex ?? 0].id.uuidString,
                                   typeNote: getModelTypeNote(selectedTypeNote).rawValue,
                                   noteDescription: notePlant)
         print("Neshko{{{ \(taskModel)")
         
         modelContext.insert(TestTaskModel(name: "Teeeest"))
+        modelContext.insert(taskModel)
 //        print("SEVEERROR = \(try? modelContext.save())")
     }
     
