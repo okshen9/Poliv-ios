@@ -5,7 +5,9 @@ struct CreateView: View {
     
     /// доступ к бд свифта
     @Environment(\.modelContext) var modelContext
-    @Query private var myPalnts: [MyPlantModel]
+    @Query var myPalnts: [MyPlantModel]
+    @Query var myTask: [TaskModel]
+    @Query var myTestTask: [TestTaskModel]
     
     
     /// Для возвращения назад в навигации
@@ -16,10 +18,12 @@ struct CreateView: View {
     private var isEdit = false
 
     
-    @State private var dateNote = Date.now
-    @State private var myPlantModelIndex: Int?
-    @State private var selectedTypeNote: Int?
-    @State private var notePlant = ""
+    @State var dateNote = Date.now
+    @State var myPlantModelIndex: Int?
+    @State var selectedTypeNote: Int?
+    @State var notePlant = ""
+    
+    @State var myPalntsName = [String]()
     
     
     
@@ -77,12 +81,12 @@ struct CreateView: View {
     
     
     private func saveTask() {
-//        guard let myPlantModelIndex else { return }
         
-        print("NeshkosaveTask \(getSateTask(dateNote).rawValue)")
-        print("NeshkosaveTask \(dateNote)")
-        print("NeshkosaveTask \(getModelTypeNote(selectedTypeNote).rawValue)")
-        print("NeshkosaveTask \(notePlant)")
+//        myPalnts.forEach { 
+//            print("neshko\($0.namePlant)")
+//        }
+        
+        guard let myPlantModelIndex else { return }
         
         
         let taskModel = TaskModel(stateTask: getSateTask(dateNote).rawValue,
@@ -90,72 +94,22 @@ struct CreateView: View {
                                   plantId: myPalnts[myPlantModelIndex ?? 0].id.uuidString,
                                   typeNote: getModelTypeNote(selectedTypeNote).rawValue,
                                   noteDescription: notePlant)
-        //print("Neshko{{{ \(taskModel)")
+        modelContext.insert(taskModel)
+        do {
+            try modelContext.save()  // Сохраняем изменения в базе данных
+            print("Data saved successfully")
+        } catch {
+            print("Error saving context: \(error)")
+        }
+        print ("Neshko \(taskModel.stateTask)")
         
-//        modelContext.insert(TestTaskModel(name: "Teeeest"))
-//        modelContext.insert(taskModel)
-//        print("SEVEERROR = \(try? modelContext.save())")
     }
     
 
-
-    
-    
-    // MARK: - Constants
-    let typeNoteDate = [
-        TypeNoteDate.lastTransfer.rawValue,
-        TypeNoteDate.lastWatering.rawValue,
-        TypeNoteDate.lastTreatment.rawValue,
-        TypeNoteDate.lastTrimming.rawValue,
-        TypeNoteDate.lastCuttings.rawValue,
-        TypeNoteDate.lastFertilizer.rawValue,
-        TypeNoteDate.lastSpraying.rawValue,
-        TypeNoteDate.lastGrafting.rawValue
-    ]
 }
 
-/// MARK: - Holly Shit
-extension CreateView {
-    private func getSateTask(_ selectedDate: Date?) -> StateTask {
-        let isFuture = isFuture(selectedDate)
-        return isFuture ? .toDo : .done
-    }
-    
-    private func isFuture(_ selectedDate: Date?) -> Bool {
-        guard selectedDate != nil else {
-            return true
-        }
+// MARK: - Constants
 
-        let now = Date()
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.day], from: now, to: dateNote)
-
-        return components.day ?? 0 > 0
-    }
-    
-                                  
-    private func getModelTypeNote(_ viewTypeNoteIndex: Int?) -> TypeNoteSwiftDate {
-            guard let viewTypeNoteIndex else {
-                return .lastWatering
-            }
-        
-          guard let viewTypeNote = TypeNoteDate(rawValue: typeNoteDate[viewTypeNoteIndex]) else {
-            return .lastWatering
-        }
-        
-        switch viewTypeNote {
-        case .lastTransfer: return TypeNoteSwiftDate.lastTransfer
-        case .lastWatering: return TypeNoteSwiftDate.lastWatering
-        case .lastTreatment: return TypeNoteSwiftDate.lastTreatment
-        case .lastTrimming: return TypeNoteSwiftDate.lastTrimming
-        case .lastCuttings: return TypeNoteSwiftDate.lastCuttings
-        case .lastFertilizer: return TypeNoteSwiftDate.lastFertilizer
-        case .lastSpraying: return TypeNoteSwiftDate.lastSpraying
-        case .lastGrafting: return TypeNoteSwiftDate.lastGrafting
-        }
-        return TypeNoteSwiftDate.lastWatering
-    }
-}
 
 #Preview {
     CreateView()

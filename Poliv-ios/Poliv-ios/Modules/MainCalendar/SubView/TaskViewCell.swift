@@ -1,12 +1,20 @@
 import SwiftUI
+import SwiftData
 
 struct TaskViewCell: View {
-    
-    init(state: StateCell) {
-        self.state = state
-    }
+    @Query var myTasks: [TaskModel]
     
     @State private var state: StateCell
+    @Environment(\.modelContext) var modelContext
+    
+    var taskId: UUID
+    
+    init(state: StateCell, taskId: UUID) {
+        self._state = State(initialValue: state)
+        self.taskId = taskId
+    }
+    
+
     
     var body: some View {
         HStack() {
@@ -21,12 +29,31 @@ struct TaskViewCell: View {
                 .padding(.all, 5)
                 .frame(width: 150)
                 .contextMenu {
-                    Button("Готово") { state.workProgress = .done }
-                    Button("В процессе", role: .destructive) { state.workProgress = .todo }
+                    Button("Готово") { 
+                        state.workProgress = .done
+                        myTasks.first(where: {$0.id == taskId})?.stateTask = 1
+                        saveChange()
+                    }
+                    Button("В процессе", role: .destructive) {
+                        state.workProgress = .todo
+                        myTasks.first(where: {$0.id == taskId})?.stateTask = 0
+                        saveChange()
+                    }
                 }
         }
         .padding(.horizontal, 8)
     }
+    
+    @MainActor
+    func saveChange() {
+        do {
+            try modelContext.save()  // Сохраняем изменения в базе данных
+            print("Data saved successfully")
+        } catch {
+            print("Error saving context: \(error)")
+        }
+    }
+    
 }
 
 
@@ -63,6 +90,19 @@ extension TaskViewCell {
                     return "leaf"
                 }
             }
+            
+            static func from(index: Int) -> CellType {
+                switch index {
+                case 0: return .watering
+                case 1: return .transfer
+                case 2: return .fertilize
+                case 3: return .cutting
+                case 4: return .meds
+                case 5: return .grafting
+                case 6: return .propagating
+                default: return .watering
+                }
+            }
         }
         
         enum WorkProgress: String {
@@ -70,6 +110,14 @@ extension TaskViewCell {
             case done = "Выполнено"
             /// надо сделать
             case todo = "Не выполнено"
+            
+            static func from(index: Int) -> WorkProgress {
+                switch index {
+                case 0: return .todo
+                case 1: return .done
+                default: return .todo
+                }
+            }
         }
     }
 }
@@ -79,5 +127,6 @@ extension TaskViewCell {
 #Preview {
     TaskViewCell(state: TaskViewCell.StateCell(nameFlower: "Test",
                                                cellType: .fertilize,
-                                               workProgress: .done))
+                                               workProgress: .done), 
+                 taskId: UUID())
 }

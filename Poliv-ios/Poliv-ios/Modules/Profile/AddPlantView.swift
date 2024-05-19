@@ -1,6 +1,8 @@
 import SwiftUI
 import SwiftData
 
+
+
 struct AddPlantView: View {
     
     /// доступ к бд свифта
@@ -8,6 +10,7 @@ struct AddPlantView: View {
     
     /// Для возвращения назад в навигации
     @Environment(\.presentationMode) var presentationMode
+//    @ObservedObject private var myPlantsManager = SwitDataManager()
 
     @State private var showSheet = false
 
@@ -137,23 +140,54 @@ struct AddPlantView: View {
     }
     
     // MARK: - Private Func
-    
+    @MainActor
     private func savePlant() {
-        let myPlants = MyPlantModel(namePlant: namePlant,
-                                    notePlant: notePlant,
-                                    descriptionPlant: descriptionPlant,
-                                    selectedTypePlant: typesPlant[selectedTypePlant ?? 0],
-                                    selectedTypeNote: typeNoteDate[selectedTypeNote ?? 0],
-                                    datePlanting: datePlanting,
-                                    dateNote: dateNote,
-                                    imagePlant: imagePlant)
-        if isEdit,
-           let myCurrentPlant,
-           let oldModel = modelContext.model(for: myCurrentPlant.id) as? MyPlantModel {
-            modelContext.delete(oldModel)
+        if isEdit, let myCurrentPlant = myCurrentPlant, let oldModel = modelContext.model(for: myCurrentPlant.id) as? MyPlantModel {
+            
+            oldModel.update(namePlant: namePlant,
+                            notePlant: notePlant,
+                            descriptionPlant: descriptionPlant,
+                            selectedTypePlant: typesPlant[selectedTypePlant ?? 0],
+                            selectedTypeNote: typeNoteDate[selectedTypeNote ?? 0],
+                            datePlanting: datePlanting,
+                            dateNote: dateNote,
+                            imagePlant: imagePlant)
+            print("Updated existing plant")
+            
+            
+            do {
+                try modelContext.save()  // Сохраняем изменения в базе данных
+                print("Data saved successfully")
+            } catch {
+                print("Error saving context: \(error)")
+            }
+            print ("Neshko \((modelContext.model(for: myCurrentPlant.id) as? MyPlantModel)?.namePlant)")
+        } else {
+            let newPlant = MyPlantModel(namePlant: namePlant,
+                                        notePlant: notePlant,
+                                        descriptionPlant: descriptionPlant,
+                                        selectedTypePlant: typesPlant[selectedTypePlant ?? 0],
+                                        selectedTypeNote: typeNoteDate[selectedTypeNote ?? 0],
+                                        datePlanting: datePlanting,
+                                        dateNote: dateNote,
+                                        imagePlant: imagePlant)
+            
+            modelContext.insert(newPlant)
+            print("Inserted new plant")
+            
+            
+            
+            do {
+                try modelContext.save()  // Сохраняем изменения в базе данных
+                print("Data saved successfully")
+            } catch {
+                print("Error saving context: \(error)")
+            }
+            print ("Neshko \(newPlant.namePlant)")
         }
-        modelContext.insert(myPlants)
-        self.presentationMode.wrappedValue.dismiss()
+        
+
+//        self.presentationMode.wrappedValue.dismiss()
     }
     
     private func getNameTypePlant() -> String {
@@ -178,9 +212,6 @@ struct AddPlantView: View {
         TypeNoteDate.lastSpraying.rawValue,
         TypeNoteDate.lastGrafting.rawValue
     ]
-    
-    private let typesPlant = [TypePlants.garden.rawValue,
-                              TypePlants.home.rawValue]
 }
 
 #Preview {

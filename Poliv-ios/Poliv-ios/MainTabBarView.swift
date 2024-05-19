@@ -1,30 +1,48 @@
 import SwiftUI
 import SwiftData
 
+var sharedModelContainer: ModelContainer = {
+    let schema = Schema([
+        TaskModel.self,
+        TestTaskModel.self,
+        MyPlantModel.self
+    ])
+    let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+
+    do {
+        return try ModelContainer(for: schema, configurations: [modelConfiguration])
+    } catch {
+        fatalError("Could not create ModelContainer: \(error)")
+    }
+}()
+
 struct MainTabBarView: View {
+
+    init() {
+     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: "Avenir-Heavy", size: 15)! ], for: .normal)
+    }
+    
+
 
     var body: some View {
 
         return TabView {
             Group {
                 MainCalendarView()
-//                    .modelContainer(for: MyPlantModel.self)
-                    .modelContainer(for: TaskModel.self)
+                    .modelContainer(sharedModelContainer)
                     .tabItem {
                         Label(Constants.TabText.calendar, systemImage:  .TabBarImageName.calendar)
                     }
 
                 FeedView()
-//                    .modelContainer(for: MyPlantModel.self)
-                    .modelContainer(for: TaskModel.self)
+                    .modelContainer(sharedModelContainer)
                     .tabItem {
                         Label(Constants.TabText.feed, systemImage:  .TabBarImageName.feed)
                     }
                 
 
                 CreateView()
-                    .modelContainer(for: MyPlantModel.self)
-                    .modelContainer(for: TaskModel.self)
+                    .modelContainer(sharedModelContainer)
                     .tabItem {
                         Label(Constants.TabText.create, systemImage:  .TabBarImageName.create)
                     }
@@ -35,7 +53,7 @@ struct MainTabBarView: View {
                     }
 
                 ProfileView()
-                    .modelContainer(for: MyPlantModel.self)
+                    .modelContainer(sharedModelContainer)
                     .tabItem {
                         Label(Constants.TabText.profile, systemImage:  .TabBarImageName.profile)
                     }

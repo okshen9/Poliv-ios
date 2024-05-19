@@ -10,7 +10,7 @@ import UIKit
 import SwiftData
 
 @Model
-final class MyPlantModel {
+final class MyPlantModel: ObservableObject, Identifiable {
     @Attribute(.unique) let id: UUID
     
     var namePlant: String
@@ -22,7 +22,8 @@ final class MyPlantModel {
     var dateNote: Date
     var imagePlantData: Data
     
-    init(namePlant: String,
+    init(id: UUID = UUID(),
+         namePlant: String,
          notePlant: String,
          descriptionPlant: String,
          selectedTypePlant: String,
@@ -31,8 +32,28 @@ final class MyPlantModel {
          dateNote: Date,
          imagePlant: UIImage?
     ) {
-        self.id = UUID()
+        self.id = id
         
+        self.namePlant = namePlant
+        self.notePlant = notePlant
+        self.descriptionPlant = descriptionPlant
+        self.selectedTypePlant = selectedTypePlant
+        self.selectedTypeNote = selectedTypeNote
+        self.datePlanting = datePlanting
+        self.dateNote = dateNote
+        self.imagePlantData = imagePlant?.pngData() ?? Data()
+    }
+    
+    func update(namePlant: String,
+         notePlant: String,
+         descriptionPlant: String,
+         selectedTypePlant: String,
+         selectedTypeNote: String,
+         datePlanting: Date,
+         dateNote: Date,
+         imagePlant: UIImage?
+    ) {
+        print("Updating plant with name: \(namePlant)")
         self.namePlant = namePlant
         self.notePlant = notePlant
         self.descriptionPlant = descriptionPlant
@@ -63,6 +84,9 @@ extension MyPlantModel {
         self.selectedTypeNote = editedPlant.selectedTypeNote
         self.datePlanting = editedPlant.datePlanting
         self.dateNote = editedPlant.dateNote
+        
         self.imagePlantData = editedPlant.imagePlantData
     }
+    
+    static let MockModel = MyPlantModel(namePlant: "Test", notePlant: "Test", descriptionPlant: "Test", selectedTypePlant: TypePlants.garden.rawValue, selectedTypeNote: TypeNoteDate.lastTransfer.rawValue, datePlanting: Date(), dateNote: Date(), imagePlant: nil)
 }

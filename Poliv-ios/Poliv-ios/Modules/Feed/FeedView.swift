@@ -6,7 +6,8 @@ let backgroundGradient = Image("backimage")
 struct FeedView: View {
     /// доступ к бд свифта
     @Environment(\.modelContext) var modelContext
-//    @Query private var myTask: [TestTaskModel]
+    @Query private var myTask: [TaskModel]
+    @Query private var myPlants: [MyPlantModel]
     
     
     
@@ -15,17 +16,18 @@ struct FeedView: View {
             Image("backimage")
                 .resizable()
                 .ignoresSafeArea()
-            VStack{
-                Text("Тут будет хронологическая лента событий")
+            VStack(alignment: .leading) {
+                Text("Тут будет лента со вкладками действия/заметки")
                     .padding()
-//                List(myTask, rowContent: {
-//                    
-//                    Text($0.name)
-//                })
+                List(myTask) { task in
+                    FeedViewCell(plant: task.getPlant(plants: myPlants),
+                                 myTask: task)
+                }
+                .scrollContentBackground(.hidden)
             }
         }
         .onAppear {
-//            print("NNNCount \(myTask.count)")
+            print("NNNCount \(myTask.count)")
         }
     }
 }

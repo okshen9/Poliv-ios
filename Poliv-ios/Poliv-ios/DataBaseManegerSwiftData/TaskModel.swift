@@ -10,7 +10,7 @@ import UIKit
 import SwiftData
 
 @Model
-final class TaskModel {
+final class TaskModel: ObservableObject, Identifiable {
     @Attribute(.unique)
     let id: UUID
     
@@ -18,7 +18,7 @@ final class TaskModel {
     var taskDate: Date
     var plantStringId: String
     /// тип события
-    var typeNote: Int
+    var typeNoteDate: Int
     var noteDescription: String?
     
     init(stateTask: Int, taskDate: Date, plantId: String, typeNote: Int, noteDescription: String? = nil) {
@@ -27,10 +27,24 @@ final class TaskModel {
         self.stateTask = stateTask
         self.taskDate = taskDate
         self.plantStringId = plantId
-        self.typeNote = typeNote
+        self.typeNoteDate = typeNote
         self.noteDescription = noteDescription
     }
+    func getPlant(plants: [MyPlantModel]) -> MyPlantModel {
+        let testPlant = plants.filter { $0.id.uuidString == self.plantStringId }.first
+        
+        return testPlant ??
+        MyPlantModel(namePlant: "нет данных",
+                     notePlant: "нет данных",
+                     descriptionPlant: "нет данных",
+                     selectedTypePlant: "нет данных",
+                     selectedTypeNote: "нет данных",
+                     datePlanting: Date(),
+                     dateNote: Date(),
+                     imagePlant: nil)
+    }
     
+    static let MockModel = TaskModel(stateTask: 0, taskDate: Date(), plantId: "Test", typeNote: 0)
 }
 
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4BF8752BFA7E78003CF1E8 /* SwitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4BF8742BFA7E78003CF1E8 /* SwitDataManager.swift */; };
+		AC4BF8772BFAAD47003CF1E8 /* DateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4BF8762BFAAD47003CF1E8 /* DateFormater.swift */; };
+		ACC461122BF8E48700C2A1E2 /* CreateViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC461112BF8E48700C2A1E2 /* CreateViewExtension.swift */; };
+		ACC461142BF8EFDA00C2A1E2 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC461132BF8EFDA00C2A1E2 /* FeedViewCell.swift */; };
 		ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */; };
 		ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680F2BF83B1400C24F04 /* TaskModel.swift */; };
 		ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA68132BF8559900C24F04 /* TestTaskModel.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC4BF8742BFA7E78003CF1E8 /* SwitDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitDataManager.swift; sourceTree = "<group>"; };
+		AC4BF8762BFAAD47003CF1E8 /* DateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormater.swift; sourceTree = "<group>"; };
+		ACC461112BF8E48700C2A1E2 /* CreateViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewExtension.swift; sourceTree = "<group>"; };
+		ACC461132BF8EFDA00C2A1E2 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionFont.swift; sourceTree = "<group>"; };
 		ACDA680F2BF83B1400C24F04 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		ACDA68132BF8559900C24F04 /* TestTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskModel.swift; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 				EC2488282BF6C462002A1A54 /* MyPlantModel.swift */,
 				ACDA680F2BF83B1400C24F04 /* TaskModel.swift */,
 				ACDA68132BF8559900C24F04 /* TestTaskModel.swift */,
+				AC4BF8742BFA7E78003CF1E8 /* SwitDataManager.swift */,
 			);
 			path = DataBaseManegerSwiftData;
 			sourceTree = "<group>";
@@ -232,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				EC24883B2BF6C462002A1A54 /* FeedView.swift */,
+				ACC461132BF8EFDA00C2A1E2 /* FeedViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				EC24883D2BF6C462002A1A54 /* CreateView.swift */,
+				ACC461112BF8E48700C2A1E2 /* CreateViewExtension.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -252,6 +263,7 @@
 				EC2488442BF6C462002A1A54 /* ExtenstionColor.swift */,
 				EC2488452BF6C462002A1A54 /* View+Extention.swift */,
 				ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */,
+				AC4BF8762BFAAD47003CF1E8 /* DateFormater.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -413,6 +425,7 @@
 				EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */,
 				ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */,
 				EC2488532BF6C462002A1A54 /* TaskToDayView.swift in Sources */,
+				AC4BF8772BFAAD47003CF1E8 /* DateFormater.swift in Sources */,
 				EC2488592BF6C462002A1A54 /* ProfileView.swift in Sources */,
 				EC24885E2BF6C463002A1A54 /* ImagePicker.swift in Sources */,
 				EC2488642BF6C463002A1A54 /* Plant.swift in Sources */,
@@ -420,6 +433,7 @@
 				EC2488612BF6C463002A1A54 /* ExtenstionColor.swift in Sources */,
 				EC24885B2BF6C463002A1A54 /* FeedView.swift in Sources */,
 				EC2488582BF6C462002A1A54 /* AddPlantView.swift in Sources */,
+				AC4BF8752BFA7E78003CF1E8 /* SwitDataManager.swift in Sources */,
 				EC2488542BF6C462002A1A54 /* TaskViewCell.swift in Sources */,
 				EC2488562BF6C462002A1A54 /* Poliv_iosApp.swift in Sources */,
 				EC24885C2BF6C463002A1A54 /* CreateView.swift in Sources */,
@@ -428,8 +442,10 @@
 				EC2488662BF6C463002A1A54 /* DataBaseManagerSqlLite.swift in Sources */,
 				EC2488622BF6C463002A1A54 /* View+Extention.swift in Sources */,
 				EC24885A2BF6C463002A1A54 /* ProfilePlantCellView.swift in Sources */,
+				ACC461142BF8EFDA00C2A1E2 /* FeedViewCell.swift in Sources */,
 				ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */,
 				ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */,
+				ACC461122BF8E48700C2A1E2 /* CreateViewExtension.swift in Sources */,
 				EC2488522BF6C462002A1A54 /* MainCalendarView.swift in Sources */,
 				EC2488602BF6C463002A1A54 /* ImageName.swift in Sources */,
 				EC2488652BF6C463002A1A54 /* TestTable.swift in Sources */,

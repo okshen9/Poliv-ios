@@ -5,6 +5,9 @@ enum TypePlants: String {
     case garden = "Садовое"
 }
 
+let typesPlant = [TypePlants.garden.rawValue,
+                          TypePlants.home.rawValue]
+
 
 enum TypeNoteDate: String {
     case lastTransfer = "Последняя пересадка"
@@ -17,3 +20,15 @@ enum TypeNoteDate: String {
     case lastGrafting = "Последнее прививание"
 }
 
+
+
+let typeNoteDate = [
+    TypeNoteDate.lastTransfer.rawValue,
+    TypeNoteDate.lastWatering.rawValue,
+    TypeNoteDate.lastTreatment.rawValue,
+    TypeNoteDate.lastTrimming.rawValue,
+    TypeNoteDate.lastCuttings.rawValue,
+    TypeNoteDate.lastFertilizer.rawValue,
+    TypeNoteDate.lastSpraying.rawValue,
+    TypeNoteDate.lastGrafting.rawValue
+]

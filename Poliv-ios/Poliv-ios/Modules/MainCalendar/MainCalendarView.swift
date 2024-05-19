@@ -2,8 +2,10 @@ import SwiftUI
 import SwiftData
 
 struct MainCalendarView: View {
-    @Query private var myTask: [TaskModel]
-    let dataBaseManager = DataBaseManagerSqlLite()
+    @Query private var myTasks: [TaskModel]
+    @Query private var myPlants: [MyPlantModel]
+    
+    
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -18,7 +20,6 @@ struct MainCalendarView: View {
     
     //MARK: Body
     var body: some View {
-        dataBaseManager.getDataFromBase()
         return ZStack{
             Image("backimage")
                 .resizable()
@@ -43,17 +44,16 @@ struct MainCalendarView: View {
                     .background(.white.opacity(0.8))
                     .cornerRadius(20)
 
-                    TaskToDayView().background(.white.opacity(0.8))
+                    TaskToDayView(date: $selectedDate)
+                        .background(.white.opacity(0.8))
                         .cornerRadius(20)
+                        .modelContainer(sharedModelContainer)
                 }
                 .scrollIndicators(.hidden)
                 Spacer()
             }
             .padding(.top)
             .padding(.horizontal, 20)
-        }
-        .onAppear {
-                    print("neshko myTask \(myTask)")
         }
     }
 }

@@ -3,7 +3,7 @@ import SwiftData
 
 struct ProfileView: View {
     // Работа с базой данных
-    @Query private var myPalnts: [MyPlantModel]
+    @Query var myPlants: [MyPlantModel]
     @Environment(\.modelContext) var modelContext
     
     // Сама вьюшка
@@ -46,7 +46,7 @@ struct ProfileView: View {
                             .foregroundColor(.white)
                             .font(Font.kudry(20))
                     }
-                    List(myPalnts) { myPlant in
+                    List(myPlants) { myPlant in
                         ProfilePlantCellView(myPlant: myPlant)
                             .modelContainer(for: MyPlantModel.self)
                             .background(.white.opacity(0.8))
