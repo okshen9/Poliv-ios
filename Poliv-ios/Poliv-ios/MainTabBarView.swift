@@ -4,7 +4,7 @@ import SwiftData
 var sharedModelContainer: ModelContainer = {
     let schema = Schema([
         TaskModel.self,
-        TestTaskModel.self,
+        ProfileModel.self,
         MyPlantModel.self
     ])
     let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)

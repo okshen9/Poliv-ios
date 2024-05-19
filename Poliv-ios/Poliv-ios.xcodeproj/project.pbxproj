@@ -13,7 +13,7 @@
 		ACC461142BF8EFDA00C2A1E2 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC461132BF8EFDA00C2A1E2 /* FeedViewCell.swift */; };
 		ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */; };
 		ACDA68102BF83B1400C24F04 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA680F2BF83B1400C24F04 /* TaskModel.swift */; };
-		ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA68132BF8559900C24F04 /* TestTaskModel.swift */; };
+		ACDA68142BF8559900C24F04 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDA68132BF8559900C24F04 /* ProfileModel.swift */; };
 		BF7F4AFC78EFD5A9970FB40C /* Pods_Poliv_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */; };
 		EC21DE682BF6BF8C00AFB4E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC21DE672BF6BF8C00AFB4E0 /* Preview Assets.xcassets */; };
 		EC24884E2BF6C462002A1A54 /* MyPlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2488282BF6C462002A1A54 /* MyPlantModel.swift */; };
@@ -52,7 +52,7 @@
 		ACC461132BF8EFDA00C2A1E2 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		ACDA680D2BF8381700C24F04 /* ExtentionFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionFont.swift; sourceTree = "<group>"; };
 		ACDA680F2BF83B1400C24F04 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		ACDA68132BF8559900C24F04 /* TestTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskModel.swift; sourceTree = "<group>"; };
+		ACDA68132BF8559900C24F04 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CDF2B386D67AC97913FF1FE3 /* Pods_Poliv_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poliv_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11BCA77AB15CB14A92403CA /* Pods-Poliv-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poliv-ios.debug.xcconfig"; path = "Target Support Files/Pods-Poliv-ios/Pods-Poliv-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		EC21DE5D2BF6BF8A00AFB4E0 /* Poliv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poliv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +183,7 @@
 			children = (
 				EC2488282BF6C462002A1A54 /* MyPlantModel.swift */,
 				ACDA680F2BF83B1400C24F04 /* TaskModel.swift */,
-				ACDA68132BF8559900C24F04 /* TestTaskModel.swift */,
+				ACDA68132BF8559900C24F04 /* ProfileModel.swift */,
 				AC4BF8742BFA7E78003CF1E8 /* SwitDataManager.swift */,
 			);
 			path = DataBaseManegerSwiftData;
@@ -443,7 +443,7 @@
 				EC2488622BF6C463002A1A54 /* View+Extention.swift in Sources */,
 				EC24885A2BF6C463002A1A54 /* ProfilePlantCellView.swift in Sources */,
 				ACC461142BF8EFDA00C2A1E2 /* FeedViewCell.swift in Sources */,
-				ACDA68142BF8559900C24F04 /* TestTaskModel.swift in Sources */,
+				ACDA68142BF8559900C24F04 /* ProfileModel.swift in Sources */,
 				ACDA680E2BF8381700C24F04 /* ExtentionFont.swift in Sources */,
 				ACC461122BF8E48700C2A1E2 /* CreateViewExtension.swift in Sources */,
 				EC2488522BF6C462002A1A54 /* MainCalendarView.swift in Sources */,

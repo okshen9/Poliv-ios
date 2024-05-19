@@ -175,8 +175,6 @@ struct AddPlantView: View {
             modelContext.insert(newPlant)
             print("Inserted new plant")
             
-            
-            
             do {
                 try modelContext.save()  // Сохраняем изменения в базе данных
                 print("Data saved successfully")
@@ -187,7 +185,7 @@ struct AddPlantView: View {
         }
         
 
-//        self.presentationMode.wrappedValue.dismiss()
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     private func getNameTypePlant() -> String {

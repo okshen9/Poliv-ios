@@ -4,6 +4,7 @@ import SwiftData
 struct ProfileView: View {
     // Работа с базой данных
     @Query var myPlants: [MyPlantModel]
+    @Query var profileModel: [ProfileModel]
     @Environment(\.modelContext) var modelContext
     
     // Сама вьюшка
@@ -18,7 +19,7 @@ struct ProfileView: View {
                     .ignoresSafeArea()
                 VStack {
                     HStack {
-                        Image(uiImage: self.image)
+                        Image(uiImage: UIImage(data: self.profileModel.first?.imageAvatarData ?? Data()) ?? UIImage(systemName: .person)!)
                                 .resizable()
                                 .frame(width: 100,
                                        height: 100)
@@ -66,9 +67,33 @@ struct ProfileView: View {
                     // Pick an image from the photo library:
                     ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
                 }
+                .onChange(of: image) {
+                    safeAvatar()
+                }
             }
         }
     }
+    
+    
+    @MainActor
+    private func safeAvatar() {
+        if let model = profileModel.first,
+           model.imageAvatarData != nil {
+            profileModel.first!.setImage(imageAvatar: image)
+        } else {
+            let profilModel = ProfileModel(imageAvatar: image)
+            modelContext.insert(profilModel)
+        }
+            
+            
+            do {
+                try modelContext.save()  // Сохраняем изменения в базе данных
+                print("Data saved successfully")
+            } catch {
+                print("Error saving context: \(error)")
+            }
+        }
+    
 }
 
 #Preview {

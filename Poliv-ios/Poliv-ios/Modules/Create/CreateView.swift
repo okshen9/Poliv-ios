@@ -7,7 +7,7 @@ struct CreateView: View {
     @Environment(\.modelContext) var modelContext
     @Query var myPalnts: [MyPlantModel]
     @Query var myTask: [TaskModel]
-    @Query var myTestTask: [TestTaskModel]
+    @Query var myTestTask: [ProfileModel]
     
     
     /// Для возвращения назад в навигации
