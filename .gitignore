@@ -1,0 +1,9 @@
+/Pods/
+/Build/
+/DerivedData/
+/Poliv-ios.xcworkspace/
+/.idea/
+/Poliv-ios.xcodeproj/xcuserdata/
+.DS_Store
+
+
