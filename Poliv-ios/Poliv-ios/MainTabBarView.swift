@@ -22,8 +22,6 @@ struct MainTabBarView: View {
      UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: "Avenir-Heavy", size: 15)! ], for: .normal)
     }
     
-
-
     var body: some View {
 
         return TabView {

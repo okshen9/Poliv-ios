@@ -5,6 +5,8 @@ import SwiftData
 
 struct AddPlantView: View {
     
+    @Query var myTasks: [TaskModel]
+    
     /// доступ к бд свифта
     @Environment(\.modelContext) var modelContext
     

@@ -6,9 +6,9 @@ let backgroundGradient = Image("backimage")
 struct FeedView: View {
     /// доступ к бд свифта
     @Environment(\.modelContext) var modelContext
-    @Query private var myTask: [TaskModel]
+    @Query private var myTasks: [TaskModel]
     @Query private var myPlants: [MyPlantModel]
-    
+    @State private var myVisbleTasks = [TaskModel]()
     
     
     var body: some View {
@@ -17,9 +17,9 @@ struct FeedView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack(alignment: .leading) {
-                Text("Тут будет лента со вкладками действия/заметки")
+                Text("Тут будет лента со вкладками действиями/заметки")
                     .padding()
-                List(myTask) { task in
+                List(myVisbleTasks) { task in
                     FeedViewCell(plant: task.getPlant(plants: myPlants),
                                  myTask: task)
                 }
@@ -27,8 +27,15 @@ struct FeedView: View {
             }
         }
         .onAppear {
-            print("NNNCount \(myTask.count)")
+            myVisbleTasks = myTasks.filter ({
+                $0.stateTask == 1
+            })
         }
+        .onChange(of: myTasks, {
+            myVisbleTasks = myTasks.filter ({
+                $0.stateTask == 1
+            })
+        })
     }
 }
 

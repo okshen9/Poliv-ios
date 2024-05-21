@@ -4,6 +4,7 @@ import SwiftData
 struct ProfileView: View {
     // Работа с базой данных
     @Query var myPlants: [MyPlantModel]
+    @Query var myTasks: [MyPlantModel]
     @Query var profileModel: [ProfileModel]
     @Environment(\.modelContext) var modelContext
     
@@ -49,7 +50,7 @@ struct ProfileView: View {
                     }
                     List(myPlants) { myPlant in
                         ProfilePlantCellView(myPlant: myPlant)
-                            .modelContainer(for: MyPlantModel.self)
+                            .modelContainer(sharedModelContainer)
                             .background(.white.opacity(0.8))
                             .cornerRadius(20)
                             .swipeActions {
@@ -68,6 +69,7 @@ struct ProfileView: View {
                     ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
                 }
                 .onChange(of: image) {
+                    print("Neshko изменилась аватарка")
                     safeAvatar()
                 }
             }
