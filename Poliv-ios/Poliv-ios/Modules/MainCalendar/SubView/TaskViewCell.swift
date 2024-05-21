@@ -56,6 +56,7 @@ struct TaskViewCell: View {
     
 }
 
+typealias CellType = TaskViewCell.StateCell.CellType
 
 extension TaskViewCell {
     struct StateCell {
@@ -63,7 +64,7 @@ extension TaskViewCell {
         var cellType: CellType
         var workProgress: WorkProgress
         
-        enum CellType: String {
+       public enum CellType: String {
             case transfer = "Пересадить"
             case watering = "Полить"
             case meds = "Обработать"
@@ -92,6 +93,25 @@ extension TaskViewCell {
                 }
             }
             
+            var feedName: String {
+                switch self {
+                case .watering:
+                    return "Полив"
+                case .transfer:
+                    return "Пересадка"
+                case .fertilize:
+                    return "Удобрение"
+                case .cutting:
+                    return "Обрезка"
+                case .meds:
+                    return "Обработка"
+                case .grafting:
+                    return "Прививание"
+                case .propagating:
+                    return "Черенкование"
+                }
+            }
+
             static func from(index: Int) -> CellType {
                 switch index {
                 case 0: return .transfer

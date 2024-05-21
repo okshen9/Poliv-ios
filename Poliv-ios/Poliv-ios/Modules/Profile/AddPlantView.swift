@@ -200,17 +200,6 @@ struct AddPlantView: View {
         return typeNoteDate[selectedTypePlant]
     }
     
-    
-    // MARK: - Constants
-    let typeNoteDate = [
-        TypeNoteDate.lastTransfer.rawValue,
-        TypeNoteDate.lastWatering.rawValue,
-        TypeNoteDate.lastTreatment.rawValue,
-        TypeNoteDate.lastTrimming.rawValue,
-        TypeNoteDate.lastCuttings.rawValue,
-        TypeNoteDate.lastFertilizer.rawValue,
-        TypeNoteDate.lastGrafting.rawValue
-    ]
 }
 
 #Preview {

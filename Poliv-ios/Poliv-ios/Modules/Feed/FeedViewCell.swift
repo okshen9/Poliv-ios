@@ -21,7 +21,8 @@ struct FeedViewCell: View {
         VStack(alignment: .leading, spacing: 16) {
             Text("\(myTask.taskDate.getDateString())")
             Text(plant.namePlant)
-            Text(TypeNoteDate(rawValue: plant.selectedTypePlant ?? "")?.rawValue ?? TypeNoteDate.lastWatering.rawValue)
+           // Text(TypeNoteDate(rawValue: plant.selectedTypePlant ?? "")?.rawValue ?? TypeNoteDate.lastWatering.rawValue)
+            Text(CellType.from(index: myTask.typeNoteDate).feedName ?? CellType.watering.feedName)
         }
         .cornerRadius(8)
         .padding(16)
