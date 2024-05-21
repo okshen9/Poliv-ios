@@ -209,7 +209,6 @@ struct AddPlantView: View {
         TypeNoteDate.lastTrimming.rawValue,
         TypeNoteDate.lastCuttings.rawValue,
         TypeNoteDate.lastFertilizer.rawValue,
-        TypeNoteDate.lastSpraying.rawValue,
         TypeNoteDate.lastGrafting.rawValue
     ]
 }

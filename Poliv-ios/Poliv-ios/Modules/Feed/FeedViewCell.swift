@@ -23,7 +23,6 @@ struct FeedViewCell: View {
             Text(plant.namePlant)
             Text(TypeNoteDate(rawValue: plant.selectedTypePlant ?? "")?.rawValue ?? TypeNoteDate.lastWatering.rawValue)
         }
-        .background(.gray80)
         .cornerRadius(8)
         .padding(16)
         

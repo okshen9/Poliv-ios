@@ -17,24 +17,37 @@ struct FeedView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack(alignment: .leading) {
-                Text("Тут будет лента со вкладками действиями/заметки")
-                    .padding()
+                Text("Лента созданных событий")
+                    .padding(.all, 20)
+                    .frame(maxWidth: .infinity,
+                           alignment: .center)
+                    .font(Font.kudry(20))
+                    .background(.topGreen)
+                    .cornerRadius(20)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 16)
+                    .foregroundColor(.white)
                 List(myVisbleTasks) { task in
                     FeedViewCell(plant: task.getPlant(plants: myPlants),
                                  myTask: task)
+                    .swipeActions {
+                    Button("Удалить", action: {
+                    modelContext.delete(task)
+                                        })
+                            }
                 }
                 .scrollContentBackground(.hidden)
             }
         }
         .onAppear {
-            myVisbleTasks = myTasks.filter ({
-                $0.stateTask == 1
-            })
+            myVisbleTasks = myTasks.sorted(by: {
+                return $0.taskDate > $1.taskDate
+             })
         }
         .onChange(of: myTasks, {
-            myVisbleTasks = myTasks.filter ({
-                $0.stateTask == 1
-            })
+            myVisbleTasks = myTasks.sorted(by: {
+                return $0.taskDate > $1.taskDate
+             })
         })
     }
 }

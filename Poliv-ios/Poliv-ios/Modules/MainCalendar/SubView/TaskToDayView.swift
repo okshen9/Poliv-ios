@@ -46,6 +46,6 @@ struct TaskToDayView: View {
 
 extension TaskToDayView {
     enum Constants {
-        static let todayText = "Сегодня нужно сделать:"
+        static let todayText = "В этот день нужно сделать:"
     }
 }

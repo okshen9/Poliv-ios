@@ -43,7 +43,6 @@ extension CreateView {
         case .lastTrimming: return TypeNoteSwiftDate.lastTrimming
         case .lastCuttings: return TypeNoteSwiftDate.lastCuttings
         case .lastFertilizer: return TypeNoteSwiftDate.lastFertilizer
-        case .lastSpraying: return TypeNoteSwiftDate.lastSpraying
         case .lastGrafting: return TypeNoteSwiftDate.lastGrafting
         }
         return TypeNoteSwiftDate.lastWatering

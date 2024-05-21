@@ -64,13 +64,14 @@ extension TaskViewCell {
         var workProgress: WorkProgress
         
         enum CellType: String {
-            case watering = "Полить"
             case transfer = "Пересадить"
-            case fertilize = "Удобрить"
-            case cutting = "Обрезать"
+            case watering = "Полить"
             case meds = "Обработать"
-            case grafting = "Привить"
+            case cutting = "Обрезать"
             case propagating = "Черенкование"
+            case fertilize = "Удобрить"
+            case grafting = "Привить"
+
 
             var imageName: String {
                 switch self {
@@ -93,13 +94,13 @@ extension TaskViewCell {
             
             static func from(index: Int) -> CellType {
                 switch index {
-                case 0: return .watering
-                case 1: return .transfer
-                case 2: return .fertilize
+                case 0: return .transfer
+                case 1: return .watering
+                case 2: return .meds
                 case 3: return .cutting
-                case 4: return .meds
-                case 5: return .grafting
-                case 6: return .propagating
+                case 4: return .propagating
+                case 5: return .fertilize
+                case 6: return .grafting
                 default: return .watering
                 }
             }

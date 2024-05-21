@@ -69,9 +69,8 @@ enum TypeNoteSwiftDate: Int {
     /// удобрение
     case lastFertilizer = 5
     /// опрыскивание
-    case lastSpraying = 6
     /// прививание
-    case lastGrafting = 7
+    case lastGrafting = 6
 }
 //}
 

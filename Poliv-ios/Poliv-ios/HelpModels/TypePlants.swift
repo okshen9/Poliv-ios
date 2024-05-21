@@ -10,14 +10,13 @@ let typesPlant = [TypePlants.garden.rawValue,
 
 
 enum TypeNoteDate: String {
-    case lastTransfer = "Последняя пересадка"
-    case lastWatering = "Последний полив"
-    case lastTreatment = "Последняя обработка"
-    case lastTrimming = "Последняя обрезка"
-    case lastCuttings = "Последнее черенкование"
-    case lastFertilizer = "Последнее удобрение"
-    case lastSpraying = "Последнее опрыскивание"
-    case lastGrafting = "Последнее прививание"
+    case lastTransfer = "Пересадка"
+    case lastWatering = "Полив"
+    case lastTreatment = "Обработка"
+    case lastTrimming = "Обрезка"
+    case lastCuttings = "Черенкование"
+    case lastFertilizer = "Удобрение"
+    case lastGrafting = "Прививание"
 }
 
 
@@ -29,6 +28,5 @@ let typeNoteDate = [
     TypeNoteDate.lastTrimming.rawValue,
     TypeNoteDate.lastCuttings.rawValue,
     TypeNoteDate.lastFertilizer.rawValue,
-    TypeNoteDate.lastSpraying.rawValue,
     TypeNoteDate.lastGrafting.rawValue
 ]
