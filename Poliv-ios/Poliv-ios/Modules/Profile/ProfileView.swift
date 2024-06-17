@@ -33,7 +33,8 @@ struct ProfileView: View {
                             .padding(.horizontal, 16)
                             .multilineTextAlignment(.center)
                             .font(Font.kudry(20))
-
+                        //credits
+                        
                     }
                     
                     Text("Здесь размещен список Ваших растений")

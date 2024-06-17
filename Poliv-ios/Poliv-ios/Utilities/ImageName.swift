@@ -13,6 +13,7 @@ extension String {
     static let watering = "drop.circle.fill"
     static let tree = "tree"
     static let person = "person"
+    static let credits = "flag"
 }
 
 
