@@ -1,8 +1,6 @@
 import SwiftUI
 import SQLite3
-
 struct SovetsView: View {
-    
     @State private var isModalPresented = false
     @State private var selectedImage = "140"
     @State private var isDataLoaded = false
@@ -15,9 +13,6 @@ struct SovetsView: View {
     @State private var plantBreedings = [String]()
     @State private var plantBlooms = [String]()
     @State private var plantPopulars = [String]()
-    
-    @State private var plantIDsIndex: String = ""
-    
     var body: some View {
         NavigationView{
             ZStack{
@@ -36,15 +31,13 @@ struct SovetsView: View {
                             .padding(.horizontal, 20)
                             .padding(.vertical, 16)
                             .foregroundColor(.white)
-
                         Text("Содержит рекомендательную информацию по уходу за растениями")
                             .multilineTextAlignment(.center)
                             .font(Font.kudry(20))
-
                         ForEach(0..<plantNames.count, id: \.self) { index in
                             NavigationLink(destination: ScrollView {
                                 VStack {
-                                    Image(plantIDsIndex)
+                                    Image(plantIDs[index])
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 300, height: 250)
@@ -55,7 +48,6 @@ struct SovetsView: View {
                                             self.selectedImage = plantIDs[index]
                                             self.isModalPresented = true
                                         }
-                                    
                                     HStack{ //1 столбец Name
                                         Text("Название растения: ")
                                             .multilineTextAlignment(.center)
@@ -66,7 +58,6 @@ struct SovetsView: View {
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal, 16)
-                                    
                                     HStack{//2 столбец Age
                                         Text("Период жизни: ")
                                             .multilineTextAlignment(.center)
@@ -77,7 +68,6 @@ struct SovetsView: View {
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal, 16)
-                                    
                                     HStack{//3 столбец Vid
                                         Text("Тип растения: ")
                                             .multilineTextAlignment(.center)
@@ -88,7 +78,6 @@ struct SovetsView: View {
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal, 16)
-                                    
                                     HStack{//5 столбец Height
                                         Text("Высота растения (см): ")
                                             .multilineTextAlignment(.center)
@@ -99,7 +88,6 @@ struct SovetsView: View {
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal, 16)
-                                    
                                     if !plantBlooms[index].isEmpty {
                                         HStack{//7 столбец Bloom
                                             Text("Цветение: ")
@@ -112,7 +100,6 @@ struct SovetsView: View {
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 16)
                                     }
-                                    
                                     //4 столбец Comm
                                     Text("Описание: ")
                                         .font(Font.kudry(20))
@@ -124,7 +111,6 @@ struct SovetsView: View {
                                         .foregroundColor(.black)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 16)
-                                    
                                     //6 столбец Breeding
                                     Text("Размножение: ")
                                         .font(Font.kudry(20))
@@ -136,13 +122,11 @@ struct SovetsView: View {
                                         .foregroundColor(.black)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 16)
-                                    
                                     Text("Популярные сорта: ")//8 Popular
                                         .frame(maxWidth: .infinity, alignment: .center)
                                         .foregroundColor(.topGreen)
                                         .padding(.horizontal, 16)
                                         .font(Font.kudry(20))
-                                    
                                     Text(plantPopulars[index])
                                         .font(.system(size: 18))
                                         .foregroundColor(.black)
@@ -150,11 +134,11 @@ struct SovetsView: View {
                                         .padding(.horizontal, 16)
                                 }.background(.white.opacity(0.8))
                             }.background(
-                                Image("backimage") // Название вашей фоновой картинки
+                                Image("backimage") // Название фоновой картинки
                                     .resizable()
                                     .scaledToFill()
                                     .edgesIgnoringSafeArea(.all)
-                            )){
+                            )) {
                                 Text(plantNames[index]) //справка по имени
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -176,14 +160,11 @@ struct SovetsView: View {
                         isDataLoaded = true
                                         }
                                 }
-                    .onChange(of: plantIDsIndex, perform: {
-                        plantIDsIndex = plantIDs[index]
-                    })
                 }
             }
         }
     }
-    
+
     func getData() {
         var db: OpaquePointer?
         if sqlite3_open(Bundle.main.path(forResource: "mybase", ofType: "db"), &db) == SQLITE_OK {
@@ -229,3 +210,4 @@ struct SovetsView: View {
 #Preview {
     SovetsView()
 }
+

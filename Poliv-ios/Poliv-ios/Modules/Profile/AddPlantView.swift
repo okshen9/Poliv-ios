@@ -142,7 +142,7 @@ struct AddPlantView: View {
                                 }
                             }
                         } else {
-                            Text("Дел по ростению не назначено")
+                            Text("Дел по растению не назначено")
                                 .frame(alignment: .leading)
                                 .background(Color.gray.opacity(0.8))
                                 .cornerRadius(8)
