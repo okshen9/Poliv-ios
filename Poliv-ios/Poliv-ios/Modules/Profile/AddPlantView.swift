@@ -130,12 +130,21 @@ struct AddPlantView: View {
                     Spacer()
                     Text("Список дел по растению")
                     VStack {
-                        ForEach(currentTasks ?? []) {
-                            if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue {
-                                Text(ttev)
-                                    .frame(alignment: .leading)
-                                    .background(Color.gray.opacity(0.8))
+                        if currentTasks != nil,
+                           !currentTasks!.isEmpty {
+                            ForEach(currentTasks ?? []) {
+                                if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue {
+                                    Text(ttev)
+                                        .frame(alignment: .leading)
+                                        .background(Color.gray.opacity(0.8))
+                                        .cornerRadius(8)
+                                }
                             }
+                        } else {
+                            Text("Дел по ростению не назначено")
+                                .frame(alignment: .leading)
+                                .background(Color.gray.opacity(0.8))
+                                .cornerRadius(8)
                         }
                     }
                     .frame(alignment: .leading)
