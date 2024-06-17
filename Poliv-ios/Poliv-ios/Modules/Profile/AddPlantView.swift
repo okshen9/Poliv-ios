@@ -163,7 +163,7 @@ struct AddPlantView: View {
             } catch {
                 print("Error saving context: \(error)")
             }
-            print ("Neshko \((modelContext.model(for: myCurrentPlant.id) as? MyPlantModel)?.namePlant)")
+            print ("\((modelContext.model(for: myCurrentPlant.id) as? MyPlantModel)?.namePlant)")
         } else {
             let newPlant = MyPlantModel(namePlant: namePlant,
                                         notePlant: notePlant,
@@ -183,7 +183,7 @@ struct AddPlantView: View {
             } catch {
                 print("Error saving context: \(error)")
             }
-            print ("Neshko \(newPlant.namePlant)")
+            print ("\(newPlant.namePlant)")
         }
         
 

@@ -1,10 +1,3 @@
-//
-//  DateFormater.swift
-//  Poliv-ios
-//
-//  Created by artem on 20.05.2024.
-//
-
 import Foundation
 
 extension Date {

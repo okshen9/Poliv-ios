@@ -69,7 +69,7 @@ struct ProfileView: View {
                     ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
                 }
                 .onChange(of: image) {
-                    print("Neshko изменилась аватарка")
+                    print("Изменилась аватарка")
                     safeAvatar()
                 }
             }

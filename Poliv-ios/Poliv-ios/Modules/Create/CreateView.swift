@@ -82,9 +82,6 @@ struct CreateView: View {
     
     private func saveTask() {
         
-//        myPalnts.forEach { 
-//            print("neshko\($0.namePlant)")
-//        }
         
         guard let myPlantModelIndex else { return }
         
@@ -101,7 +98,7 @@ struct CreateView: View {
         } catch {
             print("Error saving context: \(error)")
         }
-        print ("Neshko \(taskModel.stateTask)")
+        print ("\(taskModel.stateTask)")
         
     }
     

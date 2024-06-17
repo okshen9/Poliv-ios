@@ -1,13 +1,5 @@
-//
-//  CreateViewExtension.swift
-//  Poliv-ios
-//
-//  Created by artem on 18.05.2024.
-//
-
 import Foundation
 
-/// MARK: - Holly Shit
 extension CreateView {
     func getSateTask(_ selectedDate: Date?) -> StateTask {
         let isFuture = isFuture(selectedDate)

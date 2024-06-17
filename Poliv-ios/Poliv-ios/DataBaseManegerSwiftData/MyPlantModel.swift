@@ -1,10 +1,3 @@
-//
-//  MyPlantModel.swift
-//  Poliv-ios
-//
-//  Created by artem on 16.05.2024.
-//
-
 import Foundation
 import UIKit
 import SwiftData
