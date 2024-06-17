@@ -20,7 +20,7 @@ struct ProfilePlantCellView: View {
     @State private var namePlant: String
     
     var body: some View {
-        NavigationLink(destination: AddPlantView(myPlant).modelContainer(for: MyPlantModel.self)) {
+        NavigationLink(destination: AddPlantView(myPlant).modelContainer(sharedModelContainer)) {
             Text(namePlant)
             
         }

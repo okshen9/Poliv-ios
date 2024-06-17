@@ -40,7 +40,7 @@ struct ProfileView: View {
                         .multilineTextAlignment(.center)
                         .font(Font.kudry(20))
 
-                    NavigationLink(destination: AddPlantView(nil).modelContainer(for: MyPlantModel.self)
+                    NavigationLink(destination: AddPlantView(nil).modelContainer(sharedModelContainer)
                     ) {
                         Text("Добавить новое растение").padding(10)
                             .background(.topGreen)

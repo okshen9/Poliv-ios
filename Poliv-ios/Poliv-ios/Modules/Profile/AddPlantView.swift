@@ -24,6 +24,7 @@ struct AddPlantView: View {
     @State private var datePlanting: Date
     @State private var dateNote: Date
     @State private var imagePlant: UIImage
+    @State private var currentTasks: [TaskModel]? = nil
     
     private var isEdit = false
     private var myCurrentPlant: MyPlantModel?
@@ -47,7 +48,7 @@ struct AddPlantView: View {
         self._selectedTypeNote = State(initialValue: typeNoteDate.firstIndex(of: myPlant?.selectedTypeNote ?? "") ?? 0)
         self._datePlanting = State(initialValue: myPlant?.datePlanting ?? Date())
         self._dateNote = State(initialValue: myPlant?.dateNote ?? Date())
-        
+
     }
     
     var body: some View {
@@ -59,36 +60,36 @@ struct AddPlantView: View {
                 VStack {
                     HStack {
                         Image(uiImage: self.imagePlant)
-                                .resizable()
-                                .frame(width: 150,
-                                       height: 150)
-                                .background(.white80)
-                                .cornerRadius(20)
-                                .padding(.vertical, 20)
-                                .padding(.horizontal, 16)
-                                .onTapGesture {
-                            showSheet = true
-                        }
-                           .sheet(isPresented: $showSheet) {
-                        // Pick an image from the photo library:
-                        ImagePicker(sourceType: .photoLibrary, selectedImage: self.$imagePlant)
-                       }
+                            .resizable()
+                            .frame(width: 150,
+                                   height: 150)
+                            .background(.white80)
+                            .cornerRadius(20)
+                            .padding(.vertical, 20)
+                            .padding(.horizontal, 16)
+                            .onTapGesture {
+                                showSheet = true
+                            }
+                            .sheet(isPresented: $showSheet) {
+                                // Pick an image from the photo library:
+                                ImagePicker(sourceType: .photoLibrary, selectedImage: self.$imagePlant)
+                            }
                         Text("Выберите из Вашей галереи фотографию растения")
                             .padding(.horizontal)
                             .multilineTextAlignment(.center)
                             .font(Font.kudry(20))
-
+                        
                     }   .background(.topGreen)
                         .foregroundColor(.white)
                         .cornerRadius(20)
-
+                    
                     TextField("Введите имя растения",
                               text: $namePlant)
                     .background(.white80)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 10)
                     .disableAutocorrection(true)
-
+                    
                     PickerField(title: getNameTypePlant(),
                                 data: typesPlant,
                                 selectionIndex: $selectedTypePlant)
@@ -96,7 +97,7 @@ struct AddPlantView: View {
                     .background(.white80)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 10)
-
+                    
                     
                     DatePicker("Дата приобретения",
                                selection: $datePlanting,
@@ -104,9 +105,9 @@ struct AddPlantView: View {
                     .background(.white80)
                     .padding(.horizontal, 16)
                     .cornerRadius(20)
-
+                    
                     Text("Выберите из списка последнее известное событие:").frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal, 16).padding(.vertical, 10)
-
+                    
                     HStack {
                         PickerField(title: getTypeNote(),
                                     data: typeNoteDate,
@@ -119,7 +120,7 @@ struct AddPlantView: View {
                     }
                     .background(.white80)
                     .padding(.horizontal, 16)
-
+                    
                     TextField("Вы можете добавить свой комментарий здесь",
                               text: $descriptionPlant, axis: .vertical)
                     .lineLimit(5...7)
@@ -127,10 +128,27 @@ struct AddPlantView: View {
                     .padding(.horizontal, 16)
                     .disableAutocorrection(true)
                     Spacer()
+                    Text("Список дел по растению")
+                    VStack {
+                        ForEach(currentTasks ?? []) {
+                            if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue {
+                                Text(ttev)
+                                    .frame(alignment: .leading)
+                                    .background(Color.gray.opacity(0.8))
+                            }
+                        }
+                    }
+                    .frame(alignment: .leading)
+                    .lineSpacing(8)
                 }
+                .frame(alignment: .leading)
             }
             .scrollDismissesKeyboard(.interactively)
         }
+        .onAppear(perform: {
+            let tasks = self.myTasks.filter {$0.plantStringId == myCurrentPlant?.id.uuidString}
+            currentTasks = tasks
+        })
         .navigationTitle("Ваше растение")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
