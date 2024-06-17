@@ -16,6 +16,8 @@ struct SovetsView: View {
     @State private var plantBlooms = [String]()
     @State private var plantPopulars = [String]()
     
+    @State private var plantIDsIndex: String = ""
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -42,7 +44,7 @@ struct SovetsView: View {
                         ForEach(0..<plantNames.count, id: \.self) { index in
                             NavigationLink(destination: ScrollView {
                                 VStack {
-                                    Image(plantIDs[index])
+                                    Image(plantIDsIndex)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 300, height: 250)
@@ -174,6 +176,9 @@ struct SovetsView: View {
                         isDataLoaded = true
                                         }
                                 }
+                    .onChange(of: plantIDsIndex, perform: {
+                        plantIDsIndex = plantIDs[index]
+                    })
                 }
             }
         }
