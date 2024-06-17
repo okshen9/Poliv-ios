@@ -11,6 +11,7 @@ struct ProfileView: View {
     // Сама вьюшка
     @State private var image = UIImage(systemName: .person)!
     @State private var showSheet = false
+    @State private var showPopover: Bool = false
 
     var body: some View {
         NavigationView {
@@ -34,7 +35,16 @@ struct ProfileView: View {
                             .multilineTextAlignment(.center)
                             .font(Font.kudry(20))
                         //credits
-                        
+                        Button("(c)"){
+                            showPopover.toggle()
+                        }
+                        .popover(isPresented: $showPopover){
+                            Text("Добро пожаловать в мое мобильное приложение! Все тексты, изображения, дизайн и другие материалы приложения защищены авторскими правами. Любое незаконное использование контента приложения без согласия правообладателя будет преследоваться в соответствии с законодательством. Приложение предоставляет возможность только для личного пользования и не может быть использовано в коммерческих целях без разрешения.").padding(.horizontal, 16).multilineTextAlignment(.center)
+                            Text("Справочная информация для базы данных взята из открытых источников в сети Интернет, а также из книги \"Библия садовых растений / И. Березкина, Н. Григорьева. – Обновлен. и доп. изд. – Москва : Издательство «Э», 2016. – 256 с. – (Подарочные издания. Энциклопедии цветовода, дачника).\" ").padding(.horizontal, 16)
+                            Text("Изображения, используемые в данном приложении, взяты из открытых источников в сети Интернет. Следующие изображения защищены авторским правом и требуют упоминания авторства и источника: ").padding(.horizontal, 16)
+                            Text("Изображение Схизантус: автор - Syngenta Россия, источник  - https://www.syngenta.ru/crops/flowers-and-ornamentals/20120229-schizanthus-industrial-technology-of-growing").padding(.horizontal, 16)
+                            Text("Изображение Подофилл Эмода: автор - Дачная энциклопедия Дача-Дача, источник - https://dachadacha.com/rasteniya/tsvetochnyj-mir/dekorativnolistvennye/podofill-emoda").padding(.horizontal, 16)
+                        }
                     }
                     
                     Text("Здесь размещен список Ваших растений")

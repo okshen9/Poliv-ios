@@ -1,10 +1,3 @@
-//
-//  FeedViewCell.swift
-//  Poliv-ios
-//
-//  Created by artem on 18.05.2024.
-//
-
 import SwiftUI
 
 struct FeedViewCell: View {

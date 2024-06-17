@@ -15,7 +15,7 @@ struct AddPlantView: View {
 //    @ObservedObject private var myPlantsManager = SwitDataManager()
 
     @State private var showSheet = false
-
+    @State private var myVisbleTasks = [TaskModel]()
     @State private var namePlant: String
     @State private var notePlant: String
     @State private var descriptionPlant: String
@@ -128,28 +128,37 @@ struct AddPlantView: View {
                     .padding(.horizontal, 16)
                     .disableAutocorrection(true)
                     Spacer()
-                    Text("Список дел по растению")
                     VStack {
-                        if currentTasks != nil,
-                           !currentTasks!.isEmpty {
-                            ForEach(currentTasks ?? []) {
-                                if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue, let myCurrentPlant  {
-                                    FeedViewCell(plant: myCurrentPlant, myTask: $0)
-//                                    Text(ttev)
-                                        .frame(alignment: .leading)
-                                        .background(Color.white.opacity(0.8))
-                                        .cornerRadius(8)
+                        Text("Список дел по растению")
+                            .font(Font.kudry(20))
+                            .padding(.horizontal, 16)
+                            .cornerRadius(8)
+                            .frame(
+                                maxWidth: .infinity,
+                                alignment: .center)
+                        VStack {
+                            if currentTasks != nil,
+                               !currentTasks!.isEmpty {
+                                ForEach(currentTasks ?? []) {
+                                    if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue, let myCurrentPlant  {
+                                        FeedViewCell(plant: myCurrentPlant, myTask: $0)
+                                        //                                    Text(ttev)
+                                            .frame(alignment: .center)
+                                            .cornerRadius(8)
+                                    }
                                 }
+                            } else {
+                                Text("Дел по растению не назначено")
+                                    .padding(.top, 16)
+                                    .frame(alignment: .center)
                             }
-                        } else {
-                            Text("Дел по растению не назначено")
-                                .frame(alignment: .leading)
-                                .background(Color.gray.opacity(0.8))
-                                .cornerRadius(8)
                         }
                     }
-                    .frame(alignment: .leading)
-                    .lineSpacing(8)
+                    .background(Color.white.opacity(0.8))
+                    .cornerRadius(8)
+                    .padding(.horizontal, 16)
+                    .lineSpacing(8) //nen
+                    .frame(alignment: .center)
                 }
                 .frame(alignment: .leading)
             }
@@ -158,6 +167,9 @@ struct AddPlantView: View {
         .onAppear(perform: {
             let tasks = self.myTasks.filter {$0.plantStringId == myCurrentPlant?.id.uuidString}
             currentTasks = tasks
+            myVisbleTasks = myTasks.sorted(by: {
+                return $0.taskDate > $1.taskDate
+             })
         })
         .navigationTitle("Ваше растение")
         .toolbar {
