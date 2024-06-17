@@ -6,7 +6,6 @@ struct SovetsView: View {
     @State private var isModalPresented = false
     @State private var selectedImage = "140"
     @State private var isDataLoaded = false
-
     @State private var plantIDs = [String]()
     @State private var plantNames = [String]()
     @State private var plantAges = [String]()
@@ -35,9 +34,11 @@ struct SovetsView: View {
                             .padding(.horizontal, 20)
                             .padding(.vertical, 16)
                             .foregroundColor(.white)
+
                         Text("Содержит рекомендательную информацию по уходу за растениями")
                             .multilineTextAlignment(.center)
                             .font(Font.kudry(20))
+
                         ForEach(0..<plantNames.count, id: \.self) { index in
                             NavigationLink(destination: ScrollView {
                                 VStack {
@@ -151,7 +152,7 @@ struct SovetsView: View {
                                     .resizable()
                                     .scaledToFill()
                                     .edgesIgnoringSafeArea(.all)
-                            )) {
+                            )){
                                 Text(plantNames[index]) //справка по имени
                                     .foregroundColor(.black)
                                     .frame(maxWidth: .infinity, alignment: .leading)
