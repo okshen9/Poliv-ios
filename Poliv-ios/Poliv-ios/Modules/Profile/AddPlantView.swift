@@ -133,10 +133,11 @@ struct AddPlantView: View {
                         if currentTasks != nil,
                            !currentTasks!.isEmpty {
                             ForEach(currentTasks ?? []) {
-                                if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue {
-                                    Text(ttev)
+                                if let ttev = TypeNoteDate(rawValue: typeNoteDate[$0.typeNoteDate])?.rawValue, let myCurrentPlant  {
+                                    FeedViewCell(plant: myCurrentPlant, myTask: $0)
+//                                    Text(ttev)
                                         .frame(alignment: .leading)
-                                        .background(Color.gray.opacity(0.8))
+                                        .background(Color.white.opacity(0.8))
                                         .cornerRadius(8)
                                 }
                             }
